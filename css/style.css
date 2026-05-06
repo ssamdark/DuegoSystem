@@ -1496,11 +1496,19 @@ body.is-sub-page .mobile-toggle span {
 
 @media screen and (max-width: 1440px) {
 
-    .navbar-container,
-    .hero-content,
-    .tech-new-container {
+    .navbar-container {
         padding-left: 50px;
         padding-right: 50px;
+    }
+
+    /* ≤1440px: hero·tech도 max-width 컨테이너 방식으로 전환 */
+    .hero-content,
+    .tech-new-container {
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 60px;
+        padding-right: 60px;
     }
 
     .footer-container {
@@ -1518,7 +1526,11 @@ body.is-sub-page .mobile-toggle span {
 
 @media screen and (max-width: 1200px) {
 
-    .navbar-container,
+    .navbar-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
     .hero-content,
     .tech-new-container {
         padding-left: 5%;
@@ -1596,6 +1608,12 @@ body.is-sub-page .mobile-toggle span {
 
     .hero {
         padding-top: 70px;
+    }
+
+    .hero-content,
+    .tech-new-container {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .slogan-title,
