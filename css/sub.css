@@ -1247,6 +1247,10 @@ body.is-sub-page #scroll-wrapper {
         padding-top: 40px;
     }
 
+    .sub-header-title {
+        min-height: 100px;
+    }
+
     .sub-header h1 {
         font-size: 30px;
     }
