@@ -1215,7 +1215,7 @@ body.is-sub-page #scroll-wrapper {
     }
 
     .sub-inner {
-        padding: 0 20px;
+        padding: 0 24px;
     }
 
     .sub-tabs-links {
@@ -3143,6 +3143,15 @@ body.is-sub-page #scroll-wrapper {
 
 @media (max-width: 1024px) {
 
+    /* 모바일 inner 컨테이너 패딩 통일 */
+    .safer-hero-inner,
+    .safer-benefits-inner,
+    .private-pain-inner,
+    .private-cta-inner {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
     /* history-banner 두 컬럼 세로 전환 */
     .history-banner-cols {
         flex-direction: column;
@@ -3167,6 +3176,8 @@ body.is-sub-page #scroll-wrapper {
         flex-direction: column;
         height: auto;
         gap: 40px;
+        padding-left: 24px;
+        padding-right: 24px;
     }
     .private-hero-img {
         width: 100%;
@@ -3186,6 +3197,8 @@ body.is-sub-page #scroll-wrapper {
     .private-steps-inner {
         flex-direction: column;
         gap: 40px;
+        padding-left: 24px;
+        padding-right: 24px;
     }
     .private-steps-left {
         width: 100%;
@@ -3199,6 +3212,8 @@ body.is-sub-page #scroll-wrapper {
     .safer-feature-inner {
         flex-direction: column;
         gap: 40px;
+        padding-left: 24px;
+        padding-right: 24px;
     }
     .safer-feature-inner--reverse {
         flex-direction: column;
@@ -3218,6 +3233,8 @@ body.is-sub-page #scroll-wrapper {
     .partner-hero-inner {
         flex-direction: column;
         gap: 40px;
+        padding-left: 24px;
+        padding-right: 24px;
         padding-bottom: 40px;
     }
     .partner-hero-img {
