@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 | DUEGO SYSTEM</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS: 공통 → 서브 공통 순서 반드시 유지 -->
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/sub.css">
+</head>
+
+<body class="is-sub-page">
+
+    <!-- Header Include -->
+    <div id="header-wrap"></div>
+
+    <!-- Sub Header: 브레드크럼 + 타이틀 + 탭 -->
+    <header class="sub-header">
+        <div class="sub-inner">
+
+            <!-- 브레드크럼 + H1 -->
+            <div class="sub-header-title">
+                <div class="breadcrumbs">
+                    <a href="/index.html"><i class="ri-home-5-line"></i></a>
+                    <span class="sep">/</span>
+                    <a href="#">고객지원</a>
+                    <span class="sep">/</span>
+                    <div class="breadcrumb-current">
+                        <span>1:1 문의</span>
+                    </div>
+                </div>
+                <h1>1:1 문의</h1>
+            </div>
+
+            <!-- 서브 탭 -->
+            <nav class="sub-tabs">
+                <div class="sub-tabs-links">
+                    <a href="/support/inquiry.html">도입문의</a>
+                    <a href="/support/notice.html" class="active">1:1 문의</a>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- 컨텐츠 영역 -->
+    <main class="sub-content-wrapper">
+        <div class="sub-inner">
+
+            <div class="notice-board-wrap">
+
+                <!-- 상단 컨트롤 바 -->
+                <div class="board-top-bar">
+                    <span class="board-total-count">전체 <strong>12</strong>건</span>
+                    <div class="board-search-area">
+                        <select class="board-search-type">
+                            <option value="all">전체</option>
+                            <option value="title">제목</option>
+                            <option value="content">내용</option>
+                        </select>
+                        <div class="board-search-input-wrap">
+                            <input type="text" class="board-search-input" placeholder="검색어를 입력해 주세요.">
+                            <button type="button" class="board-search-btn">검색</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 게시판 테이블 -->
+                <table class="notice-table">
+                    <thead>
+                        <tr>
+                            <th class="col-num">번호</th>
+                            <th class="col-title">제목</th>
+                            <th class="col-date">등록일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 공지 고정 행 -->
+                        <tr class="row-pinned">
+                            <td class="col-num"><span class="badge-notice">공지</span></td>
+                            <td class="col-title"><a href="/support/notice_detail.html">[공지] 되고세이퍼 v3.2 업데이트 안내</a></td>
+                            <td class="col-date">2026.04.10</td>
+                        </tr>
+                        <tr class="row-pinned">
+                            <td class="col-num"><span class="badge-notice">공지</span></td>
+                            <td class="col-title"><a href="#">[공지] 개인정보처리방침 개정 안내 (2026.03.01 시행)</a></td>
+                            <td class="col-date">2026.02.24</td>
+                        </tr>
+                        <!-- 일반 행 -->
+                        <tr>
+                            <td class="col-num">12</td>
+                            <td class="col-title"><a href="#">2026년 1분기 되고시스템 소식지</a></td>
+                            <td class="col-date">2026.04.08</td>
+                        </tr>
+                        <tr>
+                            <td class="col-num">11</td>
+                            <td class="col-title"><a href="#">KOSHA-MS 안전보건경영시스템 인증 갱신 완료</a></td>
+                            <td class="col-date">2026.03.20</td>
+                        </tr>
+                        <tr>
+                            <td class="col-num">10</td>
+                            <td class="col-title"><a href="#">2026 안전보건 박람회 참가 안내</a></td>
+                            <td class="col-date">2026.03.12</td>
+                        </tr>
+                        <tr>
+                            <td class="col-num">9</td>
+                            <td class="col-title"><a href="#">되고세이퍼 G 클라우드 보안 인증(CSAP) 획득</a></td>
+                            <td class="col-date">2026.02.28</td>
+                        </tr>
+                        <tr>
+                            <td class="col-num">8</td>
+                            <td class="col-title"><a href="#">GS 인증 1등급 재인증 완료 안내</a></td>
+                            <td class="col-date">2026.02.10</td>
+                        </tr>
+                        <tr>
+                            <td class="col-num">7</td>
+                            <td class="col-title"><a href="#">설 연휴 고객지원 운영 안내 (2026.01.28~01.30)</a></td>
+                            <td class="col-date">2026.01.22</td>
+                        </tr>
+                        <tr>
+                            <td class="col-num">6</td>
+                            <td class="col-title"><a href="#">2025년 연간 서비스 점검 결과 안내</a></td>
+                            <td class="col-date">2025.12.30</td>
+                        </tr>
+                        <tr>
+                            <td class="col-num">5</td>
+                            <td class="col-title"><a href="#">되고시스템 본사 이전 안내</a></td>
+                            <td class="col-date">2025.11.15</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- 페이지네이션 -->
+                <nav class="board-pagination">
+                    <button type="button" class="page-btn page-arrow" disabled>
+                        <i class="ri-arrow-left-s-line"></i>
+                    </button>
+                    <button type="button" class="page-btn active">1</button>
+                    <button type="button" class="page-btn">2</button>
+                    <button type="button" class="page-btn page-arrow">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </button>
+                </nav>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer Include -->
+    <div id="footer-wrap"></div>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top-sub"></a>
+
+    <!-- JS: include → common 순서 반드시 유지 -->
+    <script src="/js/include.js" defer></script>
+    <script src="/js/common.js" defer></script>
+</body>
+
+</html>

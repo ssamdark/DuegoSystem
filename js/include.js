@@ -1,7 +1,6 @@
 /**
  * include.js
  * header.html / footer.html 컴포넌트를 fetch()로 로드
- * common.js 보다 먼저 실행되어야 함 (defer 순서 주의)
  */
 
 async function loadComponent(selector, url) {
@@ -16,11 +15,13 @@ async function loadComponent(selector, url) {
     }
 }
 
-// 루트 기준 절대경로 사용 (어느 depth 페이지에서도 동일하게 동작)
 (async () => {
-    await loadComponent('#header-wrap', '/components/header.html');
-    await loadComponent('#footer-wrap', '/components/footer.html');
+    // 병렬 로드로 속도 향상
+    await Promise.all([
+        loadComponent('#header-wrap', '/components/header.html'),
+        loadComponent('#footer-wrap', '/components/footer.html'),
+    ]);
 
-    // 컴포넌트 로드 완료 후 common.js 의존 이벤트 재발동
+    // 로드 완료 후 common.js 재실행 트리거
     document.dispatchEvent(new Event('componentsLoaded'));
 })();

@@ -1,4 +1,4 @@
-<nav class="navbar is-open-sub">
+<nav class="navbar">
     <div class="nav-dropdown-bg"></div>
     <div class="navbar-container">
         <div class="logo-area">
@@ -18,14 +18,14 @@
                 <span>구독형 서비스</span>
                 <ul class="sub-menu">
                     <li><a href="/platform/safer.html">되고세이퍼</a></li>
-                    <li><a href="/platform/safer-g.html">되고세이퍼 G</a></li>
+                    <li><a href="/platform/safer-g.html">되고세이퍼GO</a></li>
                 </ul>
             </li>
             <li class="nav-item">
                 <span>구축형 서비스</span>
                 <ul class="sub-menu">
-                    <li><a href="#">민간기업 구축</a></li>
-                    <li><a href="#">공공기관 구축</a></li>
+                    <li><a href="/platform/private.html">민간기업 구축</a></li>
+                    <li><a href="/platform/private-g.html">공공기관 구축</a></li>
                 </ul>
             </li>
             <li class="nav-item">
@@ -38,7 +38,7 @@
                 <span>고객지원</span>
                 <ul class="sub-menu">
                     <li><a href="/support/inquiry.html">도입문의</a></li>
-                    <li><a href="#">공지사항</a></li>
+                    <li><a href="/support/notice.html">1:1문의</a></li>
                 </ul>
             </li>
         </ul>
@@ -48,10 +48,61 @@
                 <span class="safer-text">되고세이퍼</span>
             </div>
         </div>
-        <div class="mobile-toggle">
+        <div class="mobile-toggle" id="mobileToggle">
             <span></span>
             <span></span>
             <span></span>
         </div>
     </div>
 </nav>
+
+<!-- 모바일 GNB 오버레이 -->
+<div class="m-nav-overlay" id="mobileNavOverlay">
+    <div class="m-nav-panel">
+        <div class="m-nav-head">
+            <span class="m-nav-brand">DUEGO SYSTEM</span>
+            <button class="m-nav-close" id="mobileNavClose"><i class="ri-close-line"></i></button>
+        </div>
+        <nav class="m-nav-links">
+            <div class="m-nav-group">
+                <button class="m-nav-group-btn">회사소개 <i class="ri-arrow-down-s-line"></i></button>
+                <ul class="m-nav-sub">
+                    <li><a href="/about/vision.html">되고시스템 소개</a></li>
+                    <li><a href="/about/ceo.html">CEO 인사말</a></li>
+                    <li><a href="/about/business.html">사업분야 및 인증</a></li>
+                    <li><a href="/about/history.html">주요 연혁</a></li>
+                </ul>
+            </div>
+            <div class="m-nav-group">
+                <button class="m-nav-group-btn">구독형 서비스 <i class="ri-arrow-down-s-line"></i></button>
+                <ul class="m-nav-sub">
+                    <li><a href="/platform/safer.html">되고세이퍼</a></li>
+                    <li><a href="/platform/safer-g.html">되고세이퍼GO</a></li>
+                </ul>
+            </div>
+            <div class="m-nav-group">
+                <button class="m-nav-group-btn">구축형 서비스 <i class="ri-arrow-down-s-line"></i></button>
+                <ul class="m-nav-sub">
+                    <li><a href="/platform/private.html">민간기업 구축</a></li>
+                    <li><a href="/platform/private-g.html">공공기관 구축</a></li>
+                </ul>
+            </div>
+            <div class="m-nav-group">
+                <button class="m-nav-group-btn">파트너 <i class="ri-arrow-down-s-line"></i></button>
+                <ul class="m-nav-sub">
+                    <li><a href="/partner/partner.html">파트너</a></li>
+                </ul>
+            </div>
+            <div class="m-nav-group">
+                <button class="m-nav-group-btn">고객지원 <i class="ri-arrow-down-s-line"></i></button>
+                <ul class="m-nav-sub">
+                    <li><a href="/support/inquiry.html">도입문의</a></li>
+                    <li><a href="/support/notice.html">1:1문의</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="m-nav-footer">
+            <a href="/support/inquiry.html" class="m-nav-cta">도입 문의하기</a>
+        </div>
+    </div>
+</div>
