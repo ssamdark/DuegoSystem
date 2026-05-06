@@ -1243,6 +1243,11 @@ body.is-sub-page #scroll-wrapper {
         --sub-header-pt: 80px;
     }
 
+    .sub-content-wrapper {
+        padding-top: 50px;
+        padding-bottom: 75px;
+    }
+
     .sub-header {
         padding-top: 40px;
     }
