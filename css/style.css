@@ -1486,6 +1486,15 @@ body.is-sub-page .mobile-toggle span {
         padding-right: 100px;
     }
 
+    .slogan-container {
+        height: 200px;
+    }
+    .slogan-title {
+        font-size: 72px;
+    }
+    .desc-container {
+        margin-bottom: 160px;
+    }
 }
 
 @media screen and (max-width: 1440px) {
@@ -1503,13 +1512,13 @@ body.is-sub-page .mobile-toggle span {
     }
 
     .slogan-container {
-        height: 180px;
+        height: 165px;
     }
     .slogan-title {
-        font-size: 68px;
+        font-size: 60px;
     }
     .desc-container {
-        margin-bottom: 140px;
+        margin-bottom: 120px;
     }
 }
 
@@ -1542,13 +1551,13 @@ body.is-sub-page .mobile-toggle span {
     }
 
     .slogan-container {
-        height: 155px;
+        height: 140px;
     }
     .slogan-title {
-        font-size: 56px;
+        font-size: 50px;
     }
     .desc-container {
-        margin-bottom: 100px;
+        margin-bottom: 80px;
     }
 }
 
@@ -1624,12 +1633,12 @@ body.is-sub-page .mobile-toggle span {
     }
 
     .slogan-title.active {
-        font-size: 38px;
+        font-size: 44px;
         line-height: 1.3;
     }
 
     .slogan-desc.active {
-        font-size: 16px;
+        font-size: 17px;
         line-height: 1.5;
         margin-top: 15px;
         color: rgba(255, 255, 255, 0.7);
