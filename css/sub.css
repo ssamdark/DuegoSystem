@@ -420,6 +420,10 @@ body.is-sub-page #scroll-wrapper {
         font-size: 28px;
     }
 
+    .ch-title {
+        font-size: 20px;
+    }
+
     .vision-intro-sub {
         font-size: 16px;
     }
