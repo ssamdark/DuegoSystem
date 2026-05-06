@@ -1590,9 +1590,12 @@ body.is-sub-page .mobile-toggle span {
     }
 
     .hero-content,
+    .intro-text-inner,
     .tech-new-container {
-        padding-left: 20px;
-        padding-right: 20px;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
     .slogan-title,
