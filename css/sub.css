@@ -1239,6 +1239,10 @@ body.is-sub-page #scroll-wrapper {
 }
 
 @media screen and (max-width: 768px) {
+    :root {
+        --sub-header-pt: 80px;
+    }
+
     .sub-header h1 {
         font-size: 26px;
     }
