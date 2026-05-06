@@ -579,8 +579,10 @@ body.is-sub-page .mobile-toggle span {
     position: relative;
     top: 20px;
     width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
     z-index: 10;
-    padding: 0 280px;
+    padding: 0 40px;
     text-align: left;
 }
 
@@ -833,7 +835,9 @@ body.is-sub-page .mobile-toggle span {
 }
 
 .intro-text-inner {
-    padding: 0 280px;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0 var(--main-padding);
 }
 
 .intro-sub {
@@ -933,7 +937,9 @@ body.is-sub-page .mobile-toggle span {
 
 .tech-new-container {
     width: 100%;
-    padding: 0 280px;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0 40px;
     display: flex;
     align-items: flex-start;
     gap: 100px;
@@ -1590,12 +1596,9 @@ body.is-sub-page .mobile-toggle span {
     }
 
     .hero-content,
-    .intro-text-inner,
     .tech-new-container {
-        max-width: 1440px;
-        margin: 0 auto;
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .slogan-title,
