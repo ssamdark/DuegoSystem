@@ -616,7 +616,7 @@ body.is-sub-page .mobile-toggle span {
     top: 0;
     left: 0;
     width: 100%;
-    font-size: 86px;
+    font-size: clamp(50px, 4.5vw, 86px);
     font-weight: 700;
     line-height: 1.25;
     letter-spacing: -1px;
@@ -1489,9 +1489,6 @@ body.is-sub-page .mobile-toggle span {
     .slogan-container {
         height: 200px;
     }
-    .slogan-title {
-        font-size: 72px;
-    }
     .desc-container {
         margin-bottom: 160px;
     }
@@ -1513,9 +1510,6 @@ body.is-sub-page .mobile-toggle span {
 
     .slogan-container {
         height: 165px;
-    }
-    .slogan-title {
-        font-size: 60px;
     }
     .desc-container {
         margin-bottom: 120px;
@@ -1552,9 +1546,6 @@ body.is-sub-page .mobile-toggle span {
 
     .slogan-container {
         height: 140px;
-    }
-    .slogan-title {
-        font-size: 50px;
     }
     .desc-container {
         margin-bottom: 80px;
