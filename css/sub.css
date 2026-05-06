@@ -1253,7 +1253,11 @@ body.is-sub-page #scroll-wrapper {
     }
 
     .sub-header-title {
-        min-height: 120px;
+        min-height: 160px;
+    }
+
+    .sub-tabs {
+        margin-top: 0;
     }
 
     .sub-header h1 {
