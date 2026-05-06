@@ -1345,8 +1345,8 @@ body.is-sub-page .mobile-toggle span {
 }
 
 .partner-title {
-    font-size: 56px;
-    font-weight: 700;
+    font-size: 44px;
+    font-weight: 600;
     color: var(--text-primary);
     letter-spacing: -2px;
     line-height: 1.1;
@@ -1668,7 +1668,7 @@ body.is-sub-page .mobile-toggle span {
     }
 
     .partner-title {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .marquee-logos img {
@@ -1886,7 +1886,7 @@ body.is-sub-page .mobile-toggle span {
 
     /* partner */
     .partner-title {
-        font-size: 24px;
+        font-size: 22px;
     }
     .partner-desc {
         font-size: 15px;
