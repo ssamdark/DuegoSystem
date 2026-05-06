@@ -579,8 +579,6 @@ body.is-sub-page .mobile-toggle span {
     position: relative;
     top: 20px;
     width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
     z-index: 10;
     padding: 0 40px;
     text-align: left;
@@ -835,7 +833,6 @@ body.is-sub-page .mobile-toggle span {
 }
 
 .intro-text-inner {
-    max-width: 1440px;
     margin: 0 auto;
     padding: 0 var(--main-padding);
 }
