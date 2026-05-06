@@ -198,7 +198,7 @@
    /* 좌우 패딩 (태블릿/모바일) */
    --navbar-height: 94px;
    /* 고정 navbar 높이 */
-   --sub-header-pt: 140px;
+   --sub-header-pt: 128px;
    /* 서브 헤더 padding-top */
    --main-padding: 300px;
 
