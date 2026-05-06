@@ -1246,6 +1246,10 @@ body.is-sub-page #scroll-wrapper {
     .breadcrumbs {
         font-size: 13px;
     }
+
+    .info-row .label {
+        width: 110px;
+    }
 }
 
 /* ==========================================================================
