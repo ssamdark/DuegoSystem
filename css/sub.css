@@ -1253,7 +1253,7 @@ body.is-sub-page #scroll-wrapper {
     }
 
     .sub-header-title {
-        min-height: 180px;
+        min-height: 120px;
     }
 
     .sub-header h1 {
