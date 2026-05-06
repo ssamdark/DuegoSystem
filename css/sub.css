@@ -1246,6 +1246,10 @@ body.is-sub-page #scroll-wrapper {
     .breadcrumbs {
         font-size: 13px;
     }
+
+    .sub-inner {
+        padding: 0 12px;
+    }
 }
 
 /* ==========================================================================
