@@ -579,10 +579,11 @@ body.is-sub-page .mobile-toggle span {
     position: relative;
     top: 20px;
     width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
     z-index: 10;
-    padding: 0 var(--main-padding);
+    padding: 0 40px;
     text-align: left;
-    margin: 0;
 }
 
 .hero-video {
@@ -936,7 +937,9 @@ body.is-sub-page .mobile-toggle span {
 
 .tech-new-container {
     width: 100%;
-    padding: 0 var(--main-padding);
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
     display: flex;
     align-items: flex-start;
     gap: 100px;
@@ -1479,9 +1482,7 @@ body.is-sub-page .mobile-toggle span {
    ========================================================================== */
 @media screen and (max-width: 1600px) {
 
-    body:not(.is-sub-page) .navbar-container,
-    body:not(.is-sub-page) .hero-content,
-    body:not(.is-sub-page) .tech-new-container {
+    body:not(.is-sub-page) .navbar-container {
         padding-left: 100px;
         padding-right: 100px;
     }
@@ -1501,16 +1502,6 @@ body.is-sub-page .mobile-toggle span {
         padding-right: 50px;
     }
 
-    /* ≤1440px: hero·tech도 max-width 컨테이너 방식으로 전환 */
-    .hero-content,
-    .tech-new-container {
-        max-width: 1440px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 60px;
-        padding-right: 60px;
-    }
-
     .footer-container {
         padding-left: 50px;
         padding-right: 50px;
@@ -1527,12 +1518,6 @@ body.is-sub-page .mobile-toggle span {
 @media screen and (max-width: 1200px) {
 
     .navbar-container {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    .hero-content,
-    .tech-new-container {
         padding-left: 5%;
         padding-right: 5%;
     }
