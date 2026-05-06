@@ -1691,6 +1691,10 @@ body.is-sub-page .mobile-toggle span {
     .marquee-inner-wrap::after {
         display: none;
     }
+
+    .marquee-inner-wrap {
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 480px) {
