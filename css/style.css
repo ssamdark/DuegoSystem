@@ -580,7 +580,7 @@ body.is-sub-page .mobile-toggle span {
     top: 20px;
     width: 100%;
     z-index: 10;
-    padding: 0 40px;
+    padding: 0 320px;
     text-align: left;
 }
 
@@ -833,8 +833,7 @@ body.is-sub-page .mobile-toggle span {
 }
 
 .intro-text-inner {
-    margin: 0 auto;
-    padding: 0 var(--main-padding);
+    padding: 0 320px;
 }
 
 .intro-sub {
@@ -934,9 +933,7 @@ body.is-sub-page .mobile-toggle span {
 
 .tech-new-container {
     width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 320px;
     display: flex;
     align-items: flex-start;
     gap: 100px;
