@@ -1686,6 +1686,11 @@ body.is-sub-page .mobile-toggle span {
     .slogan-title.active {
         font-size: 46px;
     }
+
+    .marquee-inner-wrap::before,
+    .marquee-inner-wrap::after {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 480px) {
