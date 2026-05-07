@@ -579,10 +579,8 @@ body.is-sub-page .mobile-toggle span {
     position: relative;
     top: 20px;
     width: 100%;
-    max-width: var(--content-width);
-    margin: 0 auto;
     z-index: 10;
-    padding: 0 40px;
+    padding: 0 280px;
     text-align: left;
 }
 
@@ -1510,6 +1508,7 @@ body.is-sub-page .mobile-toggle span {
         margin-bottom: 120px;
     }
 
+    .hero-content,
     .intro-text-inner,
     .tech-new-container {
         max-width: 1440px;
