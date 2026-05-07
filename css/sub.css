@@ -1207,6 +1207,9 @@ body.is-sub-page #scroll-wrapper {
     :root {
         --sub-header-pt: 100px;
     }
+    .private-hero-text {
+        max-width: 660px;
+    }
 }
 
 @media screen and (max-width: 1440px) {
