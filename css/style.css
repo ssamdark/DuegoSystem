@@ -1457,7 +1457,7 @@ body.is-sub-page .mobile-toggle span {
 }
 
 .f-logo {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 800;
     color: var(--text-primary);
     letter-spacing: -0.5px;
@@ -1579,6 +1579,10 @@ body.is-sub-page .mobile-toggle span {
         letter-spacing: -0.5px;
         white-space: nowrap;
         color: var(--text-primary);
+    }
+
+    .f-logo {
+        font-size: 16px;
     }
 
     .nav-links,
