@@ -1501,6 +1501,15 @@ body.is-sub-page .mobile-toggle span {
 
 @media screen and (max-width: 1440px) {
 
+    :root {
+        --fs-display: 46px;
+        --fs-h1:      38px;
+        --fs-h1-en:   40px;
+        --fs-sub-h1:  40px;
+        --fs-h2:      28px;
+        --fs-h3:      22px;
+    }
+
     .navbar-container {
         padding-left: 50px;
         padding-right: 50px;
