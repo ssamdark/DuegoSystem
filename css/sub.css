@@ -2904,7 +2904,7 @@ body.is-sub-page #scroll-wrapper {
 
 .private-hero-img {
     flex: 0 0 auto;
-    align-self: flex-start;
+    align-self: center;
 }
 
 .private-hero-img img {
