@@ -157,7 +157,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 lineFill.style.left = `${activeIndex * segmentWidth}px`;
             }
 
-            slider.style.transform = `translateX(${-currentIndex * 380}px)`;
+            const cardStep = allCards[0].offsetWidth + 40;
+            slider.style.transform = `translateX(${-currentIndex * cardStep}px)`;
             requestAnimationFrame(() => slider.classList.remove('no-transition'));
         }
 

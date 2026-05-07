@@ -1876,6 +1876,13 @@ body.is-sub-page .mobile-toggle span {
     }
 
     /* tech */
+    .tech-new-section {
+        padding: 60px 0 50px;
+    }
+    .tech-slider-side {
+        padding-top: 16px;
+        margin-top: -16px;
+    }
     .tech-new-title {
         font-size: 24px;
         text-align: center;
