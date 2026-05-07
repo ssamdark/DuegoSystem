@@ -1502,12 +1502,12 @@ body.is-sub-page .mobile-toggle span {
 @media screen and (max-width: 1440px) {
 
     :root {
-        --fs-display: 46px;
-        --fs-h1:      38px;
-        --fs-h1-en:   40px;
-        --fs-sub-h1:  40px;
-        --fs-h2:      28px;
-        --fs-h3:      22px;
+        --fs-display: 48px;
+        --fs-h1:      40px;
+        --fs-h1-en:   42px;
+        --fs-sub-h1:  42px;
+        --fs-h2:      30px;
+        --fs-h3:      23px;
     }
 
     .navbar-container {
