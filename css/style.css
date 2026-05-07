@@ -1557,6 +1557,13 @@ body.is-sub-page .mobile-toggle span {
     .slogan-title {
         font-size: 64px;
     }
+    .slogan-container {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    .desc-container {
+        margin-bottom: 120px;
+    }
 
     /* intro text */
     .intro-sub {
