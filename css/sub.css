@@ -2817,11 +2817,11 @@ body.is-sub-page #scroll-wrapper {
     padding: 20px 40px 0;
     display: flex;
     align-items: flex-start;
-    gap: var(--space-20);
+    gap: 0;
     height: 480px;
 }
 
-.private-hero-text { flex: 0 0 480px; padding-top: 28px; }
+.private-hero-text { flex: 1; padding-top: 28px; }
 
 .private-hero-label {
     font-size: var(--fs-small);
