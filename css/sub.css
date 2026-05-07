@@ -3313,6 +3313,15 @@ body.is-sub-page #scroll-wrapper {
 
 @media (max-width: 768px) {
 
+    /* business 다이어그램·커넥터 숨김, 슬로건이 첫 섹션 */
+    .biz-diagram-section,
+    .biz-connector {
+        display: none;
+    }
+    .biz-slogan-section {
+        padding-top: 10px;
+    }
+
     /* partner 탭 2×2 wrap */
     .partner-tabs {
         flex-wrap: wrap;
