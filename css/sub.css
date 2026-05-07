@@ -58,7 +58,7 @@ body.is-sub-page #scroll-wrapper {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     font-size: 16px;
     color: var(--gray-500);
 }
