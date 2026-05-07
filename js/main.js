@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const transitionTime = 12.53;
         const exitDuration = 0.5;
-        const videoDuration = 20.03;
+        const videoDuration = 21.6;
         let lastState = -1;
 
         function updateSloganByTime() {
