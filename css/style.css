@@ -1636,12 +1636,19 @@ body.is-sub-page .mobile-toggle span {
         transform: none;
     }
 
+    .slogan-title.exit,
+    .slogan-desc.exit {
+        display: block;
+    }
+
     .slogan-container {
         height: auto;
+        min-height: 100px;
         margin-bottom: 24px;
     }
     .desc-container {
         height: auto;
+        min-height: 60px;
         margin-bottom: 60px;
     }
 
@@ -1869,6 +1876,10 @@ body.is-sub-page .mobile-toggle span {
     }
 
     /* hero slogan layout */
+    .slogan-title.exit,
+    .slogan-desc.exit {
+        display: block;
+    }
     .slogan-container {
         height: auto;
         min-height: 100px;
@@ -1876,6 +1887,7 @@ body.is-sub-page .mobile-toggle span {
     }
     .desc-container {
         height: auto;
+        min-height: 55px;
         margin-bottom: 60px;
     }
 
