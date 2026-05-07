@@ -3072,7 +3072,7 @@ body.is-sub-page #scroll-wrapper {
 
 .private-step-big-num {
     font-family: var(--font-point);
-    font-size: 60px;
+    font-size: 40px;
     font-weight: var(--fw-bold);
     color: var(--text-primary);
     line-height: 1;
