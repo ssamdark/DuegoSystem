@@ -1884,6 +1884,9 @@ body.is-sub-page .mobile-toggle span {
         font-size: 15px;
         text-align: center;
     }
+    .tech-bottom-controls {
+        display: none;
+    }
     .new-card-detail {
         padding: 16px;
     }
