@@ -1197,6 +1197,18 @@ body.is-sub-page #scroll-wrapper {
    RESPONSIVE
    ========================================================================== */
 
+@media screen and (max-width: 1920px) {
+    .sub-header-title {
+        min-height: 160px;
+    }
+    .sub-header-title--lg {
+        min-height: 220px;
+    }
+    :root {
+        --sub-header-pt: 100px;
+    }
+}
+
 @media screen and (max-width: 1440px) {
     .sub-inner {
         padding: 0 40px;
