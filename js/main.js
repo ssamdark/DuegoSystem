@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const descs = descContainer.querySelectorAll('.slogan-desc');
         if (titles.length === 0 || descs.length === 0) return;
 
-        const transitionTime = 11.0;
+        const transitionTime = 12.53;
         const exitDuration = 0.5;
         const videoDuration = 20.03;
         let lastState = -1;
