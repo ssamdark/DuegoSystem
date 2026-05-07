@@ -2826,14 +2826,14 @@ body.is-sub-page #scroll-wrapper {
 .private-hero-inner {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 20px 40px 0;
+    padding: 0 40px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 0;
     height: 480px;
 }
 
-.private-hero-text { flex: 1; max-width: 800px; padding-top: 28px; }
+.private-hero-text { flex: 1; max-width: 800px; }
 
 .private-hero-label {
     font-size: var(--fs-small);
