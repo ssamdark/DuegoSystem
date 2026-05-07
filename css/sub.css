@@ -3360,6 +3360,17 @@ body.is-sub-page #scroll-wrapper {
     .private-steps-title {
         font-size: 24px;
     }
+
+    /* private 섹션 여백 축소 */
+    .private-pain {
+        padding: 40px 0;
+    }
+    .private-steps {
+        padding-bottom: 60px;
+    }
+    .private-step-item {
+        padding: 28px 0;
+    }
     .private-step-big-num {
         font-size: 42px;
     }
