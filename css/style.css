@@ -1550,17 +1550,20 @@ body.is-sub-page .mobile-toggle span {
         font-size: 18px;
     }
 
-    /* hero 텍스트 아래로 */
+    /* hero */
     .hero-content {
-        top: 80px;
+        top: 40px;
+    }
+    .slogan-title {
+        font-size: 40px;
     }
 
     /* intro text */
     .intro-sub {
-        font-size: 32px;
+        font-size: 36px;
     }
     .intro-title {
-        font-size: 32px;
+        font-size: 36px;
     }
 
     /* tech */
