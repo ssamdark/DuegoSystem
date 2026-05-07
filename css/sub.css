@@ -3309,13 +3309,16 @@ body.is-sub-page #scroll-wrapper {
 
 @media (max-width: 768px) {
 
-    /* partner 탭 2줄 wrap */
+    /* partner 탭 2×2 wrap */
     .partner-tabs {
         flex-wrap: wrap;
         gap: 4px;
     }
+    .partner-tab[data-filter="all"] {
+        display: none;
+    }
     .partner-tab {
-        flex: 1 1 calc(33.33% - 8px);
+        flex: 0 0 calc(50% - 6px);
         white-space: normal;
         padding: 8px 8px;
         font-size: 14px;
