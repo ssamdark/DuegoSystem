@@ -1522,12 +1522,12 @@ body.is-sub-page .mobile-toggle span {
 @media screen and (max-width: 1920px) {
 
     :root {
-        --fs-display: 46px;
-        --fs-h1:      38px;
-        --fs-h1-en:   40px;
-        --fs-sub-h1:  40px;
-        --fs-h2:      28px;
-        --fs-h3:      21px;
+        --fs-display: 42px;
+        --fs-h1:      34px;
+        --fs-h1-en:   36px;
+        --fs-sub-h1:  36px;
+        --fs-h2:      26px;
+        --fs-h3:      20px;
     }
 
     .hero-content,
