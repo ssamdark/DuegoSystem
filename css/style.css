@@ -1874,9 +1874,21 @@ body.is-sub-page .mobile-toggle span {
     }
 
     /* hero slogan layout */
-    .slogan-title.exit,
+    .slogan-title.exit {
+        display: block;
+        font-size: 52px;
+        line-height: 1.3;
+        animation: mobileFadeOut 0.4s ease-out both;
+    }
+    .slogan-title.exit .line-1,
+    .slogan-title.exit .line-2 {
+        animation: none;
+        opacity: 1;
+        transform: translateY(0);
+    }
     .slogan-desc.exit {
-        display: none;
+        display: block;
+        animation: mobileFadeOut 0.4s ease-out both;
     }
     .slogan-container {
         height: 110px;
@@ -1957,6 +1969,9 @@ body.is-sub-page .mobile-toggle span {
         --fs-h3:      16px;
         --fs-h4:      15px;
     }
+    .slogan-title.exit {
+        font-size: 38px;
+    }
 
     .intro-sub {
         font-size: 18px;
@@ -1973,6 +1988,11 @@ body.is-sub-page .mobile-toggle span {
     .partner-title {
         font-size: 22px;
     }
+}
+
+@keyframes mobileFadeOut {
+    from { opacity: 1; }
+    to   { opacity: 0; }
 }
 
 /* ==========================================================================
