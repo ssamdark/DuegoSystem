@@ -3380,6 +3380,12 @@ body.is-sub-page #scroll-wrapper {
         padding-top: 50px;
     }
 
+    /* safer icon badge 아이콘 크기 축소 */
+    .safer-icon-badge img {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
     /* safer feature */
     .safer-feature-title {
         font-size: 22px;
