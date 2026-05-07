@@ -3322,6 +3322,13 @@ body.is-sub-page #scroll-wrapper {
         padding-top: 10px;
     }
 
+    /* value-card: 번호(absolute bottom)와 텍스트 겹침 방지 */
+    .value-card {
+        padding-bottom: 70px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
     /* partner 탭 2×2 wrap */
     .partner-tabs {
         flex-wrap: wrap;
