@@ -2,6 +2,8 @@
 
 > 이 문서는 모든 코딩 작업의 최우선 기준입니다.
 > 새 페이지/컴포넌트 작업 전 반드시 읽고 시작할 것.
+> 모든 대화는 한글로 할 것.
+> 되고시스템 : https://www.duegosystem.com/ (현재 사용중인 회사 홈페이지 - 컨텐츠 구성은 현 홈페이지 참조하여 재구성)
 
 ---
 
@@ -113,12 +115,36 @@ letter-spacing: var(--ls-point); /* 0.02em */
 
 ## 5. 레이아웃 규칙
 
-### 5-1. 너비 기준
+### 5-1. 서브 페이지 상단 여백 기준 (반드시 준수)
+
+모든 서브 페이지 최상단 섹션의 `padding-top`은 **반드시 `var(--sub-header-pt)` (140px)** 사용.
+GNB가 fixed이므로 이 값으로 콘텐츠 겹침을 보정한다.
+
+| 페이지 유형 | 적용 대상 | 변수 |
+|------------|-----------|------|
+| 브레드크럼 있는 페이지 | `.sub-header` | `var(--sub-header-pt)` |
+| 히어로형 페이지 (브레드크럼 없음) | 첫 번째 섹션 (`.xxx-hero`) | `var(--sub-header-pt)` |
+
+**브레드크럼 없는 히어로형 페이지 추가 규칙:**
+- `.xxx-hero-inner`의 `padding-top`은 반드시 `var(--space-12)` (48px) 추가
+- 이유: 브레드크럼 있는 페이지는 `.sub-header-title`(min-height: 200px, 수직 중앙 정렬) 구조 덕분에 첫 콘텐츠 위에 ~48px 내부 여백이 자동으로 생긴다. 히어로형은 이 구조가 없으므로 inner에 동일한 여백을 명시해야 시각적으로 균일해진다.
+
+> ⚠️ 절대 금지
+> - 하드코딩 숫자 직접 사용 (`padding-top: 140px`) → 반드시 변수 사용
+> - 페이지별로 다른 값 사용 → 전 페이지 동일 변수로 통일
+> - 히어로형 inner에 padding-top 생략 금지
+
+**반응형**: `max-width: 1024px` 이하에서 `padding-top: 90px` 일괄 적용
+→ `.sub-header`, 모든 `.xxx-hero` 섹션 모두 동일하게 미디어 쿼리에 포함할 것
+
+---
+
+### 5-2. 너비 기준
 - **컨텐츠 최대 너비 1440px → `.sub-inner` 클래스로만**
 - `.container` 클래스 사용 금지
 - `width: 1440px !important` 절대 금지
 
-### 5-2. 서브 페이지 HTML 구조 (반드시 준수)
+### 5-3. 서브 페이지 HTML 구조 (반드시 준수)
 ```html
 <header class="sub-header">
     <div class="sub-inner">
@@ -133,7 +159,7 @@ letter-spacing: var(--ls-point); /* 0.02em */
 </main>
 ```
 
-### 5-3. 여백 기준 — 반드시 준수 (가장 많이 위반되는 규칙)
+### 5-4. 여백 기준 — 반드시 준수 (가장 많이 위반되는 규칙)
 
 ```
 ┌─────────────────────────────────────┐
@@ -206,6 +232,41 @@ letter-spacing: var(--ls-point); /* 0.02em */
 - 사이트 전체 기조는 **샤프(Sharp)** → `--radius-sm(4px)` 위주 사용
 - 강조/인터랙티브 요소만 `--radius-md(8px)` 이상 사용
 - 특수 컴포넌트(다이어그램 박스 등)는 예외적으로 하드코딩 허용
+
+---
+
+## 10. 버튼 규칙
+
+### 10-1. Variant (종류)
+| 클래스 | 스타일 | 용도 |
+|--------|--------|------|
+| `.btn-primary` | Filled Blue | 핵심 CTA — 페이지당 1개 원칙 |
+| `.btn-outline` | Border | 보조 CTA, Primary와 쌍으로 사용 |
+| `.btn-ghost` | 텍스트만 | 취소, 뒤로가기 등 낮은 강조 |
+
+### 10-2. Size (반드시 Variant와 조합)
+| 클래스 | Padding | Font-size | 용도 |
+|--------|---------|-----------|------|
+| `.btn-lg` | 14px 36px | `--fs-body (18px)` | 히어로 CTA ★ |
+| `.btn-md` | 12px 28px | `--fs-small (16px)` | 섹션 내 기본 버튼 |
+| `.btn-sm` | 8px 20px | `--fs-caption (14px)` | 인라인, 테이블 내 |
+
+### 10-3. 사용 예시
+```html
+<!-- 히어로 CTA 쌍 -->
+<a href="..." class="btn btn-primary btn-lg">무료 체험하기</a>
+<a href="..." class="btn btn-outline btn-lg">도입 문의하기</a>
+
+<!-- 섹션 CTA 단독 -->
+<a href="..." class="btn btn-primary btn-md">자세히 보기</a>
+```
+
+### 10-4. 필수 규칙
+- **Border Radius 고정: `var(--radius-md)` (8px)** — 버튼은 예외 없음
+- **페이지 prefix 금지** → `.safer-btn-*`, `.about-btn-*` 사용 금지 → 반드시 `.btn-*`로 통일
+- **CTA는 페이지당 Primary 1개** — Primary 2개 필요 시 하나를 Outline으로 변경
+- **히어로 버튼은 반드시 `.btn-lg`** — 임의로 size 축소 금지
+- **font-weight: 600 고정** — 버튼 텍스트는 항상 semibold
 
 ---
 
