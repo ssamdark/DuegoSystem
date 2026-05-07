@@ -2821,7 +2821,7 @@ body.is-sub-page #scroll-wrapper {
     height: 480px;
 }
 
-.private-hero-text { flex: 1; padding-top: 28px; }
+.private-hero-text { flex: 1; max-width: 800px; padding-top: 28px; }
 
 .private-hero-label {
     font-size: var(--fs-small);
