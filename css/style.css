@@ -1507,7 +1507,9 @@ body.is-sub-page .mobile-toggle span {
     .desc-container {
         margin-bottom: 120px;
     }
+}
 
+@media screen and (max-width: 1920px) {
     .hero-content,
     .intro-text-inner,
     .tech-new-container {
