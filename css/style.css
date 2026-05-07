@@ -1352,7 +1352,7 @@ body.is-sub-page .mobile-toggle span {
     font-size: 44px;
     font-weight: 600;
     color: var(--text-primary);
-    letter-spacing: -2px;
+    letter-spacing: -0.04em;
     line-height: 1.1;
     margin-bottom: 20px;
     font-family: var(--font-point);
