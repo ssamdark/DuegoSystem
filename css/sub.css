@@ -151,7 +151,7 @@ body.is-sub-page #scroll-wrapper {
 .sub-content-wrapper {
     flex: 1;
     width: 100%;
-    padding: var(--space-25) 0 var(--space-37);
+    padding: var(--space-20) 0 var(--space-37);
     background: var(--bg-primary);
 }
 
