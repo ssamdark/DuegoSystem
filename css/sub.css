@@ -87,7 +87,7 @@ body.is-sub-page #scroll-wrapper {
 
 /* H1 타이틀 */
 .sub-header h1 {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 700;
     color: var(--text-primary);
     margin: 0 0 20px;
@@ -1206,6 +1206,9 @@ body.is-sub-page #scroll-wrapper {
     }
     :root {
         --sub-header-pt: 100px;
+    }
+    .sub-header h1 {
+        font-size: 40px;
     }
 }
 
