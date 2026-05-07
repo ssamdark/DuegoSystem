@@ -3379,6 +3379,15 @@ body.is-sub-page #scroll-wrapper {
     .safer-feature {
         padding-top: 50px;
     }
+    .safer-feature--last {
+        padding-bottom: 40px;
+    }
+
+    /* ④ 특장점 info-title 라인 주변 여백 축소 */
+    .info-title {
+        margin-bottom: 24px;
+        padding-bottom: 10px;
+    }
 
     /* safer icon badge 아이콘 크기 축소 */
     .safer-icon-badge img {
