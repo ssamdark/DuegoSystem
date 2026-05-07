@@ -1878,9 +1878,11 @@ body.is-sub-page .mobile-toggle span {
     /* tech */
     .tech-new-title {
         font-size: 24px;
+        text-align: center;
     }
     .tech-new-desc {
         font-size: 15px;
+        text-align: center;
     }
     .new-card-detail {
         padding: 16px;
