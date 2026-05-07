@@ -3375,6 +3375,11 @@ body.is-sub-page #scroll-wrapper {
         width: 70%;
     }
 
+    /* safer feature 상단 여백 → sub-content-wrapper 모바일과 동일 */
+    .safer-feature {
+        padding-top: 50px;
+    }
+
     /* safer feature */
     .safer-feature-title {
         font-size: 22px;
