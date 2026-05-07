@@ -3371,6 +3371,9 @@ body.is-sub-page #scroll-wrapper {
     .safer-hero-banner {
         height: 240px;
     }
+    .safer-hero-logo {
+        width: 70%;
+    }
 
     /* safer feature */
     .safer-feature-title {
