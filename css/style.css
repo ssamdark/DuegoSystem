@@ -1552,10 +1552,10 @@ body.is-sub-page .mobile-toggle span {
 
     /* hero */
     .hero-content {
-        top: 10px;
+        top: -40px;
     }
     .slogan-title {
-        font-size: 58px;
+        font-size: 64px;
     }
 
     /* intro text */
