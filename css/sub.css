@@ -2926,7 +2926,7 @@ body.is-sub-page #scroll-wrapper {
 }
 
 .private-pain-headline {
-    font-size: 28px;
+    font-size: var(--fs-h2);
     font-weight: 700;
     line-height: var(--lh-title);
     color: var(--text-primary);
