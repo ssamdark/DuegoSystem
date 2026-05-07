@@ -188,6 +188,7 @@ body.is-sub-page .mobile-toggle span {
     display: flex;
     align-items: center;
     gap: 8px;
+    text-decoration: none;
 }
 
 .safer-logo {
