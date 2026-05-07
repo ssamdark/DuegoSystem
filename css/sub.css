@@ -2024,7 +2024,7 @@ body.is-sub-page #scroll-wrapper {
     width: 100%;
     margin-top: 94px;
     padding-top: 0;
-    background: #;
+    overflow: hidden;
     /* border-bottom: 1px solid var(--gray-300); */
 }
 
@@ -3255,12 +3255,18 @@ body.is-sub-page #scroll-wrapper {
     }
 
     /* partner hero 세로 전환 */
+    .partner-hero {
+        margin-top: 60px;
+    }
     .partner-hero-inner {
         flex-direction: column;
         gap: 40px;
         padding-left: 24px;
         padding-right: 24px;
         padding-bottom: 40px;
+    }
+    .partner-hero-content {
+        padding-right: 0;
     }
     .partner-hero-img {
         flex: 0 0 auto;

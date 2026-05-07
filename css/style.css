@@ -82,6 +82,8 @@ body {
     background: transparent;
     border-bottom: 1px solid transparent;
     transition: background 1.0s ease 0.1s, border-bottom 1.0s ease 0.1s, transform 0.5s ease, opacity 0.5s ease;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .navbar-container {
