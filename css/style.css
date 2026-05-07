@@ -1907,6 +1907,9 @@ body.is-sub-page .mobile-toggle span {
     }
 
     /* services */
+    .services-platform-text {
+        text-align: center;
+    }
     .services-platform-title {
         font-size: 22px;
     }
