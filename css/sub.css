@@ -1029,7 +1029,7 @@ body.is-sub-page #scroll-wrapper {
 }
 
 .history-banner-header .title {
-    font-size: var(--fs-h1);
+    font-size: var(--fs-h2);
     font-weight: 700;
     color: var(--text-primary);
     line-height: var(--lh-title);
