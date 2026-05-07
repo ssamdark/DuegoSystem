@@ -3309,6 +3309,21 @@ body.is-sub-page #scroll-wrapper {
 
 @media (max-width: 768px) {
 
+    /* partner 탭 2줄 wrap */
+    .partner-tabs {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    .partner-tab {
+        flex: 1 1 calc(33.33% - 8px);
+        white-space: normal;
+        padding: 8px 8px;
+        font-size: 14px;
+    }
+    .partner-tab + .partner-tab::before {
+        display: none;
+    }
+
     /* history-banner 헤드라인 축소 */
     .history-banner-header .title {
         font-size: 26px;
