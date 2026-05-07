@@ -835,9 +835,7 @@ body.is-sub-page .mobile-toggle span {
 }
 
 .intro-text-inner {
-    max-width: var(--content-width);
-    margin: 0 auto;
-    padding: 0 var(--main-padding);
+    padding: 0 280px;
 }
 
 .intro-sub {
@@ -937,9 +935,7 @@ body.is-sub-page .mobile-toggle span {
 
 .tech-new-container {
     width: 100%;
-    max-width: var(--content-width);
-    margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 280px;
     display: flex;
     align-items: flex-start;
     gap: 100px;
@@ -1512,6 +1508,14 @@ body.is-sub-page .mobile-toggle span {
     }
     .desc-container {
         margin-bottom: 120px;
+    }
+
+    .intro-text-inner,
+    .tech-new-container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 }
 
