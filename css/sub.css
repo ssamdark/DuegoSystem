@@ -43,7 +43,7 @@ body.is-sub-page #scroll-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0;
+    padding: 10px 0 0;
 }
 
 .sub-header-title--lg {
@@ -58,7 +58,7 @@ body.is-sub-page #scroll-wrapper {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 0;
+    margin-bottom: 8px;
     font-size: 16px;
     color: var(--gray-500);
 }
