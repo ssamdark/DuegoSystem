@@ -82,7 +82,7 @@ body.is-sub-page #scroll-wrapper {
     align-items: center;
     gap: 4px;
     color: var(--gray-800);
-    font-weight: 600;
+    font-weight: 400;
 }
 
 /* H1 타이틀 */
