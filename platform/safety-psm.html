@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공정안전관리(PSM) | DUEGO SYSTEM</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS: 공통 → 서브 공통 순서 반드시 유지 -->
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/sub.css">
+</head>
+
+<body class="is-sub-page">
+
+    <!-- Header Include -->
+    <div id="header-wrap"></div>
+
+    <!-- Sub Header -->
+    <header class="sub-header">
+        <div class="sub-inner">
+            <div class="sub-header-title">
+                <div class="breadcrumbs">
+                    <a href="/index.html"><i class="ri-home-5-line"></i></a>
+                    <span class="sep">/</span>
+                    <a href="#">구축형 서비스</a>
+                    <span class="sep">/</span>
+                    <a href="#">안전보건환경</a>
+                    <span class="sep">/</span>
+                    <div class="breadcrumb-current">
+                        <span>공정안전관리(PSM)</span>
+                    </div>
+                </div>
+                <h1>안전보건환경 <span>공정안전관리(PSM)</span></h1>
+            </div>
+
+            <nav class="sub-tabs">
+                <div class="sub-tabs-links">
+                    <a href="/platform/safety-intro.html">안전관리솔루션 개요</a>
+                    <a href="/platform/safety-management.html">안전경영시스템</a>
+                    <a href="/platform/safety-system.html">안전관리시스템</a>
+                    <a href="/platform/safety-disaster.html">재난안전관리시스템</a>
+                    <a href="/platform/safety-psm.html" class="active">공정안전관리(PSM)</a>
+                    <a href="/platform/safety-health.html">보건관리시스템</a>
+                    <a href="/platform/safety-env.html">환경관리시스템</a>
+                    <a href="/platform/safety-edu.html">안전교육통합관리시스템</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Pain Point -->
+    <section class="private-pain">
+        <div class="private-pain-inner">
+            <h2 class="private-pain-headline">전문가 컨설팅을 통해 현행 PSM 12대 구성요소 및
+변경관리 Process의 검토·보완을 지원하여<br>
+<span style="font-weight: 400; color: var(--text-secondary); font-size: 20px;">고객사에 가장 적합한 정보화 시스템 구축 지원으로 P등급 관리체계 구축합니다.</span></h2>
+
+            <div class="ceo-top-image sm-top-image">
+                <img src="/images/management_01.png" alt="공정안전관리(PSM)">
+            </div>
+        </div>
+    </section>
+
+    <!-- 시스템 구축 프로세스 -->
+    <section class="sm-process">
+        <div class="sub-inner">
+            <div class="sm-title-wrap">
+                <h2 class="sm-section-title"><span class="sm-title-bullet"></span>시스템 구축 프로세스</h2>
+                <p class="title-en">System Construction Process</p>
+            </div>
+            <img src="/images/psm.png" alt="공정안전관리 프로세스" style="width: 100%; display: block; margin-top: 20px;">
+        </div>
+    </section>
+
+    <!-- 시스템 주요메뉴 -->
+    <section class="sm-menu" style="padding-bottom:150px;">
+        <div class="sub-inner">
+            <div class="sm-title-wrap">
+                <h2 class="sm-section-title"><span class="sm-title-bullet"></span>시스템 주요메뉴</h2>
+                <p class="title-en">System Main Menu</p>
+            </div>
+            <div class="sm-menu-grid">
+                <div class="sm-menu-item sm-menu-item--full">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">PSM<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>최신 PSM 게시</li>
+                        <li>최신 PSM 자료</li>
+                        <li>PSM 개정 내역</li>
+                        <li>변경관리 등록 및 진행 사항</li>
+                        <li>변경요소목록</li>
+                        <li>이행실적관리 자료실</li>
+                        <li>공정안전보고서</li>
+                        <li>안전검사</li>
+                        <li>변경관리(MOC)</li>
+                        <li>변경관리(QMS)</li>
+                        <li>공정사고 조사보고서</li>
+                        <li>공지사항 및 자료실</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Include -->
+    <div id="footer-wrap"></div>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top-sub"></a>
+
+    <!-- JS: include → common 순서 반드시 유지 -->
+    <script src="/js/include.js" defer></script>
+    <script src="/js/common.js" defer></script>
+    <script>
+        document.querySelectorAll('.sm-menu-item--has-sub .sm-menu-item-head').forEach(head => {
+            head.addEventListener('click', () => {
+                const item = head.closest('.sm-menu-item');
+                const isOpen = item.classList.contains('is-open');
+                const btn = head.querySelector('.sm-menu-toggle');
+
+                btn.classList.remove('spinning');
+                void btn.offsetWidth;
+                btn.classList.add('spinning');
+
+                document.querySelectorAll('.sm-menu-item--has-sub.is-open').forEach(el => {
+                    el.classList.remove('is-open');
+                    el.querySelector('.sm-menu-toggle').setAttribute('aria-expanded', 'false');
+                    el.querySelector('.sm-menu-sub-list').style.maxHeight = '0';
+                });
+
+                if (!isOpen) {
+                    item.classList.add('is-open');
+                    btn.setAttribute('aria-expanded', 'true');
+                    const sub = item.querySelector('.sm-menu-sub-list');
+                    sub.style.maxHeight = sub.scrollHeight + 'px';
+                }
+            });
+        });
+
+        // 기본 열림: 첫 번째 하위메뉴 항목
+        const defaultItem = document.querySelector('.sm-menu-item--has-sub');
+        if (defaultItem) {
+            defaultItem.classList.add('is-open');
+            defaultItem.querySelector('.sm-menu-toggle').setAttribute('aria-expanded', 'true');
+            const sub = defaultItem.querySelector('.sm-menu-sub-list');
+            sub.style.maxHeight = sub.scrollHeight + 'px';
+        }
+    </script>
+</body>
+
+</html>

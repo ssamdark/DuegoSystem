@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연구실소방안전 정보제공 | DUEGO SYSTEM</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS: 공통 → 서브 공통 순서 반드시 유지 -->
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/sub.css">
+</head>
+
+<body class="is-sub-page">
+
+    <!-- Header Include -->
+    <div id="header-wrap"></div>
+
+    <!-- Sub Header -->
+    <header class="sub-header">
+        <div class="sub-inner">
+            <div class="sub-header-title">
+                <div class="breadcrumbs">
+                    <a href="/index.html"><i class="ri-home-5-line"></i></a>
+                    <span class="sep">/</span>
+                    <a href="#">구축형 서비스</a>
+                    <span class="sep">/</span>
+                    <a href="#">연구실안전</a>
+                    <span class="sep">/</span>
+                    <div class="breadcrumb-current">
+                        <span>연구실소방안전 정보제공</span>
+                    </div>
+                </div>
+                <h1>연구실안전 <span>연구실소방안전 정보제공</span></h1>
+            </div>
+
+            <nav class="sub-tabs">
+                <div class="sub-tabs-links">
+                    <a href="/platform/safety-lab.html">연구실안전관리시스템</a>
+                    <a href="/platform/safety-lab-rca.html">사전유해인자위험분석 자동화</a>
+                    <a href="/platform/safety-lab-fire.html" class="active">연구실소방안전 정보제공</a>
+                    <a href="/platform/safety-lab-chem.html">연구실화학물질 안전관리</a>
+                    <a href="/platform/safety-lab-edu.html">연구안전통합교육</a>
+                    <a href="/platform/safety-lab-import.html">수입제조화학물질 규제대응</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Pain Point -->
+    <section class="private-pain">
+        <div class="private-pain-inner">
+            <h2 class="private-pain-headline">연구실소방안전 정보제공
+<span style="font-weight: 400; color: var(--text-secondary); font-size: 20px; line-height: var(--lh-body); display: block; margin-top: 20px;">배치도 아이콘 구성에 따라 각 층별 평면 도면에 자동 연구실 특성정보 및 화학물질(시약 / 가스)정보, 장비정보, 위험물정보 등을 제공하여 사고발생 시 위험 식별이 신속하고 대응이 용이하도록 지원합니다.</span></h2>
+
+            <div class="ceo-top-image sm-top-image">
+                <img src="/images/milestone_factory.png" alt="연구실소방안전 정보제공">
+            </div>
+        </div>
+    </section>
+    <!-- 소방안전 이미지 -->
+    <section class="fire-img-section">
+        <div class="sub-inner">
+            <img src="/images/sub4_3.jpg" alt="연구실소방안전 정보제공" class="fire-full-img">
+        </div>
+    </section>
+
+    <!-- 시스템 주요메뉴 -->
+    <section class="sm-menu" style="padding-bottom:150px;">
+        <div class="sub-inner">
+            <div class="sm-title-wrap">
+                <h2 class="sm-section-title"><span class="sm-title-bullet"></span>특허등록 통지서</h2>
+                <p class="title-en">Notice of Patent Registration</p>
+            </div>
+            <div style="background:#f8f9fa; border-radius:var(--radius-sm); padding: var(--space-8) 0; display:flex; justify-content:center; align-items:center;">
+                <img src="/images/patent.png" alt="특허등록 통지서" style="display:block; max-width:100%; height:auto;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Include -->
+    <div id="footer-wrap"></div>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top-sub"></a>
+
+    <!-- JS: include → common 순서 반드시 유지 -->
+    <script src="/js/include.js" defer></script>
+    <script src="/js/common.js" defer></script>
+    <script>
+        document.querySelectorAll('.sm-menu-item--has-sub .sm-menu-item-head').forEach(head => {
+            head.addEventListener('click', () => {
+                const item = head.closest('.sm-menu-item');
+                const isOpen = item.classList.contains('is-open');
+                const btn = head.querySelector('.sm-menu-toggle');
+
+                btn.classList.remove('spinning');
+                void btn.offsetWidth;
+                btn.classList.add('spinning');
+
+                document.querySelectorAll('.sm-menu-item--has-sub.is-open').forEach(el => {
+                    el.classList.remove('is-open');
+                    el.querySelector('.sm-menu-toggle').setAttribute('aria-expanded', 'false');
+                    el.querySelector('.sm-menu-sub-list').style.maxHeight = '0';
+                });
+
+                if (!isOpen) {
+                    item.classList.add('is-open');
+                    btn.setAttribute('aria-expanded', 'true');
+                    const sub = item.querySelector('.sm-menu-sub-list');
+                    sub.style.maxHeight = sub.scrollHeight + 'px';
+                }
+            });
+        });
+
+        // 기본 열림: 첫 번째 하위메뉴 항목
+        const defaultItem = document.querySelector('.sm-menu-item--has-sub');
+        if (defaultItem) {
+            defaultItem.classList.add('is-open');
+            defaultItem.querySelector('.sm-menu-toggle').setAttribute('aria-expanded', 'true');
+            const sub = defaultItem.querySelector('.sm-menu-sub-list');
+            sub.style.maxHeight = sub.scrollHeight + 'px';
+        }
+    </script>
+</body>
+
+</html>

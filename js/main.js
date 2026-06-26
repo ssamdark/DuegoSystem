@@ -1,6 +1,63 @@
-document.addEventListener('DOMContentLoaded', () => {
-
+function initNavbar() {
     const navbar = document.querySelector('.navbar');
+    if (!navbar || navbar.dataset.initialized) return;
+    navbar.dataset.initialized = 'true';
+
+    navbar.addEventListener('mouseenter', () => navbar.classList.add('is-open'));
+    navbar.addEventListener('mouseleave', () => navbar.classList.remove('is-open'));
+
+    let lastScrollY = 0;
+    function updateNavbarColor() {
+        const currentScrollY = window.scrollY;
+        const scrollingDown = currentScrollY > lastScrollY;
+        if (currentScrollY === 0) {
+            navbar.classList.remove('is-open-sub', 'nav-hidden');
+        } else if (scrollingDown) {
+            navbar.classList.add('nav-hidden');
+            navbar.classList.remove('is-open-sub');
+        } else {
+            navbar.classList.remove('nav-hidden');
+            navbar.classList.add('is-open-sub');
+        }
+        lastScrollY = currentScrollY;
+    }
+    window.addEventListener('scroll', updateNavbarColor, { passive: true });
+    requestAnimationFrame(() => {
+        navbar.classList.remove('is-open-sub', 'nav-hidden', 'dark', 'is-open');
+    });
+
+    const logoLink = document.querySelector('.logo');
+    if (logoLink) {
+        logoLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    const mToggle = document.getElementById('mobileToggle');
+    const mOverlay = document.getElementById('mobileNavOverlay');
+    const mClose = document.getElementById('mobileNavClose');
+    if (mToggle && mOverlay) {
+        const openNav = () => { mOverlay.classList.add('open'); mToggle.classList.add('active'); document.body.style.overflow = 'hidden'; };
+        const closeNav = () => { mOverlay.classList.remove('open'); mToggle.classList.remove('active'); document.body.style.overflow = ''; };
+        mToggle.addEventListener('click', () => mOverlay.classList.contains('open') ? closeNav() : openNav());
+        mClose?.addEventListener('click', closeNav);
+        mOverlay.addEventListener('click', e => { if (e.target === mOverlay) closeNav(); });
+        mOverlay.querySelectorAll('.m-nav-group-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const group = btn.closest('.m-nav-group');
+                const isOpen = group.classList.contains('open');
+                mOverlay.querySelectorAll('.m-nav-group.open').forEach(g => g.classList.remove('open'));
+                if (!isOpen) group.classList.add('open');
+            });
+        });
+        mOverlay.querySelectorAll('.m-nav-sub a').forEach(a => a.addEventListener('click', closeNav));
+    }
+}
+
+document.addEventListener('componentsLoaded', initNavbar);
+
+document.addEventListener('DOMContentLoaded', () => {
 
     // -----------------------------------------------------------------------
     // 1. Hero Video Controls + Slogan Cycle
@@ -68,44 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // -----------------------------------------------------------------------
-    // 2. Navbar Hover (메인 전용)
-    // -----------------------------------------------------------------------
-    if (navbar) {
-        navbar.addEventListener('mouseenter', () => navbar.classList.add('is-open'));
-        navbar.addEventListener('mouseleave', () => navbar.classList.remove('is-open'));
-    }
-
-    // -----------------------------------------------------------------------
-    // 3. Navbar 스크롤 동작 — NHN 방식
-    //    · 최상단: 투명
-    //    · 스크롤 다운: 숨김
-    //    · 스크롤 업: 흰 배경 네비 등장
-    // -----------------------------------------------------------------------
-    let lastScrollY = 0;
-
-    function updateNavbarColor() {
-        if (!navbar) return;
-        const currentScrollY = window.scrollY;
-        const scrollingDown = currentScrollY > lastScrollY;
-
-        if (currentScrollY === 0) {
-            navbar.classList.remove('is-open-sub', 'nav-hidden');
-        } else if (scrollingDown) {
-            navbar.classList.add('nav-hidden');
-            navbar.classList.remove('is-open-sub');
-        } else {
-            navbar.classList.remove('nav-hidden');
-            navbar.classList.add('is-open-sub');
-        }
-
-        lastScrollY = currentScrollY;
-    }
-
-    window.addEventListener('scroll', updateNavbarColor, { passive: true });
-    requestAnimationFrame(() => {
-        navbar.classList.remove('is-open-sub', 'nav-hidden', 'dark', 'is-open');
-    });
 
     // -----------------------------------------------------------------------
     // 4. Tech Slider — IntersectionObserver로 진입 감지 후 초기화
@@ -247,54 +266,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }, { threshold: 0.5 });
         visionObserver.observe(visionSection);
-    }
-
-    // -----------------------------------------------------------------------
-    // 6. Logo 클릭 — 페이지 최상단 이동
-    // -----------------------------------------------------------------------
-    const logoLink = document.querySelector('.logo');
-    if (logoLink) {
-        logoLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
-
-    // -----------------------------------------------------------------------
-    // 7. 모바일 GNB 오버레이
-    // -----------------------------------------------------------------------
-    const mToggle = document.getElementById('mobileToggle');
-    const mOverlay = document.getElementById('mobileNavOverlay');
-    const mClose = document.getElementById('mobileNavClose');
-    if (mToggle && mOverlay) {
-        const openNav = () => {
-            mOverlay.classList.add('open');
-            mToggle.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        };
-        const closeNav = () => {
-            mOverlay.classList.remove('open');
-            mToggle.classList.remove('active');
-            document.body.style.overflow = '';
-        };
-        mToggle.addEventListener('click', () => {
-            mOverlay.classList.contains('open') ? closeNav() : openNav();
-        });
-        mClose?.addEventListener('click', closeNav);
-        mOverlay.addEventListener('click', e => {
-            if (e.target === mOverlay) closeNav();
-        });
-        mOverlay.querySelectorAll('.m-nav-group-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const group = btn.closest('.m-nav-group');
-                const isOpen = group.classList.contains('open');
-                mOverlay.querySelectorAll('.m-nav-group.open').forEach(g => g.classList.remove('open'));
-                if (!isOpen) group.classList.add('open');
-            });
-        });
-        mOverlay.querySelectorAll('.m-nav-sub a').forEach(a => {
-            a.addEventListener('click', closeNav);
-        });
     }
 
 });

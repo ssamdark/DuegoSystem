@@ -8,8 +8,7 @@
 
    /* -----------------------------------------------------------------------
        1. PRIMARY COLOR (Blue)
-       메인 CTA, 링크, 아이콘 → --primary-500 (#3B6DEF) 하나로 통일
-       #4e6eff / #2D65F3 / #001cff / #2B3A8B 사용 금지
+       메인 CTA, 링크, 아이콘 → --primary-700 (#1A3FB8) 하나로 통일
     ----------------------------------------------------------------------- */
    --primary-50: #EEF2FF;
    --primary-100: #E0E7FF;
@@ -18,19 +17,19 @@
    --primary-400: #6D8EF8;
    --primary-500: #3B6DEF;
    /* ★ Primary Main — CTA, 링크, 아이콘 */
-   --primary-600: #2355D4;
-   /* 호버 상태 */
+   --primary-600: #2952D4;
+   /* 중간 강조 */
    --primary-700: #1A3FB8;
-   /* 호버 버튼, 헤더 강조 */
+   /* 다크 강조 */
    --primary-800: #122D8A;
    /* 다크 섹션 강조 (구 --clavis-blue 대체) */
    --primary-900: #0B1F63;
    /* 다크 배경 텍스트 */
 
    /* Semantic 매핑 */
-   --primary: var(--primary-500);
-   --primary-hover: var(--primary-600);
-   --primary-dark: var(--primary-800);
+   --primary: var(--primary-700);
+   --primary-hover: var(--primary-800);
+   --primary-dark: var(--primary-900);
 
 
    /* -----------------------------------------------------------------------
@@ -133,6 +132,12 @@
    /* 서브 섹션 대제목 (영문/Poppins) */
    --fs-sub-h1: 50px;
    /* 서브 페이지 상단 H1 타이틀 */
+   --fs-40: 40px;
+   /* h1~h2 사이 대제목 */
+   --fs-38: 38px;
+   /* h1~h2 사이 중제목 */
+   --fs-36: 36px;
+   /* h1~h2 사이 소제목 */
    --fs-h2: 32px;
    /* 섹션 소제목 */
    --fs-h3: 24px;
@@ -157,7 +162,7 @@
    --lh-heading: 1.2;
    --lh-title: 1.4;
    --lh-normal: 1.5;
-   --lh-body: 1.8;
+   --lh-body: 1.6;
 
    /* 자간 */
    --ls-tight: -2px;
