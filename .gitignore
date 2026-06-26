@@ -3,3 +3,6 @@
 *백업*
 platform/*\ copy.html
 platform/*-g\ copy.html
+
+# Local Netlify folder
+.netlify
