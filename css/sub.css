@@ -1303,7 +1303,15 @@ body.is-sub-page #scroll-wrapper {
     }
 
     .breadcrumbs {
-        font-size: 13px;
+        font-size: 12px;
+        flex-wrap: wrap;
+        gap: 6px;
+        row-gap: 4px;
+    }
+    .breadcrumbs a,
+    .breadcrumbs .sep,
+    .breadcrumb-current {
+        white-space: nowrap;
     }
 
     .info-row .label {
