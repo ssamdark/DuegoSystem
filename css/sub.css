@@ -5652,6 +5652,38 @@ body.is-sub-page #scroll-wrapper {
     }
 }
 
+/* ── storage 모바일 ── */
+@media (max-width: 768px) {
+    .storage-apply-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    .storage-group-layout {
+        flex-direction: column;
+    }
+    .storage-group-current {
+        width: 100%;
+    }
+    .storage-group-arrow {
+        display: none;
+    }
+    .storage-group-chart-body {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .storage-group-current img,
+    .storage-group-chart img,
+    .storage-group-right-box img {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+@media (max-width: 480px) {
+    .storage-apply-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ── inv-feature-grid 모바일 ── */
 @media (max-width: 768px) {
     .inv-feature-grid {
