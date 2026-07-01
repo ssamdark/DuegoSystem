@@ -230,3 +230,37 @@
    /* 프로필, 로고 원형 */
 
 }
+
+/* ==========================================================================
+   RESPONSIVE FONT SIZE OVERRIDES
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    :root {
+        --fs-display: 30px;
+        --fs-h1:      26px;
+        --fs-h1-en:   26px;
+        --fs-40:      26px;
+        --fs-38:      24px;
+        --fs-36:      22px;
+        --fs-h2:      22px;
+        --fs-h3:      18px;
+        --fs-h4:      16px;
+        --fs-body:    16px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --fs-display: 26px;
+        --fs-h1:      22px;
+        --fs-h1-en:   22px;
+        --fs-40:      22px;
+        --fs-38:      20px;
+        --fs-36:      18px;
+        --fs-h2:      20px;
+        --fs-h3:      16px;
+        --fs-h4:      15px;
+        --fs-body:    15px;
+    }
+}
