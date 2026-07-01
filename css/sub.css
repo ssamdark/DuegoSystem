@@ -5643,3 +5643,42 @@ body.is-sub-page #scroll-wrapper {
         padding: 20px 16px;
     }
 }
+
+/* ── chem-lc 모바일 ── */
+@media (max-width: 768px) {
+    .chem-lc-wrap {
+        padding: 32px 16px;
+    }
+    .chem-lc-headline {
+        font-size: 16px;
+    }
+    .chem-lc-badge {
+        font-size: 13px;
+        padding: 6px 16px;
+    }
+    .chem-lc-flow {
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+    }
+    .chem-lc-arr {
+        display: none;
+    }
+    .chem-lc-step {
+        width: 100px;
+        gap: 8px;
+    }
+    .chem-lc-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 14px;
+    }
+    .chem-lc-list {
+        display: none;
+    }
+    .chem-lc-img,
+    .chem-lc-wrap img {
+        width: 100% !important;
+        max-width: 100%;
+    }
+}
