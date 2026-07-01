@@ -5326,6 +5326,9 @@ body.is-sub-page #scroll-wrapper {
     .sm-menu-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .sm-menu-item--full .sm-menu-sub-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
     .sm-title-wrap {
         flex-direction: column;
         gap: 4px;
@@ -5461,6 +5464,9 @@ body.is-sub-page #scroll-wrapper {
         font-size: 20px;
     }
     .sm-menu-grid {
+        grid-template-columns: 1fr;
+    }
+    .sm-menu-item--full .sm-menu-sub-list {
         grid-template-columns: 1fr;
     }
 }
