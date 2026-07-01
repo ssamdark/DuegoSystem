@@ -5626,3 +5626,20 @@ body.is-sub-page #scroll-wrapper {
     .private-step-big-num  { font-size: 22px; }
     .private-step-big-text { font-size: 16px; }
 }
+
+/* ── rca-process 모바일 ── */
+@media (max-width: 768px) {
+    .rca-process {
+        grid-template-columns: 1fr;
+    }
+    .rca-cat-grid {
+        display: none;
+    }
+    .rca-item-list--2col {
+        display: flex;
+        flex-direction: column;
+    }
+    .rca-step-body {
+        padding: 20px 16px;
+    }
+}
