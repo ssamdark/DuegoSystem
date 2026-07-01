@@ -1295,11 +1295,11 @@ body.is-sub-page #scroll-wrapper {
     }
 
     .sub-header h1 {
-        font-size: 26px;
+        font-size: 30px;
         word-break: keep-all;
     }
     .sub-header h1 span {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .breadcrumbs {
@@ -5455,10 +5455,10 @@ body.is-sub-page #scroll-wrapper {
 /* ── sm-menu-grid 480px 1열 ── */
 @media (max-width: 480px) {
     .sub-header h1 {
-        font-size: 22px;
+        font-size: 26px;
     }
     .sub-header h1 span {
-        font-size: 17px;
+        font-size: 20px;
     }
     .sm-menu-grid {
         grid-template-columns: 1fr;
