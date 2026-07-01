@@ -1260,11 +1260,7 @@ body.is-sub-page .mobile-toggle span {
 }
 
 .ai-platform-text .partner-label {
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.ai-platform-text .services-platform-title {
-    color: var(--gray-0);
+    color: var(--text-secondary);
 }
 
 .services-inner {
