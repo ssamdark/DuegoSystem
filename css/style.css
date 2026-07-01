@@ -1261,12 +1261,10 @@ body.is-sub-page .mobile-toggle span {
 
 .ai-platform-text .partner-label {
     color: rgba(255, 255, 255, 0.75);
-    text-shadow: 0 1px 6px rgba(0,0,0,0.5);
 }
 
 .ai-platform-text .services-platform-title {
     color: var(--gray-0);
-    text-shadow: 0 2px 12px rgba(0,0,0,0.6);
 }
 
 .services-inner {
