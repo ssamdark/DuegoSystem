@@ -1235,6 +1235,38 @@ body.is-sub-page .mobile-toggle span {
     margin-bottom: var(--space-8);
 }
 
+/* --- AI Services Section --- */
+.ai-services-section {
+    background: url('/images/llm_card_02.png') left center / auto 100% no-repeat,
+                url('/images/llm_card_02_bg.png') center / cover no-repeat;
+    padding: 0;
+    margin-top: 0;
+    height: 680px;
+    overflow: hidden;
+}
+
+.ai-services-platform {
+    margin: 0 auto;
+    height: 100%;
+    max-width: var(--content-width);
+}
+
+.ai-platform-text {
+    flex: 0 0 auto;
+    width: 700px;
+    margin-left: auto;
+    text-align: right;
+    padding-right: 40px;
+}
+
+.ai-platform-text .partner-label {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.ai-platform-text .services-platform-title {
+    color: var(--gray-0);
+}
+
 .services-inner {
     max-width: var(--content-width);
     margin: 0 auto;
@@ -2050,6 +2082,76 @@ body.is-sub-page .mobile-toggle span {
     }
     .partner-title {
         font-size: 22px;
+    }
+}
+
+/* ==========================================================================
+   AI SERVICES SECTION RESPONSIVE
+   ========================================================================== */
+@media screen and (max-width: 1400px) {
+    .ai-platform-text {
+        width: 560px;
+        padding-right: 32px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .ai-platform-text {
+        width: 480px;
+        padding-right: 24px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .ai-services-section {
+        height: 500px;
+    }
+    .ai-services-platform {
+        flex-direction: row;
+        align-items: center;
+        padding: 0 5%;
+    }
+    .ai-platform-text {
+        width: 380px;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ai-services-section {
+        height: auto;
+        min-height: 360px;
+        background: url('/images/llm_card_02_bg.png') center / cover no-repeat;
+    }
+    .ai-services-platform {
+        flex-direction: column;
+        justify-content: center;
+        padding: 48px 24px;
+        height: auto;
+    }
+    .ai-services-img {
+        display: none;
+    }
+    .ai-platform-text {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+        padding-right: 0;
+    }
+    .ai-platform-text .services-platform-title {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ai-services-section {
+        min-height: 300px;
+    }
+    .ai-services-platform {
+        padding: 40px 20px;
+    }
+    .ai-platform-text .services-platform-title {
+        font-size: 20px;
     }
 }
 
