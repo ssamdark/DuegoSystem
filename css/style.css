@@ -2121,7 +2121,8 @@ body.is-sub-page .mobile-toggle span {
     .ai-services-section {
         height: auto;
         min-height: 360px;
-        background: url('/images/llm_card_02_bg.png') center / cover no-repeat;
+        background: linear-gradient(rgba(11,31,99,0.80), rgba(11,31,99,0.80)),
+                    url('/images/llm_card_02_bg.png') center / cover no-repeat;
     }
     .ai-services-platform {
         flex-direction: column;
