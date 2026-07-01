@@ -1259,9 +1259,6 @@ body.is-sub-page .mobile-toggle span {
     padding-right: 40px;
 }
 
-.ai-platform-text .partner-label {
-    color: var(--text-secondary);
-}
 
 .services-inner {
     max-width: var(--content-width);
