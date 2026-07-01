@@ -5677,8 +5677,10 @@ body.is-sub-page #scroll-wrapper {
     }
     .storage-group-chart img,
     .storage-group-right-box img {
-        width: 100% !important;
-        max-width: 100% !important;
+        width: 60% !important;
+        max-width: 260px !important;
+        margin: 0 auto;
+        display: block;
     }
 }
 @media (max-width: 480px) {
