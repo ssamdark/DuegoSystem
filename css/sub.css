@@ -5671,7 +5671,10 @@ body.is-sub-page #scroll-wrapper {
         flex-direction: column;
         gap: 20px;
     }
-    .storage-group-current img,
+    .storage-group-current img {
+        width: 53% !important;
+        max-width: 200px !important;
+    }
     .storage-group-chart img,
     .storage-group-right-box img {
         width: 100% !important;
