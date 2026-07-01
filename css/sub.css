@@ -5652,6 +5652,19 @@ body.is-sub-page #scroll-wrapper {
     }
 }
 
+/* ── inv-feature-grid 모바일 ── */
+@media (max-width: 768px) {
+    .inv-feature-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .inv-feature-col {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
 /* ── chem-biz / chem-pur 모바일 ── */
 @media (max-width: 768px) {
     .chem-biz-support {
