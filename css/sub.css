@@ -1298,6 +1298,9 @@ body.is-sub-page #scroll-wrapper {
         font-size: 26px;
         word-break: keep-all;
     }
+    .sub-header h1 span {
+        font-size: 20px;
+    }
 
     .breadcrumbs {
         font-size: 13px;
@@ -5454,6 +5457,9 @@ body.is-sub-page #scroll-wrapper {
     .sub-header h1 {
         font-size: 22px;
     }
+    .sub-header h1 span {
+        font-size: 17px;
+    }
     .sm-menu-grid {
         grid-template-columns: 1fr;
     }
@@ -5582,5 +5588,33 @@ body.is-sub-page #scroll-wrapper {
     /* si-feature-grid: 3열 → 2열 */
     .si-feature-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ── safer.html private-pain / private-steps 모바일 폰트 축소 ── */
+@media (max-width: 768px) {
+    .private-pain-inner .title {
+        font-size: 24px;
+    }
+    .private-pain-inner .title-en {
+        font-size: 16px;
+    }
+    .private-step-big-num {
+        font-size: 28px;
+    }
+    .private-step-big-text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .private-pain-inner .title {
+        font-size: 22px;
+    }
+    .private-step-big-num {
+        font-size: 24px;
+    }
+    .private-step-big-text {
+        font-size: 16px;
     }
 }
