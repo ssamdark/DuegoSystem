@@ -5332,6 +5332,10 @@ body.is-sub-page #scroll-wrapper {
     .sm-title-wrap {
         flex-direction: column;
         gap: 4px;
+        align-items: flex-start;
+    }
+    .sm-title-wrap .title-en {
+        align-self: flex-start;
     }
     .sm-top-image {
         height: 200px !important;
