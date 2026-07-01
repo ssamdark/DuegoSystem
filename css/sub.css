@@ -5700,6 +5700,12 @@ body.is-sub-page #scroll-wrapper {
         flex-direction: column;
         gap: 12px;
     }
+    .inv-feature-images img {
+        width: 60% !important;
+        max-width: 260px !important;
+        margin: 0 auto;
+        display: block;
+    }
 }
 
 /* ── chem-biz / chem-pur 모바일 ── */
