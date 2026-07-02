@@ -3371,6 +3371,7 @@ body.is-sub-page #scroll-wrapper {
         height: auto;
         padding-bottom: 40px;
         background-image: none !important;
+        margin-top: 60px !important;
     }
     .private-hero-inner {
         flex-direction: column;
@@ -3402,7 +3403,7 @@ body.is-sub-page #scroll-wrapper {
         padding-right: 24px;
     }
     .private-steps-left {
-        width: 100%;
+        width: 100% !important;
         position: static;
     }
     .private-steps-right {
