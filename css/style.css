@@ -2095,7 +2095,7 @@ body.is-sub-page .mobile-toggle span {
     }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1600px) {
     .ai-services-section {
         height: auto;
         background: url('/images/llm_card_02_bg.png') center / cover no-repeat;
@@ -2109,10 +2109,11 @@ body.is-sub-page .mobile-toggle span {
     .ai-services-img {
         display: block;
         width: 100%;
-        max-width: 480px;
-        height: 320px;
-        background: url('/images/llm_card_04.png') center bottom / contain no-repeat;
+        max-width: 520px;
+        height: 360px;
+        background: url('/images/llm_card_04.png') left center / auto 100% no-repeat;
         flex-shrink: 0;
+        overflow: hidden;
     }
     .ai-platform-text {
         width: 100%;
