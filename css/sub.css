@@ -5331,6 +5331,13 @@ body.is-sub-page #scroll-wrapper {
     padding: var(--space-4) var(--space-4) var(--space-4);
 }
 
+/* 그리드 형태에서는 첫/마지막 li만 튀는 padding을 주지 않고 행마다 동일한 간격 유지 */
+.sm-menu-item--full .sm-menu-sub-list li:first-child,
+.sm-menu-item--full .sm-menu-sub-list li:last-child {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
 .sm-menu-sub-list li::before {
     content: '·';
     margin-right: 4px;
