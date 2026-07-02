@@ -167,14 +167,42 @@ body.is-sub-page .mobile-toggle span {
 
 .logo {
     display: inline-block;
-    font-size: 22px;
-    font-weight: 700;
-    color: #fff;
-    letter-spacing: -1px;
-    text-decoration: none;
     position: relative;
     z-index: 10;
-    transition: color 1.0s ease 0.1s;
+    width: 153px;
+    height: 29px;
+    text-decoration: none;
+}
+
+.logo-img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 29px;
+    width: auto;
+    display: block;
+    transition: opacity 0.4s ease;
+}
+
+.logo-img--white {
+    opacity: 1;
+}
+
+.logo-img--dark {
+    opacity: 0;
+}
+
+.navbar.dark .logo-img--white,
+.navbar.is-open .logo-img--white,
+.navbar.is-open-sub .logo-img--white {
+    opacity: 0;
+}
+
+.navbar.dark .logo-img--dark,
+.navbar.is-open .logo-img--dark,
+.navbar.is-open-sub .logo-img--dark {
+    opacity: 1;
 }
 
 .navbar-container>.lang-nav {
@@ -259,13 +287,6 @@ body.is-sub-page .mobile-toggle span {
     opacity: 1;
     visibility: visible;
     transition: height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0s, opacity 0.3s 0s;
-}
-
-.navbar.dark .logo,
-.navbar.is-open .logo,
-.navbar.is-open-sub .logo {
-    color: var(--text-primary);
-    transition: color 0.3s 0s;
 }
 
 .nav-links {
@@ -445,11 +466,9 @@ body.is-sub-page .mobile-toggle span {
 }
 
 .m-nav-brand {
-    font-family: var(--font-point);
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--text-primary);
-    letter-spacing: -0.5px;
+    height: 20px;
+    width: auto;
+    display: block;
 }
 
 .m-nav-close {
@@ -1492,10 +1511,9 @@ body.is-sub-page .mobile-toggle span {
 }
 
 .f-logo {
-    font-size: 22px;
-    font-weight: 800;
-    color: var(--text-primary);
-    letter-spacing: -0.5px;
+    height: 29px;
+    width: auto;
+    display: block;
 }
 
 .f-info p {
@@ -1565,14 +1583,11 @@ body.is-sub-page .mobile-toggle span {
     .nav-links span {
         font-size: 16px;
     }
-    .logo {
-        font-size: 18px;
-    }
     .safer-text {
         font-size: 15px;
     }
     .f-logo {
-        font-size: 18px;
+        height: 25px;
     }
 
     /* hero */
@@ -1673,14 +1688,24 @@ body.is-sub-page .mobile-toggle span {
     }
 
     .logo {
-        font-size: 16px;
-        letter-spacing: -0.5px;
-        white-space: nowrap;
-        color: var(--text-primary);
+        width: 116px;
+        height: 22px;
+    }
+
+    .logo-img {
+        height: 22px;
+    }
+
+    .logo-img--white {
+        opacity: 0;
+    }
+
+    .logo-img--dark {
+        opacity: 1;
     }
 
     .f-logo {
-        font-size: 16px;
+        height: 22px;
     }
 
     .nav-links,
