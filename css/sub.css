@@ -3017,6 +3017,17 @@ body.is-sub-page #scroll-wrapper {
     height: auto;
 }
 
+/* llm.html 히어로 배경: 데스크톱은 세로로 크게(크롭), 노트북/태블릿은 섹션에 꽉 맞춤 */
+.llm-hero-bg {
+    background: url('/images/llm_bg01.png') right center / auto 150% no-repeat, #F4F9FF;
+}
+
+@media (max-width: 1440px) {
+    .llm-hero-bg {
+        background-size: auto 100%;
+    }
+}
+
 /* ② Pain Point */
 .private-pain {
     width: 100%;
