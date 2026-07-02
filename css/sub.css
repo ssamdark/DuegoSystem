@@ -3370,6 +3370,7 @@ body.is-sub-page #scroll-wrapper {
     .private-hero {
         height: auto;
         padding-bottom: 40px;
+        background-image: none !important;
     }
     .private-hero-inner {
         flex-direction: column;
