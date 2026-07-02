@@ -2098,6 +2098,8 @@ body.is-sub-page .mobile-toggle span {
 @media screen and (max-width: 1024px) {
     .ai-services-section {
         height: 500px;
+        background: url('/images/llm_card_04.png') left center / auto 100% no-repeat,
+                    url('/images/llm_card_02_bg.png') center / cover no-repeat;
     }
     .ai-services-platform {
         flex-direction: row;
@@ -2114,7 +2116,7 @@ body.is-sub-page .mobile-toggle span {
     .ai-services-section {
         height: auto;
         min-height: 360px;
-        background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-700) 100%);
+        background: url('/images/llm_card_02_bg.png') center / cover no-repeat;
     }
     .ai-services-platform {
         flex-direction: column;
@@ -2133,7 +2135,6 @@ body.is-sub-page .mobile-toggle span {
     }
     .ai-platform-text .services-platform-title {
         font-size: 24px;
-        text-shadow: none;
     }
 }
 
