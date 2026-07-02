@@ -2095,19 +2095,30 @@ body.is-sub-page .mobile-toggle span {
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
     .ai-services-section {
-        height: 500px;
-        background: url('/images/llm_card_04.png') left center / auto 100% no-repeat,
-                    url('/images/llm_card_02_bg.png') center / cover no-repeat;
+        height: auto;
+        background: url('/images/llm_card_02_bg.png') center / cover no-repeat;
     }
     .ai-services-platform {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        padding: 0 5%;
+        padding: 0 24px 48px;
+        height: auto;
+    }
+    .ai-services-img {
+        display: block;
+        width: 100%;
+        max-width: 480px;
+        height: 320px;
+        background: url('/images/llm_card_04.png') center bottom / contain no-repeat;
+        flex-shrink: 0;
     }
     .ai-platform-text {
-        width: 380px;
+        width: 100%;
+        max-width: 600px;
+        margin-left: 0;
+        text-align: center;
         padding-right: 0;
     }
 }
