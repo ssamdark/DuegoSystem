@@ -3369,6 +3369,7 @@ body.is-sub-page #scroll-wrapper {
     /* private 히어로 세로 전환 */
     .private-hero {
         height: auto;
+        padding-top: 40px;
         padding-bottom: 40px;
         background-image: none !important;
         margin-top: 60px !important;
