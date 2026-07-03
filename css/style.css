@@ -1524,6 +1524,11 @@ body.is-sub-page .mobile-toggle span {
     margin-bottom: 4px;
 }
 
+.f-info p strong {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
 /* ==========================================================================
    RESPONSIVE
    ========================================================================== */
