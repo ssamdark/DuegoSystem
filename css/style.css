@@ -313,6 +313,7 @@ body.is-sub-page .mobile-toggle span {
     font-weight: 700;
     font-size: 18px;
     cursor: pointer;
+    white-space: nowrap;
     transition: color 1.0s ease 0.1s;
 }
 
@@ -1539,6 +1540,10 @@ body.is-sub-page .mobile-toggle span {
         padding-right: 100px;
     }
 
+    .nav-links {
+        gap: 60px;
+    }
+
     .slogan-container {
         height: 200px;
     }
@@ -1552,6 +1557,14 @@ body.is-sub-page .mobile-toggle span {
     .navbar-container {
         padding-left: 50px;
         padding-right: 50px;
+    }
+
+    .nav-links {
+        gap: 36px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
     }
 
     .footer-container {
@@ -1643,6 +1656,14 @@ body.is-sub-page .mobile-toggle span {
     .navbar-container {
         padding-left: 5%;
         padding-right: 5%;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
     }
 
     .footer-container {
@@ -1760,11 +1781,13 @@ body.is-sub-page .mobile-toggle span {
     }
 
     .slogan-container {
-        height: 140px;
+        height: auto;
+        min-height: 140px;
         margin-bottom: 24px;
     }
     .desc-container {
-        height: 70px;
+        height: auto;
+        min-height: 70px;
         margin-bottom: 60px;
     }
 
@@ -2009,11 +2032,13 @@ body.is-sub-page .mobile-toggle span {
         animation: mobileFadeOut 0.4s ease-out both;
     }
     .slogan-container {
-        height: 110px;
+        height: auto;
+        min-height: 110px;
         margin-bottom: 50px;
     }
     .desc-container {
-        height: 70px;
+        height: auto;
+        min-height: 70px;
         margin-bottom: 60px;
     }
 
