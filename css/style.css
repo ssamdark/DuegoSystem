@@ -283,7 +283,7 @@ body.is-sub-page .mobile-toggle span {
 }
 
 .navbar.is-open .nav-dropdown-bg {
-    height: 220px;
+    height: 260px;
     opacity: 1;
     visibility: visible;
     transition: height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0s, opacity 0.3s 0s;
