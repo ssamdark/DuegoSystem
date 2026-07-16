@@ -1452,6 +1452,20 @@ body.is-sub-page .mobile-toggle span {
     animation: marqueeRight 60s linear infinite;
 }
 
+.marquee-track.marquee-track--row2 {
+    animation-duration: 80s;
+    animation-delay: -50s;
+}
+
+.marquee-track.marquee-track--row1 {
+    animation-duration: 126s;
+}
+
+.marquee-track.marquee-track--row3 {
+    animation-duration: 45s;
+    animation-delay: -15s;
+}
+
 
 @keyframes marqueeLeft {
     0% {

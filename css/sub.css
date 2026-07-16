@@ -1129,7 +1129,7 @@ body.is-sub-page #scroll-wrapper {
 
 .event-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 60px;
     position: relative;
     margin-bottom: 80px;
@@ -1147,12 +1147,12 @@ body.is-sub-page #scroll-wrapper {
 }
 
 .event-item:first-child::after {
-    top: 50%;
+    top: 14px;
 }
 
 .event-item:last-child::after {
     bottom: auto;
-    height: 50%;
+    height: 14px;
 }
 
 .event-item:last-child {
@@ -1163,7 +1163,7 @@ body.is-sub-page #scroll-wrapper {
     content: "";
     position: absolute;
     left: -80px;
-    top: 50%;
+    top: 14px;
     width: 10px;
     height: 10px;
     background: var(--bg-primary);
