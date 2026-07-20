@@ -214,6 +214,117 @@ body.is-sub-page #scroll-wrapper {
     border-color: var(--gray-0);
 }
 
+.safer-float-card {
+    position: fixed;
+    bottom: 40px;
+    right: 104px;
+    width: 280px;
+    padding: 20px;
+    background: var(--surface);
+    border: 1.5px solid var(--primary);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    z-index: 100;
+}
+
+.safer-float-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    color: var(--gray-600);
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.safer-float-close:hover {
+    color: var(--text-primary);
+}
+
+.safer-float-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.safer-float-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: var(--bg-secondary);
+    border-radius: 10px;
+}
+
+.safer-float-icon img {
+    width: 30px;
+    height: auto;
+}
+
+.safer-float-copy {
+    min-width: 0;
+}
+
+.safer-float-title {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.safer-float-desc {
+    font-size: 15px;
+    line-height: 1.4;
+    color: var(--text-secondary);
+    word-break: keep-all;
+}
+
+.safer-float-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    background: var(--primary);
+    color: var(--text-inverse);
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.safer-float-cta:hover {
+    background: var(--primary-hover);
+}
+
+@media screen and (max-width: 1200px) {
+    .safer-float-card {
+        bottom: 20px;
+        right: 76px;
+        width: 240px;
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .safer-float-card {
+        display: none;
+    }
+}
+
 /* ==========================================================================
    VISION PAGE 전용 스타일
    ========================================================================== */
@@ -484,6 +595,7 @@ body.is-sub-page #scroll-wrapper {
     color: var(--text-secondary);
     margin-bottom: 28px;
     word-break: keep-all;
+    text-align: justify;
 }
 
 .ceo-signature {
@@ -3064,6 +3176,7 @@ body.is-sub-page #scroll-wrapper {
     word-break: keep-all;
 }
 
+
 .private-pain-inner .title {
     font-size: 34px;
 }
@@ -3900,7 +4013,7 @@ body.is-sub-page #scroll-wrapper {
 }
 
 /* =========================================
-   안전관리솔루션 개요 (safety-intro)
+   시스템구축 개요 (safety-intro)
    ========================================= */
 .si-section {
     padding: var(--space-16) 0;
@@ -5907,7 +6020,7 @@ body.is-sub-page #scroll-wrapper {
 }
 
 .ci-desc {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto var(--space-10);
     text-align: center;
     color: var(--text-secondary);
@@ -5916,6 +6029,7 @@ body.is-sub-page #scroll-wrapper {
 
 .ci-desc p {
     margin-bottom: var(--space-2);
+    font-size: 20px;
 }
 
 .ci-desc-headline {

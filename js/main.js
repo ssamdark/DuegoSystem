@@ -75,27 +75,30 @@ document.addEventListener('DOMContentLoaded', () => {
         const descs = descContainer.querySelectorAll('.slogan-desc');
         if (titles.length === 0 || descs.length === 0) return;
 
-        const transitionTime = 12.53;
         const exitDuration = 0.5;
         const videoDuration = 21.6;
+        const slideCount = titles.length;
+        const slotDuration = videoDuration / slideCount;
         let lastState = -1;
 
         function updateSloganByTime() {
             const currentTime = heroVideo.currentTime;
-            let currentState;
-            if (currentTime < transitionTime - exitDuration) currentState = 0;
-            else if (currentTime < transitionTime) currentState = 1;
-            else if (currentTime < videoDuration - exitDuration) currentState = 2;
-            else currentState = 3;
+            let currentState = slideCount * 2 - 1;
+            for (let i = 0; i < slideCount; i++) {
+                const slotStart = i * slotDuration;
+                const slotEnd = slotStart + slotDuration;
+                if (currentTime < slotEnd - exitDuration) { currentState = i * 2; break; }
+                if (currentTime < slotEnd) { currentState = i * 2 + 1; break; }
+            }
 
             if (currentState === lastState) return;
             titles.forEach(t => t.classList.remove('active', 'exit'));
             descs.forEach(d => d.classList.remove('active', 'exit'));
 
-            if (currentState === 0) { titles[0]?.classList.add('active'); descs[0]?.classList.add('active'); }
-            else if (currentState === 1) { titles[0]?.classList.add('exit'); descs[0]?.classList.add('exit'); }
-            else if (currentState === 2) { titles[1]?.classList.add('active'); descs[1]?.classList.add('active'); }
-            else if (currentState === 3) { titles[1]?.classList.add('exit'); descs[1]?.classList.add('exit'); }
+            const idx = Math.floor(currentState / 2);
+            const stateClass = currentState % 2 === 0 ? 'active' : 'exit';
+            titles[idx]?.classList.add(stateClass);
+            descs[idx]?.classList.add(stateClass);
 
             lastState = currentState;
         }
