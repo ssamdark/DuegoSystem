@@ -225,6 +225,19 @@ body.is-sub-page #scroll-wrapper {
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     z-index: 100;
+    animation: safer-float-glow 2.5s ease-in-out infinite;
+}
+
+@keyframes safer-float-glow {
+
+    0%,
+    100% {
+        border-color: rgba(59, 109, 239, 0.25);
+    }
+
+    50% {
+        border-color: rgba(59, 109, 239, 1);
+    }
 }
 
 .safer-float-close {
@@ -295,10 +308,10 @@ body.is-sub-page #scroll-wrapper {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 12px;
+    padding: 9px;
     background: var(--primary);
     color: var(--text-inverse);
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     text-align: center;
     text-decoration: none;
@@ -306,8 +319,22 @@ body.is-sub-page #scroll-wrapper {
     transition: background 0.2s;
 }
 
+.safer-float-cta+.safer-float-cta {
+    margin-top: 8px;
+}
+
 .safer-float-cta:hover {
     background: var(--primary-hover);
+}
+
+.safer-float-cta--outline {
+    background: none;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.safer-float-cta--outline:hover {
+    background: var(--bg-secondary);
 }
 
 @media screen and (max-width: 1200px) {
@@ -3206,9 +3233,6 @@ body.is-sub-page #scroll-wrapper {
     gap: 24px;
 }
 
-.private-pain-grid--llm {
-}
-
 .private-pain-grid--llm .private-pain-card--wide {
     grid-column: span 2;
 }
@@ -3871,9 +3895,17 @@ body.is-sub-page #scroll-wrapper {
     background: #fff;
 }
 
+.sm-process--pb-lg {
+    padding-bottom: var(--space-37);
+}
+
+.sm-process--pb-sm {
+    padding-bottom: var(--space-8);
+}
+
 .sm-process-list {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     gap: var(--space-6);
     list-style: none;
     flex-wrap: wrap;
@@ -3889,6 +3921,12 @@ body.is-sub-page #scroll-wrapper {
     text-align: center;
 }
 
+/* 두 줄로 나뉜 프로세스: stretch가 줄(ul)마다 따로 적용되므로,
+   두 줄 전체가 같은 높이를 갖도록 고정 최소높이 지정 */
+.sm-process--uniform-height .sm-process-item {
+    min-height: 240px;
+}
+
 .sm-process-num {
     font-family: var(--font-point);
     font-size: 32px;
@@ -3898,7 +3936,7 @@ body.is-sub-page #scroll-wrapper {
 }
 
 .sm-process-name {
-    font-size: var(--fs-body);
+    font-size: var(--fs-h4);
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: var(--space-2);
@@ -3908,6 +3946,11 @@ body.is-sub-page #scroll-wrapper {
 .sm-process-desc {
     font-size: var(--fs-small);
     color: var(--text-secondary);
+}
+
+.sm-process-desc--strong {
+    font-weight: var(--fw-bold);
+    color: var(--text-primary);
 }
 
 .sm-process-arrow {
@@ -3966,6 +4009,11 @@ body.is-sub-page #scroll-wrapper {
 }
 .sm-process-list--5 .sm-process-item {
     min-width: 160px;
+}
+
+
+.sm-process-list + .sm-process-list {
+    margin-top: var(--space-6);
 }
 
 /* edu-process: sm-process-item을 투명 컨테이너로 변환 */
@@ -4097,29 +4145,42 @@ body.is-sub-page #scroll-wrapper {
 
 /* ---- COMMON MODULE 이미지 오버레이 ---- */
 .si-overlay-wrap {
-    position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     margin-top: var(--space-4);
-    background: #f8f9fa;
+    /* 예외: system_01.png 이미지 자체 배경색과 맞춤 (디자인 시스템 변수 없음) */
+    background: #F7F6FB;
     border-radius: var(--radius-sm);
-    padding: var(--space-8) 0;
+}
+
+.si-system-img {
+    display: block;
+    width: 1092px;
+    max-width: 100%;
+    height: auto;
+    margin: var(--space-8) auto;
 }
 
 .si-bg-img {
     display: block;
-    max-width: 40%;
+    max-width: 100%;
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto var(--space-20);
+}
+
+.si-ov-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    padding: 24px 20px 0;
+    box-sizing: border-box;
 }
 
 .si-ov-badge {
-    position: absolute;
-    top: calc(5% - 40px);
-    left: 50%;
-    transform: translateX(-50%);
-    background: #4b5563;
-    color: #fff;
+    background: var(--gray-700);
+    color: var(--text-inverse);
     font-size: 16px;
     font-weight: 600;
     padding: 8px 24px;
@@ -4127,132 +4188,24 @@ body.is-sub-page #scroll-wrapper {
     white-space: nowrap;
 }
 
+.si-ov-desc {
+    margin: 0;
+    font-family: var(--font-base);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+    word-break: keep-all;
+}
+
 .si-ov-cm {
-    position: absolute;
-    top: calc(17% - 40px);
-    left: 50%;
-    transform: translateX(-50%);
     font-family: var(--font-point);
     font-size: 16px;
     font-weight: 700;
-    color: #94a3b8;
+    color: var(--text-tertiary);
     letter-spacing: 0.12em;
-    white-space: nowrap;
-}
-
-.si-ov-item {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-}
-
-.si-ov-item strong {
-    font-family: var(--font-point);
-    font-size: 16px;
-    font-weight: 700;
-    color: #1e293b;
-    letter-spacing: 0.04em;
-}
-
-.si-ov-item span {
-    font-size: 16px;
-    font-weight: 600;
-    color: #1e293b;
-}
-
-.si-ov-item--tl { top: calc(28% - 26px); right: calc(72% + 10px); text-align: right; }
-.si-ov-item--tr { top: calc(28% - 26px); left:  calc(72% + 10px); text-align: left;  }
-.si-ov-item--bl { top: calc(60% + 40px); right: calc(72% + 10px); text-align: right; }
-.si-ov-item--br { top: calc(60% + 40px); left:  calc(72% + 10px); text-align: left;  }
-
-.si-ov-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 19px;
-    font-weight: 800;
-    color: #1e293b;
     text-align: center;
-    line-height: 1.5;
-    pointer-events: none;
 }
-
-/* ---- COMMON MODULE 4-카드 그리드 ---- */
-.si-module-grid {
-    display: grid;
-    grid-template-columns: 1fr 320px 1fr;
-    grid-template-rows: auto auto;
-    gap: 24px;
-    align-items: stretch;
-    margin: var(--space-8) 0 var(--space-6);
-}
-
-.si-module-center {
-    grid-column: 2;
-    grid-row: 1 / 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.si-module-center img {
-    width: 100%;
-    display: block;
-    border-radius: var(--radius-md, 8px);
-}
-
-.si-module-card {
-    background: #fff;
-    border: 2px solid var(--gray-200);
-    border-radius: var(--radius-md, 8px);
-    padding: var(--space-6) var(--space-4);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-2);
-    text-align: center;
-    justify-content: center;
-}
-
-.si-module-icon {
-    font-size: 30px;
-    margin-bottom: 4px;
-}
-
-.si-module-en {
-    font-family: var(--font-point);
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-}
-
-.si-module-ko {
-    font-size: 14px;
-    color: var(--text-secondary);
-    font-weight: 500;
-}
-
-.si-module-card--safety    { grid-column: 1; grid-row: 1; }
-.si-module-card--health    { grid-column: 3; grid-row: 1; }
-.si-module-card--chemical  { grid-column: 1; grid-row: 2; }
-.si-module-card--environment { grid-column: 3; grid-row: 2; }
-
-.si-module-card--safety { border-color: var(--primary-200); }
-.si-module-card--safety .si-module-icon,
-.si-module-card--safety .si-module-en { color: var(--primary-500); }
-
-.si-module-card--health { border-color: #bbf7d0; }
-.si-module-card--health .si-module-icon,
-.si-module-card--health .si-module-en { color: #16a34a; }
-
-.si-module-card--chemical { border-color: #fed7aa; }
-.si-module-card--chemical .si-module-icon,
-.si-module-card--chemical .si-module-en { color: #ea580c; }
-
-.si-module-card--environment { border-color: #a7f3d0; }
-.si-module-card--environment .si-module-icon,
-.si-module-card--environment .si-module-en { color: #059669; }
 
 /* ---- COMMON MODULE 피처 그리드 ---- */
 .si-feature-grid {
@@ -5304,13 +5257,13 @@ body.is-sub-page #scroll-wrapper {
 
 .sm-menu-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
     gap: var(--space-3);
-    align-items: start;
+    align-items: stretch;
 }
 
 .sm-menu-item {
-    background: #fff;
+    background: var(--gray-100);
     border: 1px solid var(--gray-300);
     border-radius: 8px;
     padding: var(--space-5) var(--space-4);
@@ -5319,12 +5272,16 @@ body.is-sub-page #scroll-wrapper {
     font-weight: 500;
     color: var(--text-primary);
     word-break: keep-all;
+    display: flex;
+    flex-direction: column;
 }
 
-/* 아코디언 아이템 */
+/* 아코디언 아이템: 하위 목록은 흰색 유지, 타이틀 헤드에만 회색 배경 */
 .sm-menu-item--has-sub {
+    background: var(--bg-primary);
     padding: 0;
     text-align: left;
+    overflow: hidden;
 }
 
 .sm-menu-item-head {
@@ -5332,6 +5289,8 @@ body.is-sub-page #scroll-wrapper {
     justify-content: space-between;
     align-items: center;
     padding: var(--space-5) var(--space-4);
+    background: var(--gray-100);
+    border-radius: 8px 8px 0 0;
     cursor: pointer;
 }
 
@@ -5414,6 +5373,16 @@ body.is-sub-page #scroll-wrapper {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 접기/펼치기 없이 항상 전체 펼침 (safety-management.html) */
+.sm-menu--expanded .sm-menu-sub-list {
+    max-height: none;
+    overflow: visible;
+}
+
+.sm-menu--expanded .sm-menu-item-head {
+    cursor: default;
 }
 
 .sm-menu-sub-list li {
@@ -5617,41 +5586,24 @@ body.is-sub-page #scroll-wrapper {
     }
 }
 
-/* ── safety-intro.html si-* 컴포넌트 반응형 ── */
-@media (max-width: 768px) {
-
-    /* si-overlay-wrap: 절대위치 아이템 → 그리드 레이아웃으로 재배치 */
-    .si-overlay-wrap {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 20px 16px;
-        gap: 8px;
-        justify-items: center;
+/* ── si-module-grid: 900px 이하에서는 그리드 대신 세로 스택으로 전환 ── */
+@media (max-width: 900px) {
+    .si-module-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: var(--space-6) 0;
+    }
+    .si-module-center {
+        order: -1;
     }
     .si-bg-img {
-        grid-column: 1 / -1;
-        max-width: 80%;
-        margin: 0 auto 8px;
+        max-width: 60%;
     }
-    .si-ov-badge,
-    .si-ov-cm,
-    .si-ov-center {
-        display: none;
-    }
-    .si-ov-item {
-        position: static;
-        text-align: center;
-        background: #f1f5f9;
-        border-radius: 6px;
-        padding: 12px 8px;
-        width: 100%;
-    }
-    .si-ov-item strong {
-        font-size: 14px;
-    }
-    .si-ov-item span {
-        font-size: 13px;
-    }
+}
+
+/* ── safety-intro.html si-* 컴포넌트 반응형 ── */
+@media (max-width: 768px) {
 
     /* si-feature-grid: 5열 → 3열 */
     .si-feature-grid {
