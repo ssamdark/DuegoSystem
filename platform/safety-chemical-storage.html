@@ -52,7 +52,7 @@
                     <a href="/platform/safety-chemical-cons.html">화학물질안전관리 컨설팅</a>
                     <a href="/platform/safety-chemical.html">화학물질안전관리시스템</a>
                     <a href="/platform/safety-chemical-inv.html">화학물질 인벤토리 구축</a>
-                    <a href="/platform/safety-chemical-storage.html" class="active">STORAGE GROUP</a>
+                    <a href="/platform/safety-chemical-storage.html" class="active">성상별 분리코드</a>
                 </div>
             </nav>
         </div>
@@ -61,16 +61,16 @@
     <!-- Pain Point -->
     <section class="private-pain" style="padding-bottom:0;">
         <div class="private-pain-inner">
-            <h2 class="private-pain-headline" style="margin-bottom:0;">최신 법적 규제를 준수하고 성상별 분리보관 시스템을 제공합니다.
-<span style="font-weight: 400; color: var(--text-secondary); font-size: 20px; line-height: var(--lh-body); display: block; margin-top: 20px;">
-행정안전부, 고용노동부, 환경부, 안전보건공단, 국가법령정보센터, 화학물질정보처리시스템 등 주요 관계 기관의 화학물질 규제 관련 고시 내용을 반영하여 지속적인 업데이트를 제공합니다.</span></h2>
+            <h2 class="private-pain-headline" style="margin-bottom:0;">성상별 분리코드로 시약병에 색을 입히면, 누구나 한눈에 안전한 보관/폐기를 판단할 수 있습니다.
+<span class="private-pain-headline-sub">
+산화성·인화성·독성 등 화학물질의 성상을 그룹별 컬러 바코드로 분류하는 STORAGE GROUP 시스템에, 환경부·고용노동부·안전보건공단 등 관계 기관의 최신 규제 고시를 지속 반영하여 법적 기준에 맞는 화학물질 관리를 지원합니다.</span></h2>
 <hr style="border:none;border-top:2px solid #000;margin-top:48px;margin-bottom:80px;">
         </div>
     </section>
     
 
     <!-- 적용 예시 -->
-    <section class="sm-menu" style="padding-bottom:40px;">
+    <section class="sm-menu sm-menu--expanded" style="padding-bottom:40px;">
         <div class="sub-inner">
             <div class="sm-title-wrap">
                 <h2 class="sm-section-title"><span class="sm-title-bullet"></span>적용 예시</h2>
@@ -127,7 +127,7 @@
     </section>
 
     <!-- Storage Group -->
-    <section class="sm-menu" style="padding-bottom:40px;">
+    <section class="sm-menu sm-menu--expanded" style="padding-bottom:40px;">
         <div class="sub-inner">
             <div class="sm-title-wrap">
                 <h2 class="sm-section-title"><span class="sm-title-bullet"></span>Storage Group</h2>
@@ -168,7 +168,7 @@
     </section>
 
         <!-- 시스템 주요메뉴 -->
-    <section class="sm-menu" style="padding-bottom:150px;">
+    <section class="sm-menu sm-menu--expanded" style="padding-bottom:150px;">
         <div class="sub-inner">
             <div class="sm-title-wrap">
                 <h2 class="sm-section-title"><span class="sm-title-bullet"></span>특허등록 통지서</h2>
@@ -183,38 +183,15 @@
     <!-- Footer Include -->
     <div id="footer-wrap"></div>
 
+    <!-- Floating: 도입문의 -->
+    <a href="http://dev.duegosystem.com:30000/support/inquiry" class="build-float-cta">도입문의</a>
+
     <!-- Back to Top -->
     <a href="#" class="back-to-top-sub"></a>
 
     <!-- JS: include → common 순서 반드시 유지 -->
     <script src="/js/include.js" defer></script>
     <script src="/js/common.js" defer></script>
-    <script>
-        document.querySelectorAll('.sm-menu-item--has-sub .sm-menu-item-head').forEach(head => {
-            head.addEventListener('click', () => {
-                const item = head.closest('.sm-menu-item');
-                const isOpen = item.classList.contains('is-open');
-                const btn = head.querySelector('.sm-menu-toggle');
-
-                btn.classList.remove('spinning');
-                void btn.offsetWidth;
-                btn.classList.add('spinning');
-
-                document.querySelectorAll('.sm-menu-item--has-sub.is-open').forEach(el => {
-                    el.classList.remove('is-open');
-                    el.querySelector('.sm-menu-toggle').setAttribute('aria-expanded', 'false');
-                    el.querySelector('.sm-menu-sub-list').style.maxHeight = '0';
-                });
-
-                if (!isOpen) {
-                    item.classList.add('is-open');
-                    btn.setAttribute('aria-expanded', 'true');
-                    const sub = item.querySelector('.sm-menu-sub-list');
-                    sub.style.maxHeight = sub.scrollHeight + 'px';
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>

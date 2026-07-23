@@ -138,16 +138,16 @@ body.is-sub-page #scroll-wrapper {
 }
 
 .sub-tabs-links a.active {
-    color: var(--text-primary);
+    color: var(--primary-700);
     font-weight: 700;
 }
 
-.sub-tabs-links a.active::after {
+.sub-tabs-links a.active::before {
     content: '';
     position: absolute;
     bottom: -1px;
-    left: 0;
-    width: 100%;
+    left: -10px;
+    width: calc(100% + 20px);
     height: 3px;
     background: var(--primary-700);
 }
@@ -212,6 +212,57 @@ body.is-sub-page #scroll-wrapper {
 
 .back-to-top-sub:hover::after {
     border-color: var(--gray-0);
+}
+
+/* --- 7-1. 도입문의 플로팅 버튼 (구축형 서비스 전 페이지) --- */
+.build-float-cta {
+    position: fixed;
+    bottom: 40px;
+    right: 104px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 58px;
+    background: var(--primary-dark);
+    opacity: 0.85;
+    color: var(--text-inverse);
+    font-family: var(--font-base);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-bold);
+    white-space: nowrap;
+    text-decoration: none;
+    border-radius: var(--radius-full);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+    z-index: 100;
+    animation: build-float-cta-pulse 2.5s ease-in-out infinite;
+}
+
+.build-float-cta:hover {
+    opacity: 1;
+    transform: translateY(-4px);
+    animation-play-state: paused;
+}
+
+@keyframes build-float-cta-pulse {
+
+    0%,
+    100% {
+        opacity: 0.85;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .build-float-cta {
+        bottom: 20px;
+        right: 76px;
+        padding: 10px 32px;
+        font-size: var(--fs-small);
+    }
 }
 
 .safer-float-card {
@@ -1732,20 +1783,21 @@ body.is-sub-page #scroll-wrapper {
 .board-search-btn {
     height: 48px;
     padding: 0 var(--space-6);
-    background: var(--primary);
-    color: var(--gray-0);
-    border: none;
+    background: var(--bg-primary);
+    color: var(--primary);
+    border: 1.5px solid var(--primary);
     border-radius: var(--radius-sm);
     font-size: var(--fs-small);
     font-weight: 700;
     font-family: inherit;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.2s, color 0.2s;
     white-space: nowrap;
 }
 
 .board-search-btn:hover {
-    background: var(--primary-700);
+    background: var(--primary);
+    color: var(--gray-0);
 }
 
 
@@ -1827,7 +1879,7 @@ body.is-sub-page #scroll-wrapper {
     align-items: center;
     justify-content: center;
     padding: 4px 10px;
-    background: var(--primary);
+    background: var(--gray-700);
     color: var(--gray-0);
     font-size: var(--fs-caption);
     font-weight: 700;
@@ -1866,8 +1918,8 @@ body.is-sub-page #scroll-wrapper {
 }
 
 .page-btn.active {
-    background: var(--primary);
-    border-color: var(--primary);
+    background: var(--gray-700);
+    border-color: var(--gray-700);
     color: var(--gray-0);
     font-weight: 700;
 }
@@ -2242,6 +2294,13 @@ body.is-sub-page #scroll-wrapper {
     line-height: 1.25;
     margin-bottom: 20px;
     word-break: keep-all;
+}
+
+.partner-hero-title--sub {
+    font-size: var(--fs-36);
+    font-weight: 600;
+    margin-top: -12px;
+    color: var(--text-secondary);
 }
 
 .partner-hero-desc {
@@ -2659,7 +2718,7 @@ body.is-sub-page #scroll-wrapper {
     padding: 4px 0;
 }
 
-.safer-page-tabs .sub-tabs-links a.active::after {
+.safer-page-tabs .sub-tabs-links a.active::before {
     bottom: -7px;
 }
 
@@ -3225,6 +3284,15 @@ body.is-sub-page #scroll-wrapper {
     color: var(--text-primary);
     margin-bottom: var(--space-12);
     word-break: keep-all;
+}
+
+.private-pain-headline-sub {
+    display: block;
+    margin-top: var(--space-5);
+    font-size: var(--fs-h4);
+    font-weight: 400;
+    color: var(--text-secondary);
+    line-height: var(--lh-body);
 }
 
 .private-pain-grid {
@@ -4028,7 +4096,7 @@ body.is-sub-page #scroll-wrapper {
 
 /* 흰 카드 (번호 + 제목) */
 .sm-process-card {
-    background: #fff;
+    background: var(--bg-primary);
     border: 1px solid var(--gray-300);
     border-radius: var(--radius-sm);
     padding: var(--space-4) var(--space-8);
@@ -4161,6 +4229,12 @@ body.is-sub-page #scroll-wrapper {
     margin: var(--space-8) auto;
 }
 
+.si-bg-img-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 .si-bg-img {
     display: block;
     max-width: 100%;
@@ -4174,7 +4248,7 @@ body.is-sub-page #scroll-wrapper {
     align-items: center;
     gap: 14px;
     width: 100%;
-    padding: 24px 20px 0;
+    padding: 40px 20px 0;
     box-sizing: border-box;
 }
 
@@ -5255,6 +5329,11 @@ body.is-sub-page #scroll-wrapper {
     background: var(--bg-primary);
 }
 
+/* 페이지 중간에 오는 sm-menu 섹션용 (마지막 섹션이 아닐 때) */
+.sm-menu.sm-process--pb-sm {
+    padding-bottom: var(--space-8);
+}
+
 .sm-menu-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(220px, 1fr));
@@ -5263,7 +5342,7 @@ body.is-sub-page #scroll-wrapper {
 }
 
 .sm-menu-item {
-    background: var(--gray-100);
+    background: var(--bg-primary);
     border: 1px solid var(--gray-300);
     border-radius: 8px;
     padding: var(--space-5) var(--space-4);
@@ -5368,6 +5447,7 @@ body.is-sub-page #scroll-wrapper {
     list-style: none;
     padding: 0 var(--space-4);
     margin: 0;
+    background: var(--bg-primary);
     border-top: 1px solid var(--gray-200);
     display: block;
     max-height: 0;
@@ -5597,8 +5677,15 @@ body.is-sub-page #scroll-wrapper {
     .si-module-center {
         order: -1;
     }
-    .si-bg-img {
-        max-width: 60%;
+}
+
+/* ── 900px 이하: 비율 축소 대신 고정 너비로 스케일 유지 + 가로 스크롤 ── */
+@media (max-width: 900px) {
+    .si-bg-img-scroll .si-bg-img {
+        max-width: none;
+        width: 600px;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 

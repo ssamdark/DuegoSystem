@@ -627,7 +627,7 @@ body.is-sub-page .mobile-toggle span {
 
 .slogan-container {
     position: relative;
-    height: 220px;
+    height: 330px;
     margin-bottom: 60px;
 }
 
@@ -727,7 +727,7 @@ body.is-sub-page .mobile-toggle span {
     top: 0;
     left: 0;
     width: 100%;
-    font-size: 22px;
+    font-size: 25px;
     font-weight: 300;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.75);
@@ -1559,7 +1559,7 @@ body.is-sub-page .mobile-toggle span {
     }
 
     .slogan-container {
-        height: 200px;
+        height: 300px;
     }
     .desc-container {
         margin-bottom: 160px;
@@ -1587,7 +1587,7 @@ body.is-sub-page .mobile-toggle span {
     }
 
     .slogan-container {
-        height: 165px;
+        height: 250px;
     }
     .desc-container {
         margin-bottom: 120px;
@@ -1700,7 +1700,7 @@ body.is-sub-page .mobile-toggle span {
     }
 
     .slogan-container {
-        height: 140px;
+        height: 210px;
     }
     .desc-container {
         margin-bottom: 80px;

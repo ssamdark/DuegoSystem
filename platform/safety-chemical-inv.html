@@ -52,7 +52,7 @@
                     <a href="/platform/safety-chemical-cons.html">화학물질안전관리 컨설팅</a>
                     <a href="/platform/safety-chemical.html">화학물질안전관리시스템</a>
                     <a href="/platform/safety-chemical-inv.html" class="active">화학물질 인벤토리 구축</a>
-                    <a href="/platform/safety-chemical-storage.html">STORAGE GROUP</a>
+                    <a href="/platform/safety-chemical-storage.html">성상별 분리코드</a>
                 </div>
             </nav>
         </div>
@@ -61,14 +61,14 @@
     <!-- Pain Point -->
     <section class="private-pain">
         <div class="private-pain-inner">
-            <h2 class="private-pain-headline" style="margin-bottom:0;">자체 검증된 시스템과 인프라로 화학물질 인벤토리를 철저하게 구축합니다.<br>
-<span style="font-weight: 400; color: var(--text-secondary); font-size: 20px; line-height: var(--lh-body); display: block; margin-top: 20px;">특허 등록된 화학물질 인벤토리 구축 전용 자체 개발 앱(APP)과 자체 보유 마스터 DB를 연계하여 화학물질 DB의 최적화 및 신뢰성을 확보합니다.</span></h2>
+            <h2 class="private-pain-headline" style="margin-bottom:0;">LLM 기반 AI가 시약 조사를 돕고, 자체 마스터 DB가 데이터의 신뢰를 완성합니다.<br>
+<span class="private-pain-headline-sub">시약병 사진 촬영과 QR·바코드 손으로 옮겨 적던 시약 정보를 AI가 사진 한 장으로 인식·등록하고, 자체 보유 마스터 DB와 연계하여 MSDS·법적 규제정보까지 반영된 화학물질 인벤토리를 구축 기간 단축과 함께 완성합니다.</span></h2>
 <hr style="border:none;border-top:2px solid #000;margin-top:48px;margin-bottom:80px;">
         </div>
     </section>
 
     <!-- 특징 -->
-    <section class="sm-menu" style="padding-bottom: 0;">
+    <section class="sm-menu sm-menu--expanded" style="padding-bottom: 0;">
         <div class="sub-inner">
             <div class="sm-title-wrap">
                 <h2 class="sm-section-title"><span class="sm-title-bullet"></span>특징</h2>
@@ -87,7 +87,7 @@
     </section>
 
     <!-- 인벤토리특징 -->
-    <section class="sm-menu" style="padding-bottom:150px;">
+    <section class="sm-menu sm-menu--expanded" style="padding-bottom:150px;">
         <div class="sub-inner">
             <div class="inv-feature-grid">
                 <!-- Col 1: 자체개발 APP 활용 -->
@@ -123,47 +123,15 @@
     <!-- Footer Include -->
     <div id="footer-wrap"></div>
 
+    <!-- Floating: 도입문의 -->
+    <a href="http://dev.duegosystem.com:30000/support/inquiry" class="build-float-cta">도입문의</a>
+
     <!-- Back to Top -->
     <a href="#" class="back-to-top-sub"></a>
 
     <!-- JS: include → common 순서 반드시 유지 -->
     <script src="/js/include.js" defer></script>
     <script src="/js/common.js" defer></script>
-    <script>
-        document.querySelectorAll('.sm-menu-item--has-sub .sm-menu-item-head').forEach(head => {
-            head.addEventListener('click', () => {
-                const item = head.closest('.sm-menu-item');
-                const isOpen = item.classList.contains('is-open');
-                const btn = head.querySelector('.sm-menu-toggle');
-
-                btn.classList.remove('spinning');
-                void btn.offsetWidth;
-                btn.classList.add('spinning');
-
-                document.querySelectorAll('.sm-menu-item--has-sub.is-open').forEach(el => {
-                    el.classList.remove('is-open');
-                    el.querySelector('.sm-menu-toggle').setAttribute('aria-expanded', 'false');
-                    el.querySelector('.sm-menu-sub-list').style.maxHeight = '0';
-                });
-
-                if (!isOpen) {
-                    item.classList.add('is-open');
-                    btn.setAttribute('aria-expanded', 'true');
-                    const sub = item.querySelector('.sm-menu-sub-list');
-                    sub.style.maxHeight = sub.scrollHeight + 'px';
-                }
-            });
-        });
-
-        // 승인관리 기본 열기
-        const firstItem = document.querySelector('.sm-menu-item--has-sub');
-        if (firstItem) {
-            firstItem.classList.add('is-open');
-            firstItem.querySelector('.sm-menu-toggle').setAttribute('aria-expanded', 'true');
-            const sub = firstItem.querySelector('.sm-menu-sub-list');
-            sub.style.maxHeight = sub.scrollHeight + 'px';
-        }
-    </script>
 </body>
 
 </html>

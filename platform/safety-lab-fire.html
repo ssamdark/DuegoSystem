@@ -49,11 +49,11 @@
 
             <nav class="sub-tabs">
                 <div class="sub-tabs-links">
-                    <a href="/platform/safety-lab.html">연구기관안전관리시스템</a>
-                    <a href="/platform/safety-lab-rca.html">사전유해인자위험분석 자동화</a>
-                    <a href="/platform/safety-lab-fire.html" class="active">연구기관소방안전 정보제공</a>
-                    <a href="/platform/safety-lab-chem.html">연구기관화학물질 안전관리</a>
-                    <a href="/platform/safety-lab-edu.html">연구안전통합교육</a>
+                    <a href="/platform/safety-lab.html">연구기관 안전관리시스템</a>
+                    <!-- <a href="/platform/safety-lab-rca.html">사전유해인자위험분석 자동화</a> -->
+                    <a href="/platform/safety-lab-fire.html" class="active">연구기관 소방안전 정보제공</a>
+                    <!-- <a href="/platform/safety-lab-chem.html">연구기관화학물질 안전관리</a> -->
+                    <!-- <a href="/platform/safety-lab-edu.html">연구안전통합교육</a> -->
                     <a href="/platform/safety-lab-import.html">수입제조화학물질 규제대응</a>
                 </div>
             </nav>
@@ -63,8 +63,8 @@
     <!-- Pain Point -->
     <section class="private-pain">
         <div class="private-pain-inner">
-            <h2 class="private-pain-headline" style="margin-bottom:0;">연구기관 소방안전 정보를 제공합니다.
-<span style="font-weight: 400; color: var(--text-secondary); font-size: 20px; line-height: var(--lh-body); display: block; margin-top: 20px;">배치도 아이콘 구성에 따라 각 층별 평면 도면에 자동 연구기관 특성정보 및 화학물질(시약 / 가스)정보, 장비정보, 위험물정보 등을 제공하여 사고발생 시 위험 식별이 신속하고 대응이 용이하도록 지원합니다.</span></h2>
+            <h2 class="private-pain-headline" style="margin-bottom:0;">화재 현장의 골든타임, 어디에 어떤 위험물이 있는지 도면 위에서 바로 확인합니다.
+<span class="private-pain-headline-sub">층별 평면도에 방사선·위험기계·생물안전 시설과 화학물질(시약·가스), 위험물 정보를 자동 표기하여 사고 발생 시 신속한 위험 식별과 초기 대응을 지원합니다. 이 기술은 '화재 시 위험물질 위치정보 제공 시스템'으로 특허 등록되어 있습니다.</span></h2>
 <hr style="border:none;border-top:2px solid #000;margin-top:48px;margin-bottom:80px;">
         </div>
     </section>
@@ -76,7 +76,7 @@
     </section>
 
     <!-- 시스템 주요메뉴 -->
-    <section class="sm-menu" style="padding-bottom:150px;">
+    <section class="sm-menu sm-menu--expanded" style="padding-bottom:150px;">
         <div class="sub-inner">
             <div class="sm-title-wrap">
                 <h2 class="sm-section-title"><span class="sm-title-bullet"></span>특허등록 통지서</h2>
@@ -91,47 +91,15 @@
     <!-- Footer Include -->
     <div id="footer-wrap"></div>
 
+    <!-- Floating: 도입문의 -->
+    <a href="http://dev.duegosystem.com:30000/support/inquiry" class="build-float-cta">도입문의</a>
+
     <!-- Back to Top -->
     <a href="#" class="back-to-top-sub"></a>
 
     <!-- JS: include → common 순서 반드시 유지 -->
     <script src="/js/include.js" defer></script>
     <script src="/js/common.js" defer></script>
-    <script>
-        document.querySelectorAll('.sm-menu-item--has-sub .sm-menu-item-head').forEach(head => {
-            head.addEventListener('click', () => {
-                const item = head.closest('.sm-menu-item');
-                const isOpen = item.classList.contains('is-open');
-                const btn = head.querySelector('.sm-menu-toggle');
-
-                btn.classList.remove('spinning');
-                void btn.offsetWidth;
-                btn.classList.add('spinning');
-
-                document.querySelectorAll('.sm-menu-item--has-sub.is-open').forEach(el => {
-                    el.classList.remove('is-open');
-                    el.querySelector('.sm-menu-toggle').setAttribute('aria-expanded', 'false');
-                    el.querySelector('.sm-menu-sub-list').style.maxHeight = '0';
-                });
-
-                if (!isOpen) {
-                    item.classList.add('is-open');
-                    btn.setAttribute('aria-expanded', 'true');
-                    const sub = item.querySelector('.sm-menu-sub-list');
-                    sub.style.maxHeight = sub.scrollHeight + 'px';
-                }
-            });
-        });
-
-        // 기본 열림: 첫 번째 하위메뉴 항목
-        const defaultItem = document.querySelector('.sm-menu-item--has-sub');
-        if (defaultItem) {
-            defaultItem.classList.add('is-open');
-            defaultItem.querySelector('.sm-menu-toggle').setAttribute('aria-expanded', 'true');
-            const sub = defaultItem.querySelector('.sm-menu-sub-list');
-            sub.style.maxHeight = sub.scrollHeight + 'px';
-        }
-    </script>
 </body>
 
 </html>

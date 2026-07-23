@@ -56,7 +56,7 @@
                     <a href="/platform/safety-health.html">보건관리시스템</a>
                     <a href="/platform/safety-env.html">환경관리시스템</a>
                     <a href="/platform/safety-psm.html" class="active">공정안전관리(PSM)</a>
-                    <a href="/platform/safety-edu.html">안전교육통합관리시스템</a>
+                    <a href="/platform/safety-edu.html">안전보건교육 통합관리시스템</a>
                 </div>
             </nav>
         </div>
@@ -65,9 +65,8 @@
     <!-- Pain Point -->
     <section class="private-pain">
         <div class="private-pain-inner">
-            <h2 class="private-pain-headline" style="margin-bottom:0;">전문가 컨설팅을 통해 현행 PSM 12대 구성요소 및
-변경관리 Process의 검토·보완을 지원합니다.<br>
-<span style="font-weight: 400; color: var(--text-secondary); font-size: 20px; line-height: var(--lh-body); display: block; margin-top: 20px;">고객사에 가장 적합한 정보화 시스템 구축 지원으로 P등급 관리체계 구축합니다.</span></h2>
+            <h2 class="private-pain-headline" style="margin-bottom:0;">PSM 12대 구성요소부터 변경관리(MOC)까지, P등급을 향한 공정안전 체계를 완성합니다.<br>
+<span class="private-pain-headline-sub">전문가 컨설팅으로 현행 PSM 운영 실태를 진단·보완하고, 12대 구성요소와 변경관리 프로세스를 하나의 시스템으로 정보화하여 이행상태평가에 강한 관리체계를 구축합니다.</span></h2>
 <hr style="border:none;border-top:2px solid #000;margin-top:48px;margin-bottom:80px;">
         </div>
     </section>
@@ -84,7 +83,7 @@
     </section>
 
     <!-- 시스템 주요메뉴 -->
-    <section class="sm-menu" style="padding-bottom:150px;">
+    <section class="sm-menu sm-menu--expanded" style="padding-bottom:150px;">
         <div class="sub-inner">
             <div class="sm-title-wrap">
                 <h2 class="sm-section-title"><span class="sm-title-bullet"></span>시스템 주요메뉴</h2>
@@ -117,47 +116,15 @@
     <!-- Footer Include -->
     <div id="footer-wrap"></div>
 
+    <!-- Floating: 도입문의 -->
+    <a href="http://dev.duegosystem.com:30000/support/inquiry" class="build-float-cta">도입문의</a>
+
     <!-- Back to Top -->
     <a href="#" class="back-to-top-sub"></a>
 
     <!-- JS: include → common 순서 반드시 유지 -->
     <script src="/js/include.js" defer></script>
     <script src="/js/common.js" defer></script>
-    <script>
-        document.querySelectorAll('.sm-menu-item--has-sub .sm-menu-item-head').forEach(head => {
-            head.addEventListener('click', () => {
-                const item = head.closest('.sm-menu-item');
-                const isOpen = item.classList.contains('is-open');
-                const btn = head.querySelector('.sm-menu-toggle');
-
-                btn.classList.remove('spinning');
-                void btn.offsetWidth;
-                btn.classList.add('spinning');
-
-                document.querySelectorAll('.sm-menu-item--has-sub.is-open').forEach(el => {
-                    el.classList.remove('is-open');
-                    el.querySelector('.sm-menu-toggle').setAttribute('aria-expanded', 'false');
-                    el.querySelector('.sm-menu-sub-list').style.maxHeight = '0';
-                });
-
-                if (!isOpen) {
-                    item.classList.add('is-open');
-                    btn.setAttribute('aria-expanded', 'true');
-                    const sub = item.querySelector('.sm-menu-sub-list');
-                    sub.style.maxHeight = sub.scrollHeight + 'px';
-                }
-            });
-        });
-
-        // 기본 열림: 첫 번째 하위메뉴 항목
-        const defaultItem = document.querySelector('.sm-menu-item--has-sub');
-        if (defaultItem) {
-            defaultItem.classList.add('is-open');
-            defaultItem.querySelector('.sm-menu-toggle').setAttribute('aria-expanded', 'true');
-            const sub = defaultItem.querySelector('.sm-menu-sub-list');
-            sub.style.maxHeight = sub.scrollHeight + 'px';
-        }
-    </script>
 </body>
 
 </html>

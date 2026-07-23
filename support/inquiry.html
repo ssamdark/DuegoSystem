@@ -51,7 +51,6 @@
             <nav class="sub-tabs">
                 <div class="sub-tabs-links">
                     <a href="/support/inquiry.html" class="active">도입문의</a>
-                    <a href="/support/notice.html">1:1 문의</a>
                 </div>
             </nav>
 
@@ -79,18 +78,6 @@
                             <input type="text" placeholder="담당자명을 입력해 주세요." required>
                         </div>
 
-                        <!-- 3. 직급 -->
-                        <div class="form-group">
-                            <label>직급 <span class="required">*</span></label>
-                            <input type="text" placeholder="직급을 입력해 주세요." required>
-                        </div>
-
-                        <!-- 4. 부서 -->
-                        <div class="form-group">
-                            <label>부서 <span class="required">*</span></label>
-                            <input type="text" placeholder="소속된 부서를 입력해 주세요." required>
-                        </div>
-
                         <!-- 5. 연락처 -->
                         <div class="form-group">
                             <label>연락처 <span class="required">*</span></label>
@@ -103,12 +90,6 @@
                             <input type="email" placeholder="이메일을 입력해 주세요." required>
                         </div>
 
-                        <!-- 7. 웹사이트 -->
-                        <div class="form-group">
-                            <label>웹사이트</label>
-                            <input type="url" placeholder="참고할 수 있는 웹사이트를 입력해 주세요.">
-                        </div>
-
                         <!-- 8. 업종 -->
                         <div class="form-group">
                             <label>업종 <span class="required">*</span></label>
@@ -119,6 +100,18 @@
                                 <option value="IT/서비스">IT/서비스</option>
                                 <option value="공공기관">공공기관</option>
                                 <option value="기타">기타</option>
+                            </select>
+                        </div>
+
+                        <!-- 10. 문의 제품/서비스 -->
+                        <div class="form-group">
+                            <label>문의 제품/서비스 <span class="required">*</span></label>
+                            <select required>
+                                <option value="" disabled selected>궁금하신 제품 또는 서비스를 선택해 주세요.</option>
+                                <option value="DuegoSafer">되고세이퍼 (SaaS 플랫폼)</option>
+                                <option value="DuegoSafer G">되고세이퍼 G (G-Cloud용)</option>
+                                <option value="System Integration">구축형 시스템 개발</option>
+                                <option value="Consulting">안전보건 컨설팅</option>
                             </select>
                         </div>
 
@@ -135,40 +128,16 @@
                             </select>
                         </div>
 
-                        <!-- 10. 문의 제품/서비스 -->
-                        <div class="form-group">
-                            <label>문의 제품/서비스 <span class="required">*</span></label>
-                            <select required>
-                                <option value="" disabled selected>궁금하신 제품 또는 서비스를 선택해 주세요.</option>
-                                <option value="DuegoSafer">되고세이퍼 (SaaS 플랫폼)</option>
-                                <option value="DuegoSafer G">되고세이퍼 G (G-Cloud용)</option>
-                                <option value="System Integration">구축형 시스템 개발</option>
-                                <option value="Consulting">안전보건 컨설팅</option>
-                            </select>
-                        </div>
-
                         <!-- 11. 상담신청 문의 경로 -->
                         <div class="form-group">
-                            <label>상담신청 문의 경로 <span class="required">*</span></label>
-                            <select required>
+                            <label>상담신청 문의 경로</label>
+                            <select>
                                 <option value="" disabled selected>문의 경로를 선택해 주세요.</option>
                                 <option value="검색엔진">검색엔진 (네이버, 구글 등)</option>
                                 <option value="SNS">SNS (유튜브, 블로그 등)</option>
                                 <option value="지인소개">지인 및 관계사 소개</option>
                                 <option value="박람회">전시회 및 박람회</option>
                                 <option value="기타">기타</option>
-                            </select>
-                        </div>
-
-                        <!-- 12. 도입 시기 -->
-                        <div class="form-group">
-                            <label>도입 시기 <span class="required">*</span></label>
-                            <select required>
-                                <option value="" disabled selected>도입시기를 선택해 주세요.</option>
-                                <option value="1개월 이내">1개월 이내</option>
-                                <option value="3개월 이내">3개월 이내</option>
-                                <option value="6개월 이내">6개월 이내</option>
-                                <option value="1년 이내">1년 이내</option>
                             </select>
                         </div>
 
@@ -184,17 +153,29 @@
                             <input type="text" placeholder="사업장의 상세주소를 입력해 주세요.">
                         </div>
 
+                        <!-- 12. 도입 시기 -->
+                        <div class="form-group">
+                            <label>도입 시기</label>
+                            <select>
+                                <option value="" disabled selected>도입시기를 선택해 주세요.</option>
+                                <option value="1개월 이내">1개월 이내</option>
+                                <option value="3개월 이내">3개월 이내</option>
+                                <option value="6개월 이내">6개월 이내</option>
+                                <option value="1년 이내">1년 이내</option>
+                            </select>
+                        </div>
+
                         <!-- 15. 문의 내용 -->
                         <div class="form-group full">
-                            <label>문의 내용 <span class="required">*</span></label>
-                            <textarea placeholder="문의 내용을 입력해 주세요." required></textarea>
+                            <label>문의 내용</label>
+                            <textarea placeholder="문의 내용을 입력해 주세요."></textarea>
                         </div>
 
                     </div>
 
                     <!-- 제출 버튼 -->
                     <div class="inquiry-submit-area">
-                        <button type="submit" class="btn-submit">상담신청하기</button>
+                        <button type="submit" class="btn-submit">도입문의 신청</button>
                     </div>
                 </form>
             </div>
