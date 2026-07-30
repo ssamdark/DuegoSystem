@@ -22,6 +22,78 @@
     <link rel="stylesheet" href="/css/variables.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/sub.css">
+
+    <!-- PSM_사업영역_도식_홈페이지용.html 스타일 (.psm-diagram 안에서만 적용되도록 스코프 처리) -->
+    <style>
+        .psm-diagram {
+            --teal: #00a99d; --teal-d: #008a80; --teal-l: #e0f5f3;
+            --blue: #2b5ba8; --navy: #132a4e; --navy-d: #0c1c36;
+            --ink: #20304a; --sub: #64748b; --line: #e2e8f0; --bg: #f6f9fc;
+            font-family: 'Pretendard', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            color: var(--ink);
+        }
+        .psm-diagram *{box-sizing:border-box;margin:0;padding:0}
+        .psm-diagram .wrap{max-width:1400px;margin:0 auto;padding:32px 0 8px;}
+
+        /* headline */
+        .psm-diagram .head{text-align:center;margin-bottom:44px;}
+        .psm-diagram .kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--teal-d);margin-bottom:14px;}
+        .psm-diagram .kicker::before,.psm-diagram .kicker::after{content:"";width:28px;height:2px;background:var(--teal);border-radius:2px;}
+        .psm-diagram h1{font-size:34px;letter-spacing:-.02em;color:var(--navy);}
+        .psm-diagram h1 em{font-style:normal;color:var(--teal-d);}
+        .psm-diagram .tag{margin-top:12px;font-size:15px;color:var(--sub);}
+
+        /* flow (how) */
+        .psm-diagram .flow{display:flex;gap:0;margin-bottom:16px;}
+        .psm-diagram .fstep{flex:1;position:relative;padding:22px 18px 20px 30px;background:linear-gradient(135deg,var(--navy),#1e3d6e);color:#fff;
+            clip-path:polygon(0 0, calc(100% - 22px) 0, 100% 50%, calc(100% - 22px) 100%, 0 100%, 22px 50%);}
+        .psm-diagram .fstep:first-child{clip-path:polygon(0 0, calc(100% - 22px) 0, 100% 50%, calc(100% - 22px) 100%, 0 100%);border-radius:10px 0 0 10px;padding-left:24px;}
+        .psm-diagram .fstep:last-child{clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%, 22px 50%);border-radius:0 10px 10px 0;}
+        .psm-diagram .fstep:nth-child(2){background:linear-gradient(135deg,#1d3f74,#27508d)}
+        .psm-diagram .fstep:nth-child(3){background:linear-gradient(135deg,#215089,#2b5ba8)}
+        .psm-diagram .fstep:nth-child(4){background:linear-gradient(135deg,#0e7f78,var(--teal))}
+        .psm-diagram .fstep:nth-child(5){background:linear-gradient(135deg,var(--teal-d),#00bfae)}
+        .psm-diagram .fno{font-size:11px;font-weight:700;letter-spacing:.1em;opacity:.65;}
+        .psm-diagram .fti{font-size:17px;font-weight:800;margin-top:3px;}
+        .psm-diagram .fde{font-size:11.5px;opacity:.8;margin-top:5px;line-height:1.45;}
+        .psm-diagram .flow-note{text-align:center;font-size:14px;color:var(--sub);margin-bottom:48px;}
+        .psm-diagram .flow-note b{color:var(--teal-d);}
+
+        /* elements (what) */
+        .psm-diagram .sec-label{display:flex;align-items:center;gap:14px;margin-bottom:18px;}
+        .psm-diagram .sec-label h2{font-size:19px;color:var(--navy);letter-spacing:-.01em;flex:none;}
+        .psm-diagram .sec-label .big{font-size:30px;font-weight:800;color:var(--teal);flex:none;line-height:1;}
+        .psm-diagram .sec-label .rule{flex:1;height:1px;background:var(--line);}
+        .psm-diagram .elements{display:grid;grid-template-columns:230px 1fr 230px;gap:14px;margin-bottom:48px;align-items:stretch;}
+        .psm-diagram .ecard{border-radius:14px;padding:20px;display:flex;flex-direction:column;justify-content:center;}
+        .psm-diagram .ecard.solid{background:linear-gradient(160deg,var(--navy),#1e3d6e);color:#fff;}
+        .psm-diagram .ecard.solid + .ecard.solid{background:linear-gradient(160deg,#16406b,var(--blue));}
+        .psm-diagram .eno{font-size:14px;font-weight:700;letter-spacing:.08em;opacity:.6;}
+        .psm-diagram .eti{font-size:18px;font-weight:800;margin-top:4px;}
+        .psm-diagram .ede{font-size:14px;opacity:.75;margin-top:8px;line-height:1.5;}
+        .psm-diagram .left-col{display:flex;flex-direction:column;gap:14px;}
+        .psm-diagram .egroup{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:18px 20px;}
+        .psm-diagram .egroup-head{display:flex;align-items:baseline;gap:10px;margin-bottom:14px;}
+        .psm-diagram .egroup-head b{font-size:18px;color:var(--navy);}
+        .psm-diagram .egroup-head span{font-size:14px;color:var(--sub);}
+        .psm-diagram .nine{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+        .psm-diagram .nchip{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:9px;padding:10px 12px;font-size:13px;font-weight:700;color:var(--ink);}
+        .psm-diagram .nchip small{font-weight:600;color:var(--sub);font-size:10.5px;}
+        .psm-diagram .dot{flex:none;width:8px;height:8px;border-radius:50%;background:var(--blue);}
+        .psm-diagram .nchip.moc{border:1.6px solid var(--teal);background:var(--teal-l);color:var(--teal-d);}
+        .psm-diagram .nchip.moc .dot{background:var(--teal);}
+        .psm-diagram .ecard.erp{background:linear-gradient(160deg,var(--teal-d),var(--teal));color:#fff;}
+
+        /* strengths (why) */
+        .psm-diagram .strengths{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+        .psm-diagram .scard{border:1px solid var(--line);border-radius:14px;padding:22px 20px;background:#fff;transition:.2s;position:relative;overflow:hidden;}
+        .psm-diagram .sic{width:40px;height:40px;border-radius:10px;background:var(--teal-l);display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+        .psm-diagram .sic svg{width:20px;height:20px;stroke:var(--teal-d);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+        .psm-diagram .sti{font-size:15px;font-weight:800;color:var(--navy);line-height:1.4;}
+        .psm-diagram .sde{font-size:14px;color:var(--sub);margin-top:7px;line-height:1.55;}
+
+        .psm-diagram footer{margin-top:16px;text-align:left;font-size:14px;color:#9aa8b8;}
+    </style>
 </head>
 
 <body class="is-sub-page">
@@ -74,11 +146,82 @@
     <!-- 시스템 구축 프로세스 -->
     <section class="sm-process">
         <div class="sub-inner">
-            <div class="sm-title-wrap">
+            <!-- <div class="sm-title-wrap">
                 <h2 class="sm-section-title"><span class="sm-title-bullet"></span>시스템 구축 프로세스</h2>
                 <p class="title-en">System Construction Process</p>
+            </div> -->
+            <div class="psm-diagram">
+                <div class="wrap">
+
+                    <div class="head">
+                        <span class="kicker">PROCESS SAFETY MANAGEMENT</span>
+                        <h1>변경관리<em>(MOC)</em> 중심의 PSM 12대 구성요소 <em>통합관리</em></h1>
+                        <p class="tag">공정안전보고서 작성부터 이행상태평가 대응까지 — 법령 기준 그대로, 시스템으로 완성합니다</p>
+                    </div>
+
+                    <!-- HOW : 5-step MOC flow -->
+                    <div class="flow">
+                        <div class="fstep"><div class="fno">STEP 1</div><div class="fti">발의·분류</div><div class="fde">변경요청 · 등급 분류<br>(정상/비상/임시)</div></div>
+                        <div class="fstep"><div class="fno">STEP 2</div><div class="fti">검토·승인</div><div class="fde">위험성평가 ·<br>변경관리위원회 심의</div></div>
+                        <div class="fstep"><div class="fno">STEP 3</div><div class="fti">실행·문서화</div><div class="fde">시공(PTW·도급 연계) ·<br>공정안전자료 Revision</div></div>
+                        <div class="fstep"><div class="fno">STEP 4</div><div class="fti">가동전점검</div><div class="fde">PSSR — 교육·문서·<br>MOC 요건 완료 확인</div></div>
+                        <div class="fstep"><div class="fno">STEP 5</div><div class="fti">가동·종결</div><div class="fde">유효성 확인 ·<br>기록 보존 / 원상복구 관리</div></div>
+                    </div>
+                    <p class="flow-note">모든 단계에 <b>승인·반려 분기와 기한 알림</b>이 내장된 표준 워크플로우 — 교육·문서 개정은 반드시 <b>가동 전 완료</b>되도록 시스템이 통제합니다</p>
+
+                    <!-- WHAT : 12 elements -->
+                    <div class="sec-label"><span class="big">12</span><h2>대 구성요소, 하나의 플랫폼에서</h2><span class="rule"></span></div>
+                    <div class="elements">
+                        <div class="left-col">
+                            <div class="ecard solid"><div class="eno">ELEMENT 01</div><div class="eti">공정안전자료</div><div class="ede">P&amp;ID · 물질/설비 정보<br>변경이력 자동 Revision</div></div>
+                            <div class="ecard solid"><div class="eno">ELEMENT 02</div><div class="eti">공정위험성평가</div><div class="ede">HAZOP · K-PSR 등<br>기법별 평가 수행</div></div>
+                        </div>
+                        <div class="egroup">
+                            <div class="egroup-head"><b>안전운전계획</b><span>ELEMENT 03 – 11 · 9개 요소 통합관리</span></div>
+                            <div class="nine">
+                                <span class="nchip"><span class="dot"></span>안전운전절차 <small>SOP</small></span>
+                                <span class="nchip"><span class="dot"></span>설비관리 <small>MI</small></span>
+                                <span class="nchip"><span class="dot"></span>안전작업허가 <small>PTW</small></span>
+                                <span class="nchip"><span class="dot"></span>도급업체 안전관리</span>
+                                <span class="nchip"><span class="dot"></span>교육·훈련</span>
+                                <span class="nchip"><span class="dot"></span>가동전점검 <small>PSSR</small></span>
+                                <span class="nchip moc"><span class="dot"></span>변경요소관리 <small>MOC</small></span>
+                                <span class="nchip"><span class="dot"></span>자체감사</span>
+                                <span class="nchip"><span class="dot"></span>공정사고조사</span>
+                            </div>
+                        </div>
+                        <div class="left-col">
+                            <div class="ecard solid"><div class="eno">ELEMENT 12</div><div class="eti">비상조치계획</div><div class="ede">시나리오 · 비상연락체계<br>훈련 이력 관리</div></div>
+                            <div class="ecard erp"><div class="eno">INTERFACE</div><div class="eti">ERP · 전자결재 연계</div><div class="ede">PM·MM, 안전작업허가,<br>교육시스템과 실시간 연동</div></div>
+                        </div>
+                    </div>
+
+                    <!-- WHY : strengths -->
+                    <div class="strengths">
+                        <div class="scard">
+                            <div class="sic"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+                            <div class="sti">법령 기준 100% 정합</div>
+                            <div class="sde">산안법 제44조·시행규칙 제50조의 공정안전보고서 체계를 법령 용어 그대로 구현</div>
+                        </div>
+                        <div class="scard">
+                            <div class="sic"><svg viewBox="0 0 24 24"><path d="M4 17V9m5.5 8V5M15 17v-6m5 6V8"/><path d="M2 21h20"/></svg></div>
+                            <div class="sti">TO-DO 대시보드 · 선행지표</div>
+                            <div class="sde">요소별 이행현황을 신호등으로 시각화하고 검사·감사·임시변경 기한을 자동 알림</div>
+                        </div>
+                        <div class="scard">
+                            <div class="sic"><svg viewBox="0 0 24 24"><path d="M12 8v4l2.5 2.5"/><circle cx="12" cy="12" r="9"/></svg></div>
+                            <div class="sti">변경 전 과정 이력 추적</div>
+                            <div class="sde">발의부터 종결까지 12대 구성요소 Revision과 결재 이력을 건별로 완전 보존</div>
+                        </div>
+                        <div class="scard">
+                            <div class="sic"><svg viewBox="0 0 24 24"><path d="M8 13l2.5 2.5L16 10"/><path d="M12 3l2 2h5v5l2 2-2 2v5h-5l-2 2-2-2H5v-5l-2-2 2-2V5h5z"/></svg></div>
+                            <div class="sti">이행상태평가 대응</div>
+                            <div class="sde">P·S 등급 획득을 위한 평가 대비 자료를 시스템에서 즉시 출력</div>
+                        </div>
+                    </div>
+                    <footer>산업안전보건법 제44조(공정안전보고서) · 시행규칙 제50조 · KOSHA GUIDE 기준</footer>
+                </div>
             </div>
-            <img src="/images/psm.png" alt="공정안전관리 프로세스" style="width: 100%; display: block; margin-top: 20px;">
         </div>
     </section>
 
@@ -104,7 +247,6 @@
                         <li>공정안전보고서</li>
                         <li>안전검사</li>
                         <li>변경관리(MOC)</li>
-                        <li>변경관리(QMS)</li>
                         <li>공정사고 조사보고서</li>
                         <li>공지사항 및 자료실</li>
                     </ul>
