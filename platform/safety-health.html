@@ -30,7 +30,7 @@
     <div id="header-wrap"></div>
 
     <!-- Sub Header -->
-    <header class="sub-header">
+    <header class="sub-header" style="border-bottom: none;">
         <div class="sub-inner">
             <div class="sub-header-title">
                 <div class="breadcrumbs">
@@ -38,37 +38,25 @@
                     <span class="sep">/</span>
                     <a href="#">구축형 서비스</a>
                     <span class="sep">/</span>
-                    <a href="#">안전보건환경</a>
-                    <span class="sep">/</span>
                     <div class="breadcrumb-current">
                         <span>보건관리시스템</span>
                     </div>
                 </div>
-                <h1>안전보건환경 <span>보건관리시스템</span></h1>
+                <h1>보건관리시스템</h1>
             </div>
-
-            <nav class="sub-tabs">
-                <div class="sub-tabs-links">
-                    <a href="/platform/safety-intro.html">시스템구축 개요</a>
-                    <a href="/platform/safety-management.html">안전경영시스템</a>
-                    <a href="/platform/safety-system.html">안전관리시스템</a>
-                    <!-- <a href="/platform/safety-disaster.html">재난안전관리시스템</a> -->
-                    <a href="/platform/safety-health.html" class="active">보건관리시스템</a>
-                    <a href="/platform/safety-env.html">환경관리시스템</a>
-                    <a href="/platform/safety-psm.html">공정안전관리(PSM)</a>
-                    <a href="/platform/safety-edu.html">안전보건교육 통합관리시스템</a>
-                </div>
-            </nav>
         </div>
     </header>
 
     <!-- Pain Point -->
-    <section class="private-pain">
+    <section class="private-pain" style="padding-top: 20px;">
         <div class="private-pain-inner">
-            <h2 class="private-pain-headline" style="margin-bottom:0;">100여 명의 보건관리자가 함께 만든, 현장의 업무 그대로 담은 보건관리시스템입니다.<br>
+            <h2 class="private-pain-headline">100여 명의 보건관리자가 함께 만든, 현장의 업무 그대로 담은 보건관리시스템입니다.<br>
 <span class="private-pain-headline-sub">
     산업안전보건법이 요구하는 특수·배치전후 건강검진과 유소견자 관리, MSDS, 보건교육까지, 건강관리실의 실제 업무와 동선을 반영하여 법정 보건업무를 빠짐없이 처리합니다.</span></h2>
-<hr style="border:none;border-top:2px solid #000;margin-top:48px;margin-bottom:80px;">
+
+            <div class="ceo-top-image sm-top-image">
+                <img src="/images/health_01.png" alt="보건관리시스템">
+            </div>
         </div>
     </section>
 
@@ -136,39 +124,112 @@ AS-IS/TO-BE 기반의 맞춤형 프로세스 혁신(PI) 컨설팅 지원.</p>
                 <p class="title-en">System Main Menu</p>
             </div>
             <div class="sm-menu-grid">
+
+                <!-- 종합현황 · 공통 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">종합현황 · 공통</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">COMMON</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">건강관리실<span class="sm-menu-dot"></span></span>
+                        <span class="sm-menu-label">보건관리 대시보드<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
-                        <li>건강관리실</li>
-                        <li>투약업무</li>
-                        <li>일반업무</li>
-                        <li>측정업무</li>
-                        <li>인바디측정현황</li>
+                        <li>검진·측정 일정 및 실시 현황(신호등)</li>
+                        <li>유소견자·관리대상자 통계 요약</li>
+                        <li>기한 도래 알림(검진·측정·조사)</li>
                     </ul>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">검진관리<span class="sm-menu-dot"></span></span>
+                        <span class="sm-menu-label">보건일지<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
-                        <li>건강검진계획</li>
-                        <li>건강검진예약</li>
-                        <li>건강검진차트</li>
-                        <li>검진결과관리</li>
-                        <li>건강검진현황</li>
+                        <li>보건일지 작성·관리</li>
+                        <li>전자결재 연계</li>
+                        <li>업무 통계(처치·상담 건수)</li>
                     </ul>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">유소견자관리<span class="sm-menu-dot"></span></span>
+                        <span class="sm-menu-label">보건업무 기준·법규<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>보건 관련 법규·고시 관리</li>
+                        <li>법정 실시주기 기준 관리(검진·측정·조사)</li>
+                        <li>보건관리자 선임·업무 기록</li>
+                    </ul>
+                </div>
+                <div style="visibility:hidden;"></div>
+
+                <!-- 건강진단 · 사후관리 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">건강진단 · 사후관리</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">HEALTH EXAMINATION</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">건강검진관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>건강검진 계획·예약</li>
+                        <li>건강검진 차트</li>
+                        <li>검진결과 관리·검진 현황</li>
+                        <li>검진기관 연계(결과 자동 수신)</li>
+                        <li>특수검진 대상자 자동 선정(유해인자 연계)</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">유소견자·사후관리<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
                         <li>개인관리카드</li>
-                        <li>소음성난청</li>
-                        <li>사후관리</li>
-                        <li>관리대상자현황</li>
+                        <li>소음성난청 관리</li>
+                        <li>사후관리·관리대상자 현황</li>
+                        <li>업무적합성 평가 관리</li>
+                        <li>사후조치 이행 추적(재검·작업전환)</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">뇌심혈관계 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>뇌심혈관계 관리</li>
+                        <li>발병위험도 평가</li>
+                        <li>고위험군 대상자 관리 프로그램</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">건강증진 프로그램<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>건강증진 프로그램 운영</li>
+                        <li>자가진단</li>
+                        <li>프로그램 계획·참여자 관리(금연·비만 등)</li>
+                        <li>참여 실적·효과 분석</li>
+                    </ul>
+                </div>
+
+                <!-- 건강관리실 운영 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">건강관리실 운영</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">HEALTH CARE ROOM</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">건강관리실 업무<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>투약업무·일반업무</li>
+                        <li>측정업무(혈압·혈당 등)</li>
+                        <li>인바디 측정현황</li>
+                        <li>이용자 이력·상담 기록</li>
                     </ul>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
@@ -176,68 +237,165 @@ AS-IS/TO-BE 기반의 맞춤형 프로세스 혁신(PI) 컨설팅 지원.</p>
                         <span class="sm-menu-label">약품관리<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
-                        <li>약품목록관리</li>
-                        <li>약품입고관리</li>
-                        <li>구급약품지급</li>
-                        <li>약품재고관리</li>
+                        <li>약품목록·입고 관리</li>
+                        <li>구급약품 지급</li>
+                        <li>약품 재고관리</li>
+                        <li>유효기간 도래 알림</li>
                     </ul>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">사무실공기질측정<span class="sm-menu-dot"></span></span>
+                        <span class="sm-menu-label">응급대응 관리<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
-                        <li>사무실공기질측정관리</li>
-                        <li>측정항목관리</li>
+                        <li>응급처치·이송 기록</li>
+                        <li>구급함·AED 배치 및 점검</li>
+                        <li>응급상황 대응 절차 관리</li>
                     </ul>
+                </div>
+                <div style="visibility:hidden;"></div>
+
+                <!-- 작업환경 · 유해인자 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">작업환경 · 유해인자</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">WORK ENVIRONMENT</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
                         <span class="sm-menu-label">작업환경측정관리<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
-                        <li>작업환경현황</li>
-                        <li>작업환경측정결과관리</li>
-                        <li>작업환경측정대상관리</li>
-                        <li>유해인자관리</li>
+                        <li>작업환경 현황</li>
+                        <li>측정대상·결과 관리</li>
+                        <li>측정기관 관리</li>
+                        <li>노출기준 초과 조치 관리</li>
                     </ul>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">근골격계관리<span class="sm-menu-dot"></span></span>
+                        <span class="sm-menu-label">유해인자·MSDS 관리<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
-                        <li>유해요인조사 계획관리</li>
-                        <li>부담작업 체크리스트</li>
-                        <li>질환증상조사 설문</li>
-                        <li>유해요인 기본조사</li>
-                        <li>작업환경 개선관리</li>
+                        <li>유해인자 관리</li>
+                        <li>GHS/MSDS 관리</li>
+                        <li>특별관리물질 취급 관리</li>
+                        <li>유해인자–공정–근로자 노출 매핑</li>
                     </ul>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">직무스트레스관리<span class="sm-menu-dot"></span></span>
+                        <span class="sm-menu-label">사무실 공기질 측정<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>사무실 공기질 측정관리</li>
+                        <li>측정항목 관리</li>
+                        <li>기준 초과 개선 조치</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">국소배기장치 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>국소배기장치 관리</li>
+                        <li>점검일지·성능 검사 이력</li>
+                        <li>개선·보수 이력</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">밀폐공간 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>밀폐공간 관리</li>
+                        <li>밀폐공간 작업 프로그램 수립</li>
+                        <li>출입 전 가스농도 측정 기록</li>
+                        <li>안전작업허가(PTW) 연계</li>
+                    </ul>
+                </div>
+                <div style="visibility:hidden;"></div>
+                <div style="visibility:hidden;"></div>
+                <div style="visibility:hidden;"></div>
+
+                <!-- 근골격계 · 직무스트레스 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">근골격계 · 직무스트레스</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">ERGONOMICS / MENTAL HEALTH</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">근골격계 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>유해요인조사 계획관리·기본조사</li>
+                        <li>부담작업 체크리스트</li>
+                        <li>질환증상조사 설문</li>
+                        <li>작업환경 개선관리</li>
+                        <li>증상호소자 의학적 관리 연계</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">직무스트레스 관리<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
                         <li>직무스트레스 계획</li>
-                        <li>직무스트레스 설문(자가진단)</li>
-                        <li>직무스트레스 현황</li>
+                        <li>설문(자가진단)·현황</li>
+                        <li>고위험군 상담·사후관리</li>
+                        <li>부서별 결과 분석·개선과제</li>
                     </ul>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">기타<span class="sm-menu-dot"></span></span>
+                        <span class="sm-menu-label">직장 내 괴롭힘·감정노동<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
-                        <li>보건일지</li>
-                        <li>밀폐공간관리</li>
-                        <li>뇌심혈관계관리</li>
-                        <li>건강증진 프로그램</li>
-                        <li>자가진단</li>
-                        <li>국소배기장치관리</li>
-                        <li>GHS/MSDS 관리</li>
+                        <li>신고 접수·처리 관리</li>
+                        <li>감정노동 보호 프로그램</li>
+                        <li>심리상담 지원 이력</li>
                     </ul>
                 </div>
+                <div style="visibility:hidden;"></div>
+
+                <!-- 시스템 기반 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">시스템 기반</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">SYSTEM</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">개인건강정보 보호<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>민감정보 접근권한 통제(보건담당자 한정)</li>
+                        <li>개인정보 마스킹·열람 이력</li>
+                        <li>보존연한 관리(특수검진 30년 등)</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">사용자·기준정보 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>사용자·권한 관리</li>
+                        <li>조직·공통코드 관리</li>
+                        <li>HR 연계(입·퇴사, 부서이동 자동 반영)</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">타 시스템 연계<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>안전관리시스템 연계(화학물질–특수검진)</li>
+                        <li>검진기관·EAP 기관 연계</li>
+                        <li>안전경영시스템 KPI 연계</li>
+                    </ul>
+                </div>
+                <div style="visibility:hidden;"></div>
             </div>
         </div>
     </section>

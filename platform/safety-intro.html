@@ -22,6 +22,49 @@
     <link rel="stylesheet" href="/css/variables.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/sub.css">
+
+    <!-- 구축형 서비스-SHE & C 통합관리시스템 구축 모듈 기능 변경.html 스타일 (.she-modules 안에서만 적용되도록 스코프 처리) -->
+    <style>
+        .she-modules {
+            --navy: #1e2b3c; --purple: #6a1fbf; --purple-d: #5314a3; --sub: #6b7684;
+            --line: #e5e8ee; --bg: #f7f8fa; --chip: #eef0f4;
+            max-width: 1360px;
+            margin: 40px auto 0;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 44px 40px 40px;
+            font-family: 'Pretendard', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            color: var(--navy);
+        }
+        .she-modules *{box-sizing:border-box;margin:0;padding:0}
+
+        .she-modules .band{display:flex;justify-content:center;margin-bottom:34px;}
+        .she-modules .band span{background:linear-gradient(135deg,var(--purple-d),var(--purple));color:#fff;font-size:17px;font-weight:400;border-radius:24px;width:302px;height:33px;padding:0 30px;display:inline-flex;align-items:center;justify-content:center;letter-spacing:-.01em;box-shadow:0 4px 14px rgba(106,31,191,.25);}
+
+        .she-modules .row{display:flex;align-items:stretch;gap:16px;}
+        .she-modules .mod{flex:1;display:flex;flex-direction:column;min-width:0;}
+        .she-modules .mod-h{background:var(--chip);border-radius:8px;text-align:center;font-size:16.5px;font-weight:800;color:var(--navy);padding:13px 8px;margin-bottom:14px;}
+        .she-modules .mod-b{flex:1;border:1px solid var(--line);border-radius:10px;background:#fff;box-shadow:0 2px 8px rgba(30,43,60,.05);padding:20px 10px 22px;display:flex;flex-direction:column;gap:11px;}
+        .she-modules .fi{display:flex;align-items:baseline;gap:9px;font-size:12.5px;color:#414b58;line-height:1.5;font-weight:500;word-break:keep-all;}
+        .she-modules .fi::before{content:"";flex:none;width:4px;height:4px;border-radius:50%;background:#8a94a3;transform:translateY(-3px);}
+        .she-modules .fi b{font-weight:700;color:var(--navy);}
+
+        .she-modules .plus{flex:none;width:56px;display:flex;align-items:center;justify-content:center;position:relative;margin-top:52px;}
+        .she-modules .plus i{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--purple-d),var(--purple));color:#fff;font-style:normal;font-size:19px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 10px rgba(106,31,191,.3);}
+
+        .she-modules .note{margin-top:34px;text-align:center;font-size:14px;color:var(--sub);line-height:1.8;}
+        .she-modules .note b{color:var(--purple-d);}
+
+        .she-modules .values{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:26px;}
+        .she-modules .val{border:1px solid #e2d9f5;background:#faf8ff;border-radius:10px;text-align:center;padding:15px 10px;font-size:14px;font-weight:700;color:var(--purple-d);}
+
+        @media (max-width:1200px){
+            .she-modules .row{flex-direction:column;gap:16px;}
+            .she-modules .plus{display:none;}
+            .she-modules .values{grid-template-columns:repeat(2,1fr);}
+        }
+    </style>
 </head>
 
 <body class="is-sub-page">
@@ -30,7 +73,7 @@
     <div id="header-wrap"></div>
 
     <!-- Sub Header -->
-    <header class="sub-header">
+    <header class="sub-header" style="border-bottom: none;">
         <div class="sub-inner">
             <div class="sub-header-title">
                 <div class="breadcrumbs">
@@ -38,40 +81,43 @@
                     <span class="sep">/</span>
                     <a href="#">구축형 서비스</a>
                     <span class="sep">/</span>
-                    <a href="#">안전보건환경</a>
-                    <span class="sep">/</span>
                     <div class="breadcrumb-current">
-                        <span>시스템구축 개요</span>
+                        <span>시스템 구축 개요</span>
                     </div>
                 </div>
-                <h1>안전보건환경 <span>시스템구축 개요</span></h1>
+                <h1>시스템 구축 개요</h1>
             </div>
-
-            <nav class="sub-tabs">
-                <div class="sub-tabs-links">
-                    <a href="/platform/safety-intro.html" class="active">시스템구축 개요</a>
-                    <a href="/platform/safety-management.html">안전경영시스템</a>
-                    <a href="/platform/safety-system.html">안전관리시스템</a>
-                    <!-- <a href="/platform/safety-disaster.html">재난안전관리시스템</a> -->
-                    <a href="/platform/safety-health.html">보건관리시스템</a>
-                    <a href="/platform/safety-env.html">환경관리시스템</a>
-                    <a href="/platform/safety-psm.html">공정안전관리(PSM)</a>
-                    <a href="/platform/safety-edu.html">안전보건교육 통합관리시스템</a>
-                </div>
-            </nav>
         </div>
     </header>
 
-   <!-- Pain Point -->
-    <section class="private-pain">
+ <!-- 조달청 3자 단가 계약 -->
+    <section class="private-pain" style="padding-top: 20px;">
         <div class="private-pain-inner">
             <div class="sm-title-wrap">
-                <h2 class="sm-section-title" style="padding-top: 10px;"><span class="sm-title-bullet"></span>시스템구축 개요</h2>
+                <h2 class="sm-section-title" style="padding-top: 10px;"><span class="sm-title-bullet"></span>조달청 3자 단가 계약 안내</h2>
+                <p class="title-en">3-Party Unit Price Contract</p>
+            </div>     
+            <!-- 예외: private-hero 배경색과 동일하게 맞춤 (디자인 시스템 변수 없음) -->
+            <div style="display:flex; align-items:center; gap:40px; margin-bottom:60px; background:#F4F6FF; border-radius:8px; padding:28px 100px 28px 80px;">
+                <div class="private-hero-text" style="max-width:660px;">
+                    <p class="private-hero-label">GS인증 · 조달청 3자 단가 계약</p>
+                    <h1 class="private-hero-title" style="font-size: var(--fs-h2); margin-bottom: var(--space-3);">복잡한 조달 절차는 줄이고<br>공공기관 안전 혁신은 더 빠르게</h1>
+                    <p class="private-hero-desc" style="margin-bottom:0;">공공기관 맞춤형 안전보건 관리 시스템을 별도의 복잡한 계약 절차 없이<br>조달청 나라장터를 통해 신속하고 신뢰성 있게 도입하실 수 있습니다.</p>
+                </div>
+                <div class="private-hero-img" style="margin:0;">
+                    <img src="/images/private-g_h01_small.png" alt="시스템 구축 개요">
+                </div>
+            </div>
+        </div>
+    </section>   
+
+    <!-- 시스템 구축 개요 타이틀 -->
+    <section class="private-pain" style="padding-top:0;">
+        <div class="private-pain-inner">
+            <div class="sm-title-wrap">
+                <h2 class="sm-section-title" style="padding-top: 10px;"><span class="sm-title-bullet"></span>시스템 구축 개요</h2>
                 <p class="title-en">System Construction Process</p>
             </div>
-            <!-- <div class="ceo-top-image sm-top-image">
-                <img src="/images/management_01.png" alt="안전경영시스템">
-            </div> -->
         </div>
     </section>
 
@@ -85,15 +131,99 @@
                     <div class="si-ov-cm">COMMON MODULE</div>
                 </div>
                 <img src="/images/system_01.png" alt="안전보건 관리체계 구축 - SAFETY, HEALTH, CHEMICAL, ENVIRONMENT" class="si-system-img">
-                <div class="si-bg-img-scroll">
+                 <div class="si-bg-img-scroll">
                     <img src="/images/system_02.png" alt="시스템 구축 과정" class="si-bg-img">
                 </div>
-                <div class="si-bg-img-scroll">
-                    <img src="/images/system_03.png" alt="시스템 구축" class="si-bg-img">
+            </div>
+
+            <!-- 외부 삽입 (system_03.png 대체) -->
+            <div class="she-modules">
+
+            <div class="band"><span>SHE &amp; C 통합관리시스템 구축</span></div>
+
+            <div class="row">
+
+                <div class="mod">
+                    <div class="mod-h">안전경영시스템</div>
+                    <div class="mod-b">
+                        <span class="fi"><b>방침·목표·추진계획</b> 관리</span>
+                        <span class="fi"><b>안전보건 예산</b> 편성·집행</span>
+                        <span class="fi"><b>법규관리·준수평가</b> (법제처 연동)</span>
+                        <span class="fi"><b>산업안전보건위원회·협의체</b> 운영</span>
+                        <span class="fi"><b>내부·외부심사</b> 및 경영자 검토</span>
+                        <span class="fi"><b>KPI·중처법 이행점검</b> 보고</span>
+                    </div>
                 </div>
+
+                <div class="mod">
+                    <div class="mod-h">안전관리시스템</div>
+                    <div class="mod-b">
+                        <span class="fi"><b>위험성평가</b> (HAZOP·KRAS·JSA)</span>
+                        <span class="fi"><b>안전점검·순회점검</b> 및 시정개선</span>
+                        <span class="fi"><b>안전작업허가(PTW)</b> · TBM</span>
+                        <span class="fi"><b>사고·아차사고</b> 관리</span>
+                        <span class="fi"><b>도급·협력사</b> 안전관리</span>
+                        <span class="fi"><b>비상대응·근로자 참여</b> (제안·신고)</span>
+                    </div>
+                </div>
+
+                <div class="mod">
+                    <div class="mod-h">보건관리시스템</div>
+                    <div class="mod-b">
+                        <span class="fi"><b>건강검진·유소견자</b> 사후관리</span>
+                        <span class="fi"><b>작업환경측정·유해인자</b> 관리</span>
+                        <span class="fi"><b>근골격계·직무스트레스</b> 관리</span>
+                        <span class="fi"><b>건강관리실·약품</b> 관리</span>
+                        <span class="fi"><b>뇌심혈관계·건강증진</b> 프로그램</span>
+                        <span class="fi"><b>개인건강정보 보호</b> (민감정보 통제)</span>
+                    </div>
+                </div>
+
+                <div class="mod">
+                    <div class="mod-h">환경관리시스템</div>
+                    <div class="mod-b">
+                        <span class="fi"><b>환경 인허가·법규</b> 준수평가</span>
+                        <span class="fi"><b>매체별 법정일지</b> (대기·수질·폐기물)</span>
+                        <span class="fi"><b>자가측정·TMS</b> 모니터링</span>
+                        <span class="fi"><b>온실가스·에너지</b> 관리 (Scope 1·2)</span>
+                        <span class="fi"><b>환경영향평가</b> 협의내용 이행</span>
+                        <span class="fi"><b>환경성과·ESG</b> 데이터 보고</span>
+                    </div>
+                </div>
+
+                <div class="mod">
+                    <div class="mod-h">화학물질관리시스템</div>
+                    <div class="mod-b">
+                        <span class="fi"><b>인벤토리·규제DB</b> 관리</span>
+                        <span class="fi"><b>구매 사전 안전성검토</b>·승인</span>
+                        <span class="fi"><b>전과정 추적</b> 입고–사용–폐기 (QR·RFID)</span>
+                        <span class="fi"><b>저장소·지정수량</b> 관리</span>
+                        <span class="fi"><b>MSDS·경고표지</b> 관리</span>
+                        <span class="fi"><b>법정대장 자동생성</b>·실적보고</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="note">
+                되고시스템의 SHE &amp; C 통합관리시스템은<br>
+                <b>안전경영시스템 모듈, 안전관리시스템 모듈, 보건관리시스템 모듈, 환경관리시스템 모듈 및 화학물질관리시스템 모듈</b>로 구성되어<br>
+                고객사 도입 시기 및 환경에 맞추어 순차적 필요한 모듈 도입으로 SHE &amp; C 통합관리시스템 구축 할 수 있습니다.
+            </p>
+
+            <div class="values">
+                <div class="val">통합 대시보드</div>
+                <div class="val">데이터 연계 및 분석</div>
+                <div class="val">법규 / 규제 준수 지원</div>
+                <div class="val">성과 관리 및 보고</div>
+                <div class="val">협업 및 소통 강화</div>
+            </div>
+
             </div>
         </div>
     </section>
+
+
 
     <!-- Footer Include -->
     <div id="footer-wrap"></div>

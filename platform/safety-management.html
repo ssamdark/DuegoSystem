@@ -30,7 +30,7 @@
     <div id="header-wrap"></div>
 
     <!-- Sub Header -->
-    <header class="sub-header">
+    <header class="sub-header" style="border-bottom: none;">
         <div class="sub-inner">
             <div class="sub-header-title">
                 <div class="breadcrumbs">
@@ -38,32 +38,17 @@
                     <span class="sep">/</span>
                     <a href="#">구축형 서비스</a>
                     <span class="sep">/</span>
-                    <a href="#">안전보건환경</a>
-                    <span class="sep">/</span>
                     <div class="breadcrumb-current">
                         <span>안전경영시스템</span>
                     </div>
                 </div>
-                <h1>안전보건환경 <span>안전경영시스템</span></h1>
+                <h1>안전경영시스템</h1>
             </div>
-
-            <nav class="sub-tabs">
-                <div class="sub-tabs-links">
-                    <a href="/platform/safety-intro.html">시스템구축 개요</a>
-                    <a href="/platform/safety-management.html" class="active">안전경영시스템</a>
-                    <a href="/platform/safety-system.html">안전관리시스템</a>
-                    <!-- <a href="/platform/safety-disaster.html">재난안전관리시스템</a> -->
-                    <a href="/platform/safety-health.html">보건관리시스템</a>
-                    <a href="/platform/safety-env.html">환경관리시스템</a>
-                    <a href="/platform/safety-psm.html">공정안전관리(PSM)</a>
-                    <a href="/platform/safety-edu.html">안전보건교육 통합관리시스템</a>
-                </div>
-            </nav>
         </div>
     </header>
 
     <!-- Pain Point -->
-    <section class="private-pain">
+    <section class="private-pain" style="padding-top: 20px;">
         <div class="private-pain-inner">
             <h2 class="private-pain-headline">계획에서 개선까지, P·D·C·A로 완성하는 안전보건경영시스템을 구축합니다.<br>
 <span class="private-pain-headline-sub">계획(Plan) → 실행(Do) → 점검(Check) → 개선(Act)의 선순환 체계로, 일회성 관리가 아닌 지속 가능한 안전경영을 구현합니다.</span></h2>
@@ -138,23 +123,180 @@ AS-IS/TO-BE 기반의 맞춤형 프로세스 혁신(PI) 컨설팅 지원.</p>
                 <p class="title-en">System Main Menu</p>
             </div>
             <div class="sm-menu-grid">
-                <!-- 하위 없음 -->
-                <div class="sm-menu-item"><span class="sm-menu-label">안전보건경영방침<span class="sm-menu-dot"></span></span></div>
-                <div class="sm-menu-item"><span class="sm-menu-label">매뉴얼<span class="sm-menu-dot"></span></span></div>
-                <div class="sm-menu-item"><span class="sm-menu-label">절차서<span class="sm-menu-dot"></span></span></div>
-                <div class="sm-menu-item"><span class="sm-menu-label">지침서<span class="sm-menu-dot"></span></span></div>
-
-                <!-- 하위 있음 -->
+                <!-- 리더십 · 방침 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">리더십 · 방침</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">LEADERSHIP</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">연간안전보건계획<span class="sm-menu-dot"></span></span>
+                        <span class="sm-menu-label">안전보건경영방침<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>방침 제·개정 관리(버전 이력)</li>
+                        <li>방침 공표·전파(게시·서명 확인)</li>
+                        <li>경영자 리더십 활동 기록</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">경영시스템 문서관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>매뉴얼 관리</li>
+                        <li>절차서 관리</li>
+                        <li>지침서 관리</li>
+                        <li>제·개정 승인(전자결재)·Revision 이력</li>
+                        <li>최신본 배포·구본 회수 관리</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">안전보건관리체제 구축<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>선·해임 관리</li>
+                        <li>안전보건조직도 관리</li>
+                        <li>선임서/지정서 관리</li>
+                        <li>전담조직 구성·운영 관리</li>
+                        <li>자격·선임요건 충족 알림</li>
+                    </ul>
+                </div>
+                <div style="visibility:hidden;"></div>
+
+                <!-- P · 계획 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">P · 계획</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">PLAN</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">안전보건 목표·추진계획<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
                         <li>안전보건목표 추진계획(전사)</li>
                         <li>안전보건목표 추진실시(전사)</li>
-                        <li>대상부서 관리</li>
-                        <li>담당자 관리</li>
-                        <li>안전보건목표 부서 추진실적 현황</li>
+                        <li>대상부서·담당자 관리</li>
+                        <li>부서별 추진실적 현황</li>
+                        <li>목표–예산–KPI 연계 관리</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">안전보건 예산 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>예산 편성 관리</li>
+                        <li>예산 집행 관리·현황</li>
+                        <li>예산 항목 관리</li>
+                        <li>집행률 분석·미집행 알림</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">법규관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>법규 관리(법제처 API 연동)</li>
+                        <li>법규 준수평가 계획·실시·현황</li>
+                        <li>법규 영향검토</li>
+                        <li>개정 법규 대응과제 관리</li>
+                        <li>법정 의무이행 캘린더</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">위험등록부(전사)<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>전사 위험요인 통합 등록부</li>
+                        <li>심사·평가 지적 위험요인 취합</li>
+                        <li>현장 위험성평가 연계 조회</li>
+                    </ul>
+                </div>
+
+                <!-- D · 실행·운영 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">D · 실행·운영</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">DO</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">산업안전보건위원회 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>위원회 구성</li>
+                        <li>회의 계획·결과 관리</li>
+                        <li>의결/이행사항 관리</li>
+                        <li>회의록 현황/조회</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">산업안전보건협의체 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>협의체 구성</li>
+                        <li>회의 계획·결과 관리</li>
+                        <li>요청·조치사항 관리</li>
+                        <li>협의체 운영 현황</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">회의록 관리(공통)<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>참여자 관리</li>
+                        <li>서명 관리(전자서명)</li>
+                        <li>결재 관리</li>
+                        <li>의결사항 이행 추적 통합 현황</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">종사자 의견청취<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>의견 접수(제안·설문·간담회)</li>
+                        <li>처리결과·회신 관리</li>
+                        <li>반기 의견청취 실적 현황</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">비상대응 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>훈련 시나리오 및 대응조치</li>
+                        <li>훈련 계획·결과·현황</li>
+                        <li>비상대응 매뉴얼 관리(유형별)</li>
+                        <li>훈련 평가·개선사항 도출</li>
+                    </ul>
+                </div>
+                <div style="visibility:hidden;"></div>
+                <div style="visibility:hidden;"></div>
+                <div style="visibility:hidden;"></div>
+
+                <!-- C · 점검·평가 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">C · 점검·평가</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">CHECK</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">KPI 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>지표·목표 관리</li>
+                        <li>연간계획 관리</li>
+                        <li>실적 등록(월간·분기·연간)</li>
+                        <li>부서별 현황·실적분석</li>
+                        <li>KPI 리포트</li>
                     </ul>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
@@ -162,20 +304,63 @@ AS-IS/TO-BE 기반의 맞춤형 프로세스 혁신(PI) 컨설팅 지원.</p>
                         <span class="sm-menu-label">내부심사<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
-                        <li>심사 계획</li>
-                        <li>심사 결과</li>
-                        <li>결과보고서</li>
+                        <li>심사 계획·결과·결과보고서</li>
                         <li>위험등록부</li>
                         <li>고객사 점검결과 관리</li>
+                        <li>심사원 자격 관리</li>
+                        <li>부적합사항 시정조치 연계</li>
                     </ul>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">외부심사<span class="sm-menu-dot"></span></span>
+                        <span class="sm-menu-label">외부심사·인증 관리<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
-                        <li>심사 결과</li>
-                        <li>위험등록부</li>
+                        <li>심사 결과·위험등록부</li>
+                        <li>인증 현황(KOSHA-MS·ISO 45001)</li>
+                        <li>사후심사·갱신 일정 알림</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">안전보건관리평가(반기)<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>상반기·하반기 평가</li>
+                        <li>대상자 관리(관리책임자 등)</li>
+                        <li>평가표 관리</li>
+                        <li>평가결과 조치·환류 관리</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">중처법 의무이행 점검<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>반기 이행점검 체크리스트</li>
+                        <li>의무별 이행현황(신호등)</li>
+                        <li>미이행 사항 조치 관리</li>
+                    </ul>
+                </div>
+                <div style="visibility:hidden;"></div>
+                <div style="visibility:hidden;"></div>
+                <div style="visibility:hidden;"></div>
+
+                <!-- A · 개선·경영검토 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">A · 개선·경영검토</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">ACT</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">시정개선 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>시정개선 진행 관리</li>
+                        <li>진행 현황 및 통계</li>
+                        <li>원인분석·재발방지 기록</li>
+                        <li>조치기한 초과 알림·효과성 검증</li>
                     </ul>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
@@ -183,144 +368,53 @@ AS-IS/TO-BE 기반의 맞춤형 프로세스 혁신(PI) 컨설팅 지원.</p>
                         <span class="sm-menu-label">경영자 검토(경영검토)<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
-                        <li>경영검토 계획</li>
-                        <li>경영검토 결과</li>
-                        <li>경영검토 보고서</li>
+                        <li>경영검토 계획·결과·보고서</li>
                         <li>개선/조치사항 관리</li>
                         <li>경영검토 현황</li>
-                    </ul>
-                </div>
-
-                <div class="sm-menu-item sm-menu-item--has-sub">
-                    <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">안전보건 예산 관리<span class="sm-menu-dot"></span></span>
-                    </div>
-                    <ul class="sm-menu-sub-list">
-                        <li>예산편성관리</li>
-                        <li>예산집행관리</li>
-                        <li>예산집행현황</li>
-                        <li>예산항목관리</li>
-                    </ul>
-                </div>
-
-                <div class="sm-menu-item sm-menu-item--has-sub">
-                    <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">안전보건관리체제구축<span class="sm-menu-dot"></span></span>
-                    </div>
-                    <ul class="sm-menu-sub-list">
-                        <li>선해임관리</li>
-                        <li>안건보건조직도관리</li>
-                        <li>선임서/지정서관리</li>
-                    </ul>
-                </div>
-
-                <div class="sm-menu-item sm-menu-item--has-sub">
-                    <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">법규관리<span class="sm-menu-dot"></span></span>
-                    </div>
-                    <ul class="sm-menu-sub-list">
-                        <li>법규 관리</li>
-                        <li>법규 준수평가계획</li>
-                        <li>법규 평가실시</li>
-                        <li>법규 평가현황</li>
-                        <li>법규영향검토</li>
-                        <li>법제처API연동</li>
-                        
-                    </ul>
-                </div>
-
-                <div class="sm-menu-item sm-menu-item--has-sub">
-                    <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">비상대응 관리<span class="sm-menu-dot"></span></span>
-                    </div>
-                    <ul class="sm-menu-sub-list">
-                        <li>훈련계획</li>
-                        <li>훈련결과</li>
-                        <li>훈련 시나리오 및 대응조치</li>
-                        <li>훈련 현황</li>
+                        <li>검토 입력자료 자동 취합(KPI·심사·사고)</li>
                     </ul>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">산업안전보건위원회관리<span class="sm-menu-dot"></span></span>
-                    </div>
-                    <ul class="sm-menu-sub-list">
-                        <li>위원회 구성</li>
-                        <li>회의 계획</li>
-                        <li>회의 결과 관리</li>
-                        <li>의결/이행사항 관리</li>
-                        <li>회의록 현황/조회</li>
-                    </ul>
-                </div>
-                <div class="sm-menu-item sm-menu-item--has-sub">
-                    <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">산업안전보건협의체관리<span class="sm-menu-dot"></span></span>
-                    </div>
-                    <ul class="sm-menu-sub-list">
-                        <li>협의체 구성</li>
-                        <li>회의 계획</li>
-                        <li>회의 결과 관리</li>
-                        <li>요청·조치사항 관리</li>
-                        <li>협의체 운영 현황</li>
-                    </ul>
-                </div>
-                <div class="sm-menu-item sm-menu-item--has-sub">
-                    <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">회의록관리<span class="sm-menu-dot"></span></span>
-                    </div>
-                    <ul class="sm-menu-sub-list"> 
-                        <li>참여자 관리</li>
-                        <li>서명 관리</li>
-                        <li>결재 관리</li>                    
-                    </ul>
-                </div>
-                <div class="sm-menu-item sm-menu-item--has-sub">
-                    <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">안전보건관리평가<span class="sm-menu-dot"></span></span>
-                    </div>
-                    <ul class="sm-menu-sub-list">
-                         <li>상반기 평기</li>
-                         <li>하반기 평기</li>
-                         <li>대상자 관리</li>
-                         <li>평가표 관리</li>
-                    </ul>
-                </div>
-                <div class="sm-menu-item sm-menu-item--has-sub">
-                    <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">KPI관리<span class="sm-menu-dot"></span></span>
-                    </div>
-                    <ul class="sm-menu-sub-list">
-                        <li>지표관리</li>
-                        <li>연간계획</li>
-                        <li>월간실적</li>
-                        <li>분기실적</li>
-                        <li>연간실적</li>
-                        <li>부서별 현황</li>
-                        <li>KPI 현황</li>
-                        <li>목표관리</li>
-                        <li>실적분석</li>
-                        <li>KPI 리포트</li>
-                    </ul>
-                </div>
-                <div class="sm-menu-item sm-menu-item--has-sub">
-                    <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">이행증빙보고서<span class="sm-menu-dot"></span></span>
+                        <span class="sm-menu-label">이행증빙 보고서<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
                         <li>안전보건관리체계 구축 보고서</li>
                         <li>안전보건공시제 보고서</li>
                         <li>중대재해처벌법 대응 보고서</li>
-                    </ul>
-                </div>                
-                <div class="sm-menu-item sm-menu-item--has-sub">
-                    <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">시정개선 관리<span class="sm-menu-dot"></span></span>
-                    </div>
-                    <ul class="sm-menu-sub-list">
-                        <li>시정개선 진행 관리</li>
-                        <li>시정개선 진행 현황 및 통계</li>                       
+                        <li>증빙자료 자동 취합·보고서 생성</li>
                     </ul>
                 </div>
+                <div style="visibility:hidden;"></div>
+
+                <!-- 시스템 기반 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">시스템 기반</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">SYSTEM</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">사용자·기준정보 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>사용자·권한 관리</li>
+                        <li>조직·공통코드 관리</li>
+                        <li>결재선·전자서명 설정</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">현장 시스템 연계<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>안전관리시스템(현장) 데이터 연계</li>
+                        <li>위험성평가·점검·사고 실적 수신</li>
+                        <li>HR·ERP 연동(조직·인사·예산)</li>
+                    </ul>
+                </div>
+                <div style="visibility:hidden;"></div>
+                <div style="visibility:hidden;"></div>
 
             </div>
         </div>

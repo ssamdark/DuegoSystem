@@ -30,7 +30,7 @@
     <div id="header-wrap"></div>
 
     <!-- Sub Header -->
-    <header class="sub-header">
+    <header class="sub-header" style="border-bottom: none;">
         <div class="sub-inner">
             <div class="sub-header-title">
                 <div class="breadcrumbs">
@@ -38,38 +38,26 @@
                     <span class="sep">/</span>
                     <a href="#">구축형 서비스</a>
                     <span class="sep">/</span>
-                    <a href="#">안전보건환경</a>
-                    <span class="sep">/</span>
                     <div class="breadcrumb-current">
                         <span>환경관리시스템</span>
                     </div>
                 </div>
-                <h1>안전보건환경 <span>환경관리시스템</span></h1>
+                <h1>환경관리시스템</h1>
             </div>
-
-            <nav class="sub-tabs">
-                <div class="sub-tabs-links">
-                    <a href="/platform/safety-intro.html">시스템구축 개요</a>
-                    <a href="/platform/safety-management.html">안전경영시스템</a>
-                    <a href="/platform/safety-system.html">안전관리시스템</a>
-                    <!-- <a href="/platform/safety-disaster.html">재난안전관리시스템</a> -->
-                    <a href="/platform/safety-health.html">보건관리시스템</a>
-                    <a href="/platform/safety-env.html" class="active">환경관리시스템</a>
-                    <a href="/platform/safety-psm.html">공정안전관리(PSM)</a>
-                    <a href="/platform/safety-edu.html">안전보건교육 통합관리시스템</a>
-                </div>
-            </nav>
         </div>
     </header>
 
     <!-- Pain Point -->
-    <section class="private-pain">
+    <section class="private-pain" style="padding-top: 20px;">
         <div class="private-pain-inner">
-            <h2 class="private-pain-headline" style="margin-bottom:0;">환경 규제는 빈틈없이, ESG 경영은 한발 앞서 ISO 14001 기반 통합 환경관리시스템입니다.<br>
+            <h2 class="private-pain-headline">환경 규제는 빈틈없이, ESG 경영은 한발 앞서 ISO 14001 기반 통합 환경관리시스템입니다.<br>
 <span class="private-pain-headline-sub">
     대기·수질·폐기물 등 매체별 법정일지 관리부터 온실가스 측정, 환경영향평가까지, 환경업무 전반을 P·D·C·A 체계로 정보화하여 지속 가능한 환경경영을 지원합니다.
 </span></h2>
-<hr style="border:none;border-top:2px solid #000;margin-top:48px;margin-bottom:80px;">
+
+            <div class="ceo-top-image sm-top-image">
+                <img src="/images/safety_01.png" alt="환경관리시스템">
+            </div>
         </div>
     </section>
 
@@ -100,7 +88,6 @@
                     <h3 class="sm-process-name">계약 체결 </h3>
                     <p class="sm-process-desc sm-process-desc--strong">입찰·수의계약 및 추진 체계 확정 </p>
                     <p class="sm-process-desc">입찰 또는 수의계약 방식으로 계약을 체결하고 프로젝트 추진 체계 확정.</p>
-                    <p class="sm-process-desc" style="color: var(--primary);"> ※ 공공기관 대상 나라장터 3자 단가계약 체결 가능</p>
                 </li>
             </ul>
             <ul class="sm-process-list">
@@ -137,15 +124,61 @@ AS-IS/TO-BE 기반의 맞춤형 프로세스 혁신(PI) 컨설팅 지원.</p>
                 <p class="title-en">System Main Menu</p>
             </div>
             <div class="sm-menu-grid">
+
+                <!-- 종합현황 · 공통 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">종합현황 · 공통</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">COMMON</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">환경관리 대시보드<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>매체별 법정일지 작성현황(신호등)</li>
+                        <li>측정치 기준 초과 알림</li>
+                        <li>배출량·실적 종합 요약</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">환경 인허가 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>배출시설 인허가 현황(대기·수질·폐기물)</li>
+                        <li>변경 인허가 신청·이력 관리</li>
+                        <li>인허가 조건 이행 관리</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">환경법규 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>법규 등록·개정 알림</li>
+                        <li>법규 준수평가(체크리스트)</li>
+                        <li>법정 보고·제출 일정 캘린더</li>
+                    </ul>
+                </div>
+                <div style="visibility:hidden;"></div>
+
+                <!-- 매체별 환경관리 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">매체별 환경관리</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">MEDIA MANAGEMENT</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
                         <span class="sm-menu-label">대기관리<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
                         <li>법정일지 관리</li>
-                        <li>대기일지운영현황</li>
-                        <li>대기시설가동현황</li>
+                        <li>대기일지 운영현황</li>
+                        <li>대기시설 가동현황</li>
                         <li>대기측정 관리</li>
+                        <li>측정 초과 시 조치 관리</li>
                     </ul>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
@@ -154,10 +187,10 @@ AS-IS/TO-BE 기반의 맞춤형 프로세스 혁신(PI) 컨설팅 지원.</p>
                     </div>
                     <ul class="sm-menu-sub-list">
                         <li>법정운영일지</li>
-                        <li>수질운영현황</li>
-                        <li>수질측정관리</li>
+                        <li>수질운영현황·수질측정관리</li>
                         <li>폐수위탁관리</li>
                         <li>용폐수 트렌드</li>
+                        <li>방류수 기준 초과 알림</li>
                     </ul>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
@@ -165,13 +198,11 @@ AS-IS/TO-BE 기반의 맞춤형 프로세스 혁신(PI) 컨설팅 지원.</p>
                         <span class="sm-menu-label">폐기물관리<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
-                        <li>폐기물 업체관리</li>
-                        <li>계근장 일지</li>
-                        <li>월 실적</li>
-                        <li>폐기물 품목관리</li>
-                        <li>폐기물 계약관리</li>
-                        <li>폐기물 실적관리</li>
+                        <li>폐기물 업체·계약 관리</li>
+                        <li>계근장 일지·월 실적</li>
+                        <li>폐기물 품목·실적 관리</li>
                         <li>배출자 의무관리</li>
+                        <li>올바로(Allbaro) 시스템 연계</li>
                     </ul>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
@@ -179,8 +210,9 @@ AS-IS/TO-BE 기반의 맞춤형 프로세스 혁신(PI) 컨설팅 지원.</p>
                         <span class="sm-menu-label">토양오염관리<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
-                        <li>토양오염대상시설</li>
-                        <li>성적서관리</li>
+                        <li>토양오염 대상시설</li>
+                        <li>성적서 관리</li>
+                        <li>정기 토양오염도 검사 일정 관리</li>
                     </ul>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
@@ -189,38 +221,141 @@ AS-IS/TO-BE 기반의 맞춤형 프로세스 혁신(PI) 컨설팅 지원.</p>
                     </div>
                     <ul class="sm-menu-sub-list">
                         <li>비점오염원 저감시설</li>
-                        <li>성적서관리</li>
+                        <li>성적서 관리</li>
+                        <li>설치신고·관리대장 이행 관리</li>
                     </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">화학물질관리(화관법)<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>유해화학물질 취급시설 관리</li>
+                        <li>영업허가·실적보고 관리</li>
+                        <li>화학물질 통계조사 대응</li>
+                    </ul>
+                </div>
+                <div style="visibility:hidden;"></div>
+                <div style="visibility:hidden;"></div>
+
+                <!-- 시설 · 측정 · 기후에너지 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">시설 · 측정 · 기후에너지</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">FACILITY / MONITORING / GHG</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
                         <span class="sm-menu-label">환경시설관리<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
-                        <li>배출구관리</li>
-                        <li>방지시설 관리</li>
-                        <li>배출시설 관리</li>
-                        <li>전력계관리</li>
+                        <li>배출구 관리</li>
+                        <li>방지시설·배출시설 관리</li>
+                        <li>전력계 관리</li>
+                        <li>시설 점검·정비 이력</li>
+                        <li>인허가 정보 연계(시설–허가 매핑)</li>
                     </ul>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">온실가스 측정관리<span class="sm-menu-dot"></span></span>
+                        <span class="sm-menu-label">측정·모니터링 통합<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
-                        <li>연료/배출가스/배출계수</li>
-                        <li>시설목록</li>
-                        <li>온실가스 배출량 현황</li>
-                        <li>연료사용금액 현황</li>
+                        <li>자가측정 계획·결과 관리</li>
+                        <li>측정대행업체 관리</li>
+                        <li>TMS(굴뚝·수질 원격감시) 연계</li>
+                        <li>기준 초과 조치·보고 관리</li>
                     </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">온실가스·에너지 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>연료/배출가스/배출계수 관리</li>
+                        <li>시설목록·온실가스 배출량 현황</li>
+                        <li>연료사용금액 현황</li>
+                        <li>Scope 1·2 배출량 산정</li>
+                        <li>목표관리제·배출권거래제 명세서 대응</li>
+                        <li>에너지 사용량 관리</li>
+                    </ul>
+                </div>
+                <div style="visibility:hidden;"></div>
+
+                <!-- 평가 · 성과 · 개선 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">평가 · 성과 · 개선</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">ASSESSMENT / PERFORMANCE</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
                         <span class="sm-menu-label">환경영향평가관리<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
+                        <li>평가 대상사업·협의 관리</li>
+                        <li>협의내용 이행 관리</li>
+                        <li>사후환경영향조사 관리</li>
                     </ul>
                 </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">환경성과·ESG 보고<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>환경 KPI·목표 관리</li>
+                        <li>ESG 환경데이터 취합(공시 대응)</li>
+                        <li>지속가능경영보고서 데이터 제공</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">환경 시정개선·사고 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>시정개선 진행·현황 통계</li>
+                        <li>환경사고 보고·대응</li>
+                        <li>환경민원 접수·처리</li>
+                    </ul>
+                </div>
+                <div style="visibility:hidden;"></div>
+
+                <!-- 시스템 기반 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">시스템 기반</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">SYSTEM</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">사용자·기준정보 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>사용자·권한 관리</li>
+                        <li>조직·공통코드 관리</li>
+                        <li>결재선·전자서명 설정</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">외부 연계 설정<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>올바로·TMS 등 공공시스템 연계</li>
+                        <li>계측기·IoT 데이터 수집 연계</li>
+                        <li>ERP 연동(전력·연료·구매 데이터)</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">경영시스템 연계<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>안전경영시스템(KPI·경영검토) 연계</li>
+                        <li>ISO 14001 내부심사·시정조치 연계</li>
+                    </ul>
+                </div>
+                <div style="visibility:hidden;"></div>
             </div>
         </div>
     </section>

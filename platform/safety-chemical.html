@@ -38,13 +38,13 @@
                     <span class="sep">/</span>
                     <a href="#">구축형 서비스</a>
                     <span class="sep">/</span>
-                    <a href="#">화학물질안전</a>
+                    <a href="#">화학물질시스템</a>
                     <span class="sep">/</span>
                     <div class="breadcrumb-current">
                         <span>화학물질안전관리시스템</span>
                     </div>
                 </div>
-                <h1>화학물질안전 <span>화학물질안전관리시스템</span></h1>
+                <h1>화학물질시스템 <span>화학물질안전관리시스템</span></h1>
             </div>
 
             <nav class="sub-tabs">
@@ -180,49 +180,223 @@
             </div>
             <div class="sm-menu-grid">
 
+                <!-- 종합현황 · 기준정보 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">종합현황 · 기준정보</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">COMMON / MASTER</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">승인관리<span class="sm-menu-dot"></span></span>
+                        <span class="sm-menu-label">현황 및 통계(대시보드)<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
-                        <li>신규제품등록 신청</li>
-                        <li>공급사 변경 등록</li>
-                        <li>제품 및 공급사 통제</li>
-                        <li>신규제품등록 요청현황</li>
-                        <li>공급사 변경 승인</li>
-                        <li>제품 및 공급사 통제</li>
-                        <li>법적규제관리</li>
+                        <li>현황/통계·화학물질 현황분석차트</li>
+                        <li>화학물질 관리현황</li>
+                        <li>위험물 지정수량 현황</li>
+                        <li>규제물질 보유 신호등·기한 알림</li>
                     </ul>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">입고관리<span class="sm-menu-dot"></span></span>
+                        <span class="sm-menu-label">화학물질 기준정보(인벤토리)<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
+                        <li>화학물질 기초정보 관리(CAS 기준)</li>
                         <li>물질통합검색</li>
-                        <li>신규 자재 등록</li>
-                        <li>ERP 자재코드 관리</li>
-                        <li>입고 물질 바코드 발행</li>
-                        <li>샘플/직접 구매 등 사후등록</li>
-                        <li>실사관리</li>
+                        <li>화학제품/MSDS 관리</li>
+                        <li>성상별 보관 그룹 관리</li>
                     </ul>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">운영 및 폐기관리<span class="sm-menu-dot"></span></span>
+                        <span class="sm-menu-label">규제정보 관리<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
-                        <li>제품이동현황</li>
-                        <li>물질이동이력</li>
-                        <li>입출고 이력</li>
-                        <li>폐기관리</li>
-                        <li>취급일지관리</li>
-                        <li>유해화학물질관리대장</li>
-                        <li>경고표지관리</li>
-                        <li>위험물 취급소 취급일자</li>
-                        <li>MSDS조회</li>
-                        <li>MSDS/경고표지정보관리</li>
+                        <li>화학물질 규제정보관리(규제DB)</li>
+                        <li>규제검토/대응 신청 현황</li>
+                        <li>규제대응 실적·화학물질 규제대응</li>
+                        <li>규제 변경 모니터링·영향 알림</li>
                     </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">인허가 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>화학물질 인허가 관리(통합)</li>
+                        <li>저장소 신고물질 관리</li>
+                        <li>인허가 조건 이행·갱신 알림</li>
+                    </ul>
+                </div>
+
+                <!-- ① 승인 · 구매 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">① 승인 · 구매</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">APPROVAL / PROCUREMENT</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">신규제품 등록·승인<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>신규제품등록 신청·요청현황</li>
+                        <li>신규 단위용량 등록 요청현황</li>
+                        <li>사전 안전성검토(규제DB 자동 검증)</li>
+                        <li>금지·허가·제한물질 자동 차단</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">공급사·제품 통제<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>공급사 변경 등록·승인</li>
+                        <li>제품 및 공급사 통제</li>
+                        <li>법적 규제관리</li>
+                        <li>공급사 MSDS 제출·최신화 관리</li>
+                    </ul>
+                </div>
+                <div style="visibility:hidden;"></div>
+                <div style="visibility:hidden;"></div>
+
+                <!-- ② 입고 · 검수 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">② 입고 · 검수</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">RECEIVING / TRACKING</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">입고 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>신규 자재 등록·ERP 자재코드 관리</li>
+                        <li>입고 물질 바코드 발행(QR·RFID)</li>
+                        <li>샘플/직접 구매 등 사후등록</li>
+                        <li>입고취소 현황</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">실사·재고 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>실사관리</li>
+                        <li>코드스캔 재고 일제조사</li>
+                        <li>장기 미사용·유효기간 경과 알림</li>
+                        <li>구매–입고–재고 수량 대사</li>
+                    </ul>
+                </div>
+                <div style="visibility:hidden;"></div>
+                <div style="visibility:hidden;"></div>
+
+                <!-- ③ 사용 · 취급 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">③ 사용 · 취급</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">USE / HANDLING</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">이동·입출고 이력<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>제품이동현황·물질이동이력</li>
+                        <li>입출고 이력</li>
+                        <li>시약 이동관리</li>
+                        <li>용기 단위 전과정 추적(입고–사용–폐기)</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">취급 일지 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>취급일지 관리</li>
+                        <li>위험물 취급소 취급일지</li>
+                        <li>코드스캔 사용량 기록</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">MSDS·경고표지<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>MSDS 조회</li>
+                        <li>MSDS/경고표지 정보관리</li>
+                        <li>경고표지 관리(GHS)</li>
+                        <li>소분용기 표지 출력</li>
+                    </ul>
+                </div>
+                <div style="visibility:hidden;"></div>
+
+                <!-- ④ 보관 · 저장 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">④ 보관 · 저장</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">STORAGE</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">저장소·위치 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>위치관리(저장소·보관위치)</li>
+                        <li>성상별 보관 그룹 적용</li>
+                        <li>혼재보관 금지 자동 검증</li>
+                        <li>지정수량 배수 초과 모니터링</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">소방·방화 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>방화구획 관리</li>
+                        <li>도면관리(저장소 배치)</li>
+                        <li>소방정보 현황</li>
+                        <li>위험물 취급소–소방설비 매핑</li>
+                    </ul>
+                </div>
+                <div style="visibility:hidden;"></div>
+                <div style="visibility:hidden;"></div>
+
+                <!-- ⑤ 폐기 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">⑤ 폐기</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">DISPOSAL</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">폐기 처리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>폐기관리(사용자 수동폐기)</li>
+                        <li>코드스캔 자동폐기</li>
+                        <li>규제물질 폐기 승인 절차</li>
+                    </ul>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">폐기 현황·연계<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>폐기 현황·통계</li>
+                        <li>폐액·지정폐기물 처리 연계(환경시스템)</li>
+                        <li>구매–사용–폐기 물질수지 분석</li>
+                    </ul>
+                </div>
+                <div style="visibility:hidden;"></div>
+                <div style="visibility:hidden;"></div>
+
+                <!-- 법정일지 · 신고·보고 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">법정일지 · 신고·보고</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">LEGAL RECORDS / REPORT</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
@@ -232,45 +406,50 @@
                         <li>특별관리물질 취급대장</li>
                         <li>유해화학물질 관리대장</li>
                         <li>유해화학물질 자체점검일지</li>
+                        <li>입출고 데이터 기반 대장 자동생성</li>
                     </ul>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">현황 및 통계<span class="sm-menu-dot"></span></span>
+                        <span class="sm-menu-label">법정 신고·보고<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
-                        <li>현황/통계</li>
-                        <li>화학물질 현황분석차트</li>
-                        <li>규제검토/대응 신청 현황</li>
-                        <li>위험물지정수량현황</li>
-                        <li>화학물질 관리현황</li>
+                        <li>화학물질 통계조사·배출량조사 대응</li>
+                        <li>유해화학물질 실적보고</li>
+                        <li>취급시설 정기검사 일정·결과 관리</li>
+                    </ul>
+                </div>
+                <div style="visibility:hidden;"></div>
+                <div style="visibility:hidden;"></div>
+
+                <!-- 시스템 기반 -->
+                <div style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; margin-top:28px;">
+                    <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:700; border-radius:6px; padding:5px 12px; letter-spacing:.02em; white-space:nowrap;">시스템 기반</span>
+                    <small style="font-size:var(--fs-caption); color:var(--text-secondary); letter-spacing:.08em; font-weight:600;">SYSTEM</small>
+                    <span style="flex:1; height:1px; background:var(--gray-400);"></span>
+                </div>
+                <div class="sm-menu-item sm-menu-item--has-sub">
+                    <div class="sm-menu-item-head">
+                        <span class="sm-menu-label">사용자·기준정보 관리<span class="sm-menu-dot"></span></span>
+                    </div>
+                    <ul class="sm-menu-sub-list">
+                        <li>사용자·권한 관리(취급자격 연동)</li>
+                        <li>조직·공통코드 관리</li>
+                        <li>스캔장비(QR·RFID) 관리</li>
                     </ul>
                 </div>
                 <div class="sm-menu-item sm-menu-item--has-sub">
                     <div class="sm-menu-item-head">
-                        <span class="sm-menu-label">기타<span class="sm-menu-dot"></span></span>
+                        <span class="sm-menu-label">타 시스템 연계<span class="sm-menu-dot"></span></span>
                     </div>
                     <ul class="sm-menu-sub-list">
-                        <li>화학제품/MSDS 관리</li>
-                        <li>신규제품등록요청현황</li>
-                        <li>화학물질 규제정보관리</li>
-                        <li>물질통합검색</li>
-                        <li>화학물질기초정보관리</li>
-                        <li>신규단위용량등록요청현황</li>
-                        <li>규제대응실적</li>
-                        <li>화학물질 규제대응</li>
-                        <li>방화구획관리</li>
-                        <li>저장소 신고물질</li>
-                        <li>위치관리</li>
-                        <li>인허가관리</li>
-                        <li>입고취소현황</li>
-                        <li>시약이동관리</li>
-                        <li>도면관리</li>
-                        <li>소방정보현황</li>
-                        <li>성상별 보관 그룹 관리</li>
-                        <li>화학물질인허가관리</li>
+                        <li>ERP 연계(자재코드·구매)</li>
+                        <li>보건관리시스템 연계(특검·작업환경측정)</li>
+                        <li>환경·연구실안전 시스템 연계</li>
                     </ul>
                 </div>
+                <div style="visibility:hidden;"></div>
+                <div style="visibility:hidden;"></div>
             </div>
         </div>
     </section>

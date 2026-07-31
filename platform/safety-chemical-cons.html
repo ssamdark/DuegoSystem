@@ -22,6 +22,67 @@
     <link rel="stylesheet" href="/css/variables.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/sub.css">
+
+    <!-- 예외: 화학물질_전과정_컨설팅_프로세스.html 원본 스타일을 .chem-consult-diagram 범위로 스코프 (디자인 시스템 변수 없음, 원본 색상 유지) -->
+    <style>
+        .chem-consult-diagram {
+            --cc-navy: #1e2b3c;
+            --cc-blue: #2b5bd7;
+            --cc-blue-l: #e8eeff;
+            --cc-blue-ll: #f3f6ff;
+            --cc-teal: #0e8f84;
+            --cc-teal-l: #e2f4f2;
+            --cc-sub: #6b7684;
+            --cc-line: #e2e6ec;
+            --cc-bg: #f4f5f8;
+        }
+        .chem-consult-diagram * { box-sizing: border-box; }
+        .chem-consult-diagram .section { background: var(--cc-bg); border-radius: 16px; padding: 52px 44px 46px; color: var(--cc-navy); font-family: 'Pretendard', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; }
+
+        .chem-consult-diagram .headline { text-align: center; margin-bottom: 10px; }
+        .chem-consult-diagram .headline h2 { font-size: 26px; font-weight: 800; letter-spacing: -.02em; }
+        .chem-consult-diagram .headline h2 em { font-style: normal; color: var(--cc-blue); }
+        .chem-consult-diagram .headline p { margin-top: 10px; font-size: 14px; color: var(--cc-sub); line-height: 1.7; }
+
+        .chem-consult-diagram .method { display: flex; align-items: stretch; justify-content: center; gap: 10px; margin: 34px 0 46px; flex-wrap: wrap; }
+        .chem-consult-diagram .mstep { background: #fff; border: 1px solid var(--cc-line); border-radius: 12px; padding: 16px 20px; width: 250px; position: relative; }
+        .chem-consult-diagram .mstep .no { font-size: 11px; font-weight: 800; color: var(--cc-blue); letter-spacing: .1em; }
+        .chem-consult-diagram .mstep b { display: block; font-size: 15.5px; font-weight: 800; margin-top: 3px; }
+        .chem-consult-diagram .mstep span { display: block; font-size: 12px; color: var(--cc-sub); margin-top: 6px; line-height: 1.55; }
+        .chem-consult-diagram .marrow { align-self: center; color: var(--cc-blue); font-size: 18px; font-weight: 800; }
+
+        .chem-consult-diagram .matrix-title { text-align: center; font-size: 15px; font-weight: 800; color: var(--cc-navy); margin-bottom: 22px; }
+        .chem-consult-diagram .matrix-title small { display: block; font-weight: 600; font-size: 12px; color: var(--cc-sub); margin-top: 4px; }
+        .chem-consult-diagram .flow { display: flex; align-items: stretch; gap: 0; }
+        .chem-consult-diagram .stage { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+        .chem-consult-diagram .circle-zone { display: flex; flex-direction: column; align-items: center; margin-bottom: 14px; }
+        .chem-consult-diagram .circle { width: 104px; height: 104px; border-radius: 50%; background: var(--cc-blue-l); border: 2px solid #cdd9ff; display: flex; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; color: var(--cc-blue); }
+        .chem-consult-diagram .stage-sub { margin-top: 10px; font-size: 13.5px; font-weight: 800; color: var(--cc-navy); text-align: center; }
+        .chem-consult-diagram .farrow { flex: none; width: 44px; height: 104px; align-self: flex-start; display: flex; align-items: center; justify-content: center; color: var(--cc-blue); font-size: 20px; font-weight: 800; }
+
+        .chem-consult-diagram .panel { flex: 1; background: #fff; border: 1px solid var(--cc-line); border-radius: 12px; padding: 16px 16px 18px; display: flex; flex-direction: column; gap: 14px; }
+        .chem-consult-diagram .blk .bh { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 800; letter-spacing: .05em; border-radius: 4px; padding: 3.5px 9px; margin-bottom: 9px; }
+        .chem-consult-diagram .blk.diag .bh { background: var(--cc-teal-l); color: var(--cc-teal); }
+        .chem-consult-diagram .blk.sys .bh { background: var(--cc-blue-l); color: var(--cc-blue); }
+        .chem-consult-diagram .blk ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+        .chem-consult-diagram .blk li { display: flex; align-items: baseline; gap: 8px; font-size: 12.5px; color: #414b58; line-height: 1.5; }
+        .chem-consult-diagram .blk li::before { content: ""; flex: none; width: 4px; height: 4px; border-radius: 50%; background: #c2cad4; transform: translateY(-3px); }
+
+        .chem-consult-diagram .deliv { margin-top: 40px; }
+        .chem-consult-diagram .deliv-title { text-align: center; font-size: 15px; font-weight: 800; margin-bottom: 16px; }
+        .chem-consult-diagram .deliv-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+        .chem-consult-diagram .dcard { background: #fff; border: 1.5px solid #cdd9ff; border-radius: 12px; text-align: center; padding: 18px 14px; }
+        .chem-consult-diagram .dcard b { display: block; font-size: 14.5px; font-weight: 800; color: var(--cc-blue); }
+        .chem-consult-diagram .dcard span { display: block; font-size: 12px; color: var(--cc-sub); margin-top: 6px; line-height: 1.55; }
+
+        @media (max-width:1280px) {
+            .chem-consult-diagram .flow { flex-direction: column; gap: 18px; }
+            .chem-consult-diagram .farrow { display: none; }
+            .chem-consult-diagram .deliv-cards { grid-template-columns: repeat(2, 1fr); }
+            .chem-consult-diagram .method { flex-direction: column; align-items: center; }
+            .chem-consult-diagram .marrow { transform: rotate(90deg); }
+        }
+    </style>
 </head>
 
 <body class="is-sub-page">
@@ -38,13 +99,13 @@
                     <span class="sep">/</span>
                     <a href="#">구축형 서비스</a>
                     <span class="sep">/</span>
-                    <a href="#">화학물질안전</a>
+                    <a href="#">화학물질시스템</a>
                     <span class="sep">/</span>
                     <div class="breadcrumb-current">
                         <span>화학물질안전관리 컨설팅</span>
                     </div>
                 </div>
-                <h1>화학물질안전 <span>화학물질안전관리 컨설팅</span></h1>
+                <h1>화학물질시스템 <span>화학물질안전관리 컨설팅</span></h1>
             </div>
 
             <nav class="sub-tabs">
@@ -61,72 +122,161 @@
     <!-- Pain Point -->
     <section class="private-pain">
         <div class="private-pain-inner">
-            <h2 class="private-pain-headline">구매에서 폐기까지, 화학물질 관리의 전 과정을 전문가의 정밀 진단으로, 현장에 맞는 안전관리 체계를 설계합니다.
+            <h2 class="private-pain-headline" style="margin-bottom:0;">구매에서 폐기까지, 화학물질 관리의 전 과정을 전문가의 정밀 진단으로, 현장에 맞는 안전관리 체계를 설계합니다.
 <span class="private-pain-headline-sub">화학물질 관리현황 실태 진단으로 문제점과 개선과제를 도출하고, 화평법·화관법 등 관련 법규 준수와 구매부터 폐기까지 전 과정을 아우르는 정보화 시스템 구축 방안을 제시합니다.</span></h2>
 
-            <div class="ceo-top-image sm-top-image">
-                <img src="/images/ss01.png" alt="화학물질안전관리 컨설팅">
-            </div>
+            <hr style="border:none;border-top:2px solid #000;margin-top:48px;margin-bottom:80px;">
         </div>
     </section>
     <!-- 화학물질컨설팅 프로세스 -->
-    <section class="chem-lc-section" style="padding-bottom:150px;">
+    <section class="chem-consult-diagram" style="padding-bottom:150px;">
         <div class="sub-inner">
-            <div class="chem-lc-wrap">
-            <p class="chem-lc-headline">화학물질 규제DB를 적용하여 화학물질의 구매부터 폐기까지 전 과정 관리시스템 구축</p><br>
-            <div class="chem-lc-flow">
-                <div class="chem-lc-step">
-                    <div class="chem-lc-circle">구매</div>
-                    <p class="chem-lc-step-label">구매 신청</p>
-                    <ul class="chem-lc-list">
-                        <li>구매신청</li>
-                        <li>사전 안전성검토</li>
-                        <li>법적 규제대응</li>
-                    </ul>
+            <div class="section">
+
+                <div class="headline">
+                    <h2>화학물질 규제DB 기반 <em>전 과정 정밀 진단</em>으로, 현장에 맞는 <em>관리시스템 구축</em>을 설계합니다</h2>
+                    <p>구매부터 폐기까지 단계별 관리 실태를 진단하고, 화평법·화관법·산안법·위험물안전관리법 GAP 분석을 거쳐<br>시스템으로 구현할 TO-BE 프로세스와 구축 로드맵을 제시합니다.</p>
                 </div>
-                <span class="chem-lc-arr"><img src="/images/iocn_s_003.png" alt=""></span>
-                <div class="chem-lc-step">
-                    <div class="chem-lc-circle">검수</div>
-                    <p class="chem-lc-step-label">Tracking Management</p>
-                    <ul class="chem-lc-list">
-                        <li>납품/검수</li>
-                        <li>바코드 출력/부착<br>(QR, RFID 가능)</li>
-                    </ul>
+
+                <!-- 컨설팅 방법론 -->
+                <div class="method">
+                    <div class="mstep"><span class="no">STEP 01</span><b>관리현황 실태 진단</b><span>현장 실사·데이터 분석으로 단계별 관리 실태와 문제점 도출</span></div>
+                    <span class="marrow">▶</span>
+                    <div class="mstep"><span class="no">STEP 02</span><b>법규 GAP 분석</b><span>화평법·화관법·산안법·위험물법 요구사항 대비 미충족 항목 진단</span></div>
+                    <span class="marrow">▶</span>
+                    <div class="mstep"><span class="no">STEP 03</span><b>TO-BE 프로세스 설계</b><span>전 과정 표준 프로세스(PI)와 책임·절차(R&amp;R) 재설계</span></div>
+                    <span class="marrow">▶</span>
+                    <div class="mstep"><span class="no">STEP 04</span><b>시스템 구축 방안 제시</b><span>구축 범위·로드맵·요구사항 정의 및 구축 후 이행 지원</span></div>
                 </div>
-                <span class="chem-lc-arr"><img src="/images/iocn_s_003.png" alt=""></span>
-                <div class="chem-lc-step">
-                    <div class="chem-lc-circle">사용취급</div>
-                    <p class="chem-lc-step-label">사용·취급상 관리</p>
-                    <ul class="chem-lc-list">
-                        <li>취급일지 관리</li>
-                        <li>저장/보관 관리</li>
-                        <li>보호구 관리</li>
-                        <li>특검/작업환경측정 관리</li>
-                        <li>안전보건(MSDS)교육</li>
-                        <li>유해화학물질 안전교육</li>
-                    </ul>
+
+                <!-- 전과정 진단·설계 매트릭스 -->
+                <p class="matrix-title">전 과정 단계별 진단 포인트와 시스템 구현 기능
+                    <small>컨설팅 진단 결과가 그대로 시스템 요구사항으로 이어지는 구조</small>
+                </p>
+
+                <div class="flow">
+
+                    <div class="stage">
+                        <div class="circle-zone"><div class="circle">구매</div><div class="stage-sub">구매 신청·승인</div></div>
+                        <div class="panel">
+                            <div class="blk diag"><span class="bh">진단 POINT</span>
+                                <ul>
+                                    <li>구매 경로별 통제 여부(정식·샘플·직접구매)</li>
+                                    <li>사전 안전성검토 절차 존재·이행 여부</li>
+                                    <li>금지·허가·제한물질 스크리닝 체계</li>
+                                </ul>
+                            </div>
+                            <div class="blk sys"><span class="bh">시스템 구현</span>
+                                <ul>
+                                    <li>구매신청–승인 워크플로우</li>
+                                    <li>규제DB 자동 검증·차단</li>
+                                    <li>ERP 구매 연계</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span class="farrow">▶</span>
+
+                    <div class="stage">
+                        <div class="circle-zone"><div class="circle">검수</div><div class="stage-sub">입고·Tracking</div></div>
+                        <div class="panel">
+                            <div class="blk diag"><span class="bh">진단 POINT</span>
+                                <ul>
+                                    <li>구매–입고–재고 데이터 일치성</li>
+                                    <li>미등록 반입(샘플·직접구매) 관리 실태</li>
+                                    <li>용기 식별체계(라벨링) 구축 여부</li>
+                                </ul>
+                            </div>
+                            <div class="blk sys"><span class="bh">시스템 구현</span>
+                                <ul>
+                                    <li>납품/검수·사후등록</li>
+                                    <li>바코드 출력/부착(QR·RFID)</li>
+                                    <li>용기 단위 이력 추적·실사관리</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span class="farrow">▶</span>
+
+                    <div class="stage">
+                        <div class="circle-zone"><div class="circle">사용취급</div><div class="stage-sub">사용·취급상 관리</div></div>
+                        <div class="panel">
+                            <div class="blk diag"><span class="bh">진단 POINT</span>
+                                <ul>
+                                    <li>취급일지·법정대장 작성 실태</li>
+                                    <li>MSDS 비치·경고표지 부착 여부</li>
+                                    <li>교육 이수·보호구 지급, 특검·작업환경측정 연계</li>
+                                </ul>
+                            </div>
+                            <div class="blk sys"><span class="bh">시스템 구현</span>
+                                <ul>
+                                    <li>코드스캔 사용량 기록·취급일지</li>
+                                    <li>법정대장 자동생성, MSDS·표지 출력</li>
+                                    <li>안전보건(MSDS)·유해화학물질 교육 연계</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span class="farrow">▶</span>
+
+                    <div class="stage">
+                        <div class="circle-zone"><div class="circle">보관저장</div><div class="stage-sub">Storage·재고관리</div></div>
+                        <div class="panel">
+                            <div class="blk diag"><span class="bh">진단 POINT</span>
+                                <ul>
+                                    <li>성상별 분리보관·혼재 위험 여부</li>
+                                    <li>지정수량·허가 취급량 준수 실태</li>
+                                    <li>저장시설 기준 및 운반·이송 절차</li>
+                                </ul>
+                            </div>
+                            <div class="blk sys"><span class="bh">시스템 구현</span>
+                                <ul>
+                                    <li>Storage Group 분류·혼재금지 자동검증</li>
+                                    <li>지정수량 배수 모니터링, Central Delivery</li>
+                                    <li>운반/이송 안전관리계획서</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span class="farrow">▶</span>
+
+                    <div class="stage">
+                        <div class="circle-zone"><div class="circle">폐기</div><div class="stage-sub">폐기·물질수지</div></div>
+                        <div class="panel">
+                            <div class="blk diag"><span class="bh">진단 POINT</span>
+                                <ul>
+                                    <li>폐기 절차·기록 관리 실태</li>
+                                    <li>장기 미사용·유효기간 경과 시약 방치 여부</li>
+                                    <li>폐액 분류·위탁처리 적법성</li>
+                                </ul>
+                            </div>
+                            <div class="blk sys"><span class="bh">시스템 구현</span>
+                                <ul>
+                                    <li>사용자 수동폐기·코드스캔 자동폐기</li>
+                                    <li>구매–사용–폐기 물질수지 분석</li>
+                                    <li>폐기 현황·통계, 폐기물 처리 연계</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <span class="chem-lc-arr"><img src="/images/iocn_s_003.png" alt=""></span>
-                <div class="chem-lc-step">
-                    <div class="chem-lc-circle">보관저장</div>
-                    <p class="chem-lc-step-label">Storage·재고관리</p>
-                    <ul class="chem-lc-list">
-                        <li>Storage Group 분류 기준</li>
-                        <li>Centeral Delivery 관리</li>
-                        <li>운반/이송 안전관리계획서</li>
-                    </ul>
+
+                <!-- 산출물 -->
+                <div class="deliv">
+                    <p class="deliv-title">컨설팅 산출물</p>
+                    <div class="deliv-cards">
+                        <div class="dcard"><b>관리현황 실태진단 보고서</b><span>단계별 문제점·개선과제 도출</span></div>
+                        <div class="dcard"><b>법규 GAP 분석서</b><span>화평법·화관법·산안법·위험물법 준수 진단</span></div>
+                        <div class="dcard"><b>TO-BE 프로세스 맵</b><span>전 과정 표준 프로세스·R&amp;R 설계서</span></div>
+                        <div class="dcard"><b>시스템 구축 로드맵</b><span>구축 범위·요구사항 정의(RFP 지원)</span></div>
+                    </div>
                 </div>
-                <span class="chem-lc-arr"><img src="/images/iocn_s_003.png" alt=""></span>
-                <div class="chem-lc-step">
-                    <div class="chem-lc-circle">폐기</div>
-                    <p class="chem-lc-step-label">스캔장비 활용관리</p>
-                    <ul class="chem-lc-list">
-                        <li>사용자 수동폐기</li>
-                        <li>코드스캔 자동폐기</li>
-                        <li>현황 및 통계</li>
-                    </ul>
-                </div>
-            </div>
+
             </div>
         </div>
     </section>
