@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (prevBtn) prevBtn.addEventListener('click', () => { stopAutoplay(); updateSlider(currentIndex - 1); startAutoplay(); });
         if (nextBtn) nextBtn.addEventListener('click', () => { stopAutoplay(); updateSlider(currentIndex + 1); startAutoplay(); });
-        listItems.forEach((item, i) => item.addEventListener('click', () => { stopAutoplay(); updateSlider(i); startAutoplay(); }));
+        listItems.forEach((item, i) => item.addEventListener('click', (e) => { e.preventDefault(); stopAutoplay(); updateSlider(i); startAutoplay(); }));
         allCards.forEach((card, i) => card.addEventListener('click', () => { stopAutoplay(); updateSlider(i % originalCardsCount); startAutoplay(); }));
 
         if (playBtn) {
