@@ -1453,17 +1453,17 @@ body.is-sub-page .mobile-toggle span {
 }
 
 .marquee-track.marquee-track--row2 {
-    animation-duration: 80s;
-    animation-delay: -50s;
+    animation-duration: 136s;
+    animation-delay: -85s;
 }
 
 .marquee-track.marquee-track--row1 {
-    animation-duration: 126s;
+    animation-duration: 169s;
 }
 
 .marquee-track.marquee-track--row3 {
-    animation-duration: 45s;
-    animation-delay: -15s;
+    animation-duration: 77s;
+    animation-delay: -26s;
 }
 
 

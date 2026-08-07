@@ -3182,7 +3182,7 @@ body.is-sub-page #scroll-wrapper {
     align-items: center;
     gap: var(--space-8);
     width: max-content;
-    animation: logoScroll 240s linear infinite;
+    animation: logoScroll 294s linear infinite;
 }
 
 .private-logo-track img {
