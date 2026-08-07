@@ -1824,6 +1824,19 @@ body.is-sub-page .mobile-toggle span {
         left: 0;
     }
 
+    /* 타이포·여백은 상태와 무관하게 동일하게 유지 → exit ↔ active 전환 시 높이 변화 없음 */
+    .slogan-title {
+        font-size: 48px;
+        line-height: 1.3;
+    }
+
+    .slogan-desc {
+        font-size: 17px;
+        line-height: 1.5;
+        margin-top: 15px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
     .slogan-title.active,
     .slogan-desc.active {
         display: block;
@@ -1841,13 +1854,13 @@ body.is-sub-page .mobile-toggle span {
         transform: none;
     }
 
-    /* exit 상태: desc와 동일하게 페이드 없이 한 번에 사라지되 자리는 유지 */
+    /* exit 상태: 제목·설명이 같은 타이밍으로 부드럽게 페이드아웃 */
     .slogan-title.exit,
     .slogan-desc.exit {
         display: block;
-        visibility: hidden;
-        opacity: 0;
-        animation: none;
+        visibility: visible;
+        transform: none;
+        animation: mobileFadeOut 0.4s ease-out both;
     }
     .slogan-title.exit .line-1,
     .slogan-title.exit .line-2 {
@@ -1865,19 +1878,6 @@ body.is-sub-page .mobile-toggle span {
         height: auto;
         min-height: 70px;
         margin-bottom: 60px;
-    }
-
-    .slogan-title.active,
-    .slogan-title.exit {
-        font-size: 48px;
-        line-height: 1.3;
-    }
-
-    .slogan-desc.active {
-        font-size: 17px;
-        line-height: 1.5;
-        margin-top: 15px;
-        color: rgba(255, 255, 255, 0.7);
     }
 
     .tech-new-section {
@@ -1925,8 +1925,7 @@ body.is-sub-page .mobile-toggle span {
         top: 0;
     }
 
-    .slogan-title.active,
-    .slogan-title.exit {
+    .slogan-title {
         font-size: 40px;
     }
 
@@ -1941,8 +1940,7 @@ body.is-sub-page .mobile-toggle span {
 }
 
 @media screen and (max-width: 480px) {
-    .slogan-title.active,
-    .slogan-title.exit {
+    .slogan-title {
         font-size: 32px;
     }
     .tech-new-card {
@@ -2093,27 +2091,7 @@ body.is-sub-page .mobile-toggle span {
         font-size: 16px;
     }
 
-    /* hero slogan layout */
-    .slogan-title.exit {
-        display: block;
-        font-size: 40px;
-        line-height: 1.3;
-        visibility: hidden;
-        opacity: 0;
-        animation: none;
-    }
-    .slogan-title.exit .line-1,
-    .slogan-title.exit .line-2 {
-        animation: none;
-        opacity: 1;
-        transform: translateY(0);
-    }
-    .slogan-desc.exit {
-        display: block;
-        visibility: hidden;
-        opacity: 0;
-        animation: none;
-    }
+    /* hero slogan layout (active/exit 공통 스타일은 1024px 블록에서 정의) */
     .slogan-container {
         height: auto;
         min-height: 110px;
@@ -2195,10 +2173,6 @@ body.is-sub-page .mobile-toggle span {
         --fs-h3:      16px;
         --fs-h4:      15px;
     }
-    .slogan-title.exit {
-        font-size: 32px;
-    }
-
     .intro-sub {
         font-size: 18px;
     }
