@@ -4281,6 +4281,35 @@ body.is-sub-page #scroll-wrapper {
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .si-ov-badge {
+        font-size: 13px;
+        padding: 7px 16px;
+        white-space: normal;
+        text-align: center;
+        word-break: keep-all;
+    }
+    .si-ov-desc {
+        font-size: 16px;
+    }
+    .si-ov-cm {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .si-ov-top {
+        padding: 30px 16px 0;
+    }
+    .si-ov-badge {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+    .si-ov-desc {
+        font-size: 14px;
+    }
+}
+
 /* ---- COMMON MODULE 피처 그리드 ---- */
 .si-feature-grid {
     display: grid;
@@ -6363,4 +6392,11 @@ body.is-sub-page #scroll-wrapper {
 }
 .ci-section .history-banner-header .label {
     color: var(--primary);
+}
+
+/* org.html 헤드라인: ceo-page-title와 같은 1024px 지점에서 축소 (기존 768px는 너무 늦게 줄어듦) */
+@media (max-width: 1024px) {
+    .ci-section .history-banner-header .title {
+        font-size: 28px;
+    }
 }

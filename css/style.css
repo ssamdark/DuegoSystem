@@ -1824,7 +1824,14 @@ body.is-sub-page .mobile-toggle span {
 
     .slogan-title.exit,
     .slogan-desc.exit {
-        display: none;
+        display: block;
+        animation: mobileFadeOut 0.4s ease-out both;
+    }
+    .slogan-title.exit .line-1,
+    .slogan-title.exit .line-2 {
+        animation: none;
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .slogan-container {
