@@ -1594,6 +1594,31 @@ body.is-sub-page .mobile-toggle span {
     }
 }
 
+/* 1440~1200px 사이 GNB 하위 항목 겹침 방지용 중간 압축 단계 */
+@media screen and (max-width: 1400px) {
+
+    .navbar-container {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .nav-links {
+        gap: 24px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    .sub-menu {
+        min-width: 120px;
+    }
+
+    .sub-menu li a {
+        font-size: 14px;
+    }
+}
+
 @media screen and (max-width: 1920px) {
 
     :root {
@@ -1678,6 +1703,14 @@ body.is-sub-page .mobile-toggle span {
 
     .nav-links a {
         font-size: 15px;
+    }
+
+    .sub-menu {
+        min-width: 110px;
+    }
+
+    .sub-menu li a {
+        font-size: 13px;
     }
 
     .footer-container {
@@ -1851,9 +1884,9 @@ body.is-sub-page .mobile-toggle span {
     }
 
     .marquee-logos img {
-        height: 48px;
-        width: 120px;
-        padding: 10px 20px;
+        height: 64px;
+        width: 160px;
+        padding: 10px 22px;
     }
 }
 

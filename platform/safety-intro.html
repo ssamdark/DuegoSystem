@@ -64,6 +64,27 @@
             .she-modules .plus{display:none;}
             .she-modules .values{grid-template-columns:repeat(2,1fr);}
         }
+
+        /* 조달청 3자 단가 계약 배너: 1360px 미만에서 좌우 배치가 불안정해져 세로로 전환 */
+        @media (max-width:1360px){
+            .si-3party-banner{
+                flex-direction:column;
+                align-items:flex-start !important;
+                padding:28px 40px !important;
+            }
+            .si-3party-banner .private-hero-text{
+                max-width:100% !important;
+            }
+            .si-3party-banner .private-hero-img{
+                width:auto;
+                align-self:center;
+            }
+            .si-3party-banner .private-hero-img img{
+                width:auto;
+                max-width:100%;
+                height:auto;
+            }
+        }
     </style>
 </head>
 
@@ -98,7 +119,7 @@
                 <p class="title-en">3-Party Unit Price Contract</p>
             </div>     
             <!-- 예외: private-hero 배경색과 동일하게 맞춤 (디자인 시스템 변수 없음) -->
-            <div style="display:flex; align-items:center; gap:40px; margin-bottom:60px; background:#F4F6FF; border-radius:8px; padding:28px 100px 28px 80px;">
+            <div class="si-3party-banner" style="display:flex; align-items:center; gap:40px; margin-bottom:60px; background:#F4F6FF; border-radius:8px; padding:28px 100px 28px 80px;">
                 <div class="private-hero-text" style="max-width:660px;">
                     <p class="private-hero-label">GS인증 · 조달청 3자 단가 계약</p>
                     <h1 class="private-hero-title" style="font-size: var(--fs-h2); margin-bottom: var(--space-3);">복잡한 조달 절차는 줄이고<br>공공기관 안전 혁신은 더 빠르게</h1>
