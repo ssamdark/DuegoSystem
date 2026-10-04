@@ -271,4 +271,52 @@ document.addEventListener('DOMContentLoaded', () => {
         visionObserver.observe(visionSection);
     }
 
+    // -----------------------------------------------------------------------
+    // 6. 메인 팝업 배너 — '오늘 하루 보지 않기'는 자정까지 유지
+    // -----------------------------------------------------------------------
+    const mainPopup = document.getElementById('main-popup');
+    if (mainPopup) {
+        const POPUP_KEY = 'duego_main_popup_hidden_until';
+
+        // localStorage는 사생활 보호 모드 등에서 접근 자체가 막힐 수 있어 전부 try로 감싼다
+        function isPopupHidden() {
+            try {
+                const until = localStorage.getItem(POPUP_KEY);
+                return !!until && Date.now() < Number(until);
+            } catch (err) {
+                return false;
+            }
+        }
+
+        function closePopup() {
+            mainPopup.hidden = true;
+            document.body.style.overflow = '';
+        }
+
+        function hidePopupToday() {
+            try {
+                const midnight = new Date();
+                midnight.setHours(24, 0, 0, 0);
+                localStorage.setItem(POPUP_KEY, String(midnight.getTime()));
+            } catch (err) {
+                // 저장에 실패해도 닫기는 정상 동작시킨다
+            }
+            closePopup();
+        }
+
+        if (!isPopupHidden()) {
+            mainPopup.hidden = false;
+            document.body.style.overflow = 'hidden';
+        }
+
+        mainPopup.querySelectorAll('[data-popup-close]').forEach(el => {
+            el.addEventListener('click', closePopup);
+        });
+        mainPopup.querySelector('[data-popup-hide-today]')?.addEventListener('click', hidePopupToday);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !mainPopup.hidden) closePopup();
+        });
+    }
+
 });
